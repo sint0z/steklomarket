@@ -41,6 +41,7 @@
                 <div class="header-section">
                     <div class="page-width">
                         <div class="header__content">
+                            <!-- logo -->
                             <a class="header__left" href="index.html">
                                 <img src="image/logo.png" alt="">
                                 <div class="logo-text">
@@ -48,7 +49,7 @@
                                     <span class="logo-text-bottom">MARKET</span>
                                 </div>
                             </a>
-
+                            <!-- header-nav-bar -->
                             <div class="header__center">
                                 <nav>
                                     <a href="#">О компании</a>
@@ -58,15 +59,18 @@
                                 </nav>
                             </div>
 
+                            <!-- buttons -->
                             <div class="header__right">
                                 <div class="button__group">
-                                    <button class="button">
+                                    <!-- contact button -->
+                                    <button class="button" id="map-button">
                                         <div class="button__content">
-                                            <i class="bi bi-geo-alt-fill"></i>
+                                            <i class="bi bi-map-fill"></i>
                                             <span>Как к нам добраться?</span>
                                         </div>
                                     </button>
-                                    <button class="button button__mobile__menu">
+                                    <!-- mobile version button, on desktop - hide-->
+                                    <button class="button button__mobile__menu" aria-expanded="false">
                                         <div class="button__content">
                                             <i class="bi bi-list"></i>
                                         </div>
@@ -79,17 +83,118 @@
             </div>
         </header>
 
+        <aside class="sidebar" id="sidebar" aria-hidden="true">
+            <div class="sidebar__content">
+                <!-- sidebar navigation -->
+                <nav class="sidebar__nav">
+                    <div class="content__item">
+                        <span><a href="index.html">Главная</a></span>
+                    </div>
+                    <div class="content__item">
+                        <span><a href="#">О компании</a></span>
+                    </div>
+                    <div class="content__item">
+                        <span> <a href="#">Продукция</a></span>
+                    </div>
+                    <div class="content__item">
+                        <span> <a href="#">Контакты</a></span>
+                    </div>
+                    <div class="content__item">
+                        <span><a href="#">Наши проекты</a></span>
+                    </div>
+                </nav>
+                <div class="button__group">
+                    <!-- contact button in sidebar -->
+                    <button class="button">
+                        <div class="button__content">
+                            <i class="bi bi-map-fill"></i>
+                            <span>Как к нам добраться?</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <div class="overlay"></div>
+
+        <main class="main">
+
+        </main>
+
         <footer class="footer">
             <div class="page-width">
                 <div class="footer__content">
+                    <div class="footer__main">
 
-                </div>
+                        <!-- logo -->
+                        <div class="header__left">
+                            <a class="header__left" href="index.html">
+                                <img src="image/logo.png" alt="">
+                                <div class="logo-text">
+                                    <span class="logo-text-top">STEKLO</span>
+                                    <span class="logo-text-bottom">MARKET</span>
+                                </div>
+                            </a>
+                        </div>
 
-                <div class="footer__bottom">
+                        <!-- nav-bar -->
+                        <div class="footer__navbar">
+                            <nav>
+                                <a href="#">О компании</a>
+                                <a href="#">Продукция</a>
+                                <a href="#">Контакты</a>
+                                <a href="#">Наши проекты</a>
+                            </nav>
+                        </div>
 
+                        <!-- Information about the organization-->
+                        <div class="footer__contact">
+                            <div class="content__item">
+                                <i class="bi bi-passport-fill"></i>
+                                <div class="content__item__content">
+                                    <span>ООО “Витрум”</span>
+                                    <span>ИНН: 2222829160</span>
+                                    <span>ОГРН: 1142223012667</span>
+                                </div>
+                            </div>
+                            <div class="content__item">
+                                <i class="bi bi bi-envelope-at-fill"></i>
+                                <span>sale@steklomarket.ru</span>
+                            </div>
+                            <div class="content__item">
+                                <div class="content__item">
+                                    <i class="bi bi-alarm-fill"></i>
+                                    <span class="days">Пн-Пт:<span class="times">08:00-17:00</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone number organization-->
+                        <div class="footer__phone-contact">
+                            <p>Позвонить нам:</p>
+                            <div class="content__item">
+                                <i class="bi bi-whatsapp"></i>
+                                <span class="days">+7-923-003-22-00</span>
+                            </div>
+                            <div class="content__item">
+                                <i class="bi bi-phone-fill"></i>
+                                <span class="days">+7-923-003-77-00</span>
+                            </div>
+                        </div>
+
+                        <!-- Organization copyright-->
+                        <p class="footer__copyright">© 2025 <span>ООО «Витрум».</span> Все права защищены.</p>
+                    </div>
+
+                    <!-- Developer contact-->
+                    <div class="footer__bottom">
+                        <p class="dev__info">Development by - <a href="https://github.com/sint0z" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> S1ntoz / Shze Team</a></p>
+                    </div>
                 </div>
             </div>
         </footer>
     </div>
+
+    <script src="script/index.js"></script>
 </body>
 </html>
