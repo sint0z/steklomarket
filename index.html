@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,24 +88,29 @@
                 <!-- sidebar navigation -->
                 <nav class="sidebar__nav">
                     <div class="content__item">
+                        <i class="bi bi-house-door-fill"></i>
                         <span><a href="index.html">Главная</a></span>
                     </div>
                     <div class="content__item">
+                        <i class="bi bi-info-square-fill"></i>
                         <span><a href="#">О компании</a></span>
                     </div>
                     <div class="content__item">
+                        <i class="bi bi-aspect-ratio"></i>
                         <span> <a href="#">Продукция</a></span>
                     </div>
                     <div class="content__item">
+                        <i class="bi bi-pin-map-fill"></i>
                         <span> <a href="#">Контакты</a></span>
                     </div>
                     <div class="content__item">
+                        <i class="bi bi-shop"></i>
                         <span><a href="#">Наши проекты</a></span>
                     </div>
                 </nav>
                 <div class="button__group">
                     <!-- contact button in sidebar -->
-                    <button class="button">
+                    <button class="button"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
                         <div class="button__content">
                             <i class="bi bi-map-fill"></i>
                             <span>Как к нам добраться?</span>
@@ -118,7 +123,175 @@
         <div class="overlay"></div>
 
         <main class="main">
+            <!-- Hero section -->
+            <section class="hero__section">
+                <div class="page-width">
+                    <div class="hero__content">
+                        <div class="hero__left">
+                            <div class="hero__text-wrapper">
+                                <p class="section__content_title">
+                                    Продажа стекольных<br> изделий в Барнауле
+                                </p>
+                                <p class="section__content_text">
+                                    Мы предлагаем широкий ассортимент стекольных изделий: прозрачное стекло, стекло химического травления, зеркала.<br>
+                                    Работаем по индивидуальным заказам и предлагаем выгодные условия для наших клиентов.
+                                </p>
+                            </div>
+                            <div class="button__group">
+                                <button class="button" id="button_order">
+                                    <div class="button__content">
+                                        <i class="bi bi-cart-plus-fill"></i>
+                                        <span>Заказать</span>
+                                    </div>
+                                </button>
+                                <button class="button" id="button_about">
+                                    <div class="button__content">
+                                        <span>Подробнее</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </button>
+                            </div>
 
+                        </div>
+                        <div class="hero__right">
+                            <img src="image/hero-img.png" alt="Hero Glass Image" class="hero__image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TODO - To approve the presence of a block with partners on the website, and, if agreed, to develop it -->
+            <!-- The section is under approval -->
+            <section class="partners__section" style=" width: 100%; height: 180px; background-color: transparent; border-bottom: 1px solid var(--stroke-color);">
+                <div class="page-width">
+                    <div class="partners__content">
+
+                    </div>
+                </div>
+            </section>
+
+            <!--Best sales production section-->
+            <section class="production__section">
+                <div class="page-width">
+                    <div class="production__content">
+
+                        <div class="section__title">
+                            <p>Лидеры продаж</p>
+                        </div>
+
+                        <!--TODO - Create script, that generate these cards from a list-->
+                        <!--Start production card -->
+                        <div class="production__cards">
+                            <!-- Top-Card-->
+                            <div class="card__prod">
+                                <img class="card__img" src="image/" alt="" onerror="this.onerror=null; this.src='image/default_product_image.png'">
+                                <div class="card__content">
+                                    <p class="card__prod-title">Название стекла</p>
+                                    <div class="card__prod-description">
+                                        <p class="card__prod-item"> <i class="bi bi-caret-right-fill"></i>Производитель: <span>Салават</span></p>
+                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Толщина: <span>4мм</span></p>
+                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Марка: <span>M1</span></p>
+                                        <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
+                                    </div>
+                                    <div class="button__group">
+                                        <button class="button">
+                                            <div class="button__content">
+                                                <span>Заказать</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Bottom-Card-->
+
+                            <!-- Top-Card-->
+                            <div class="card__prod">
+                                <img class="card__img" src="image/" alt="" onerror="this.onerror=null; this.src='image/default_product_image.png'">
+                                <div class="card__content">
+                                    <p class="card__prod-title">Название стекла</p>
+                                    <div class="card__prod-description">
+                                        <p class="card__prod-item"> <i class="bi bi-caret-right-fill"></i>Производитель: <span>Салават</span></p>
+                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Толщина: <span>4мм</span></p>
+                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Марка: <span>M1</span></p>
+                                        <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
+                                    </div>
+                                    <div class="button__group">
+                                        <button class="button">
+                                            <div class="button__content">
+                                                <span>Заказать</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Bottom-Card-->
+
+                            <!-- Top-Card-->
+                            <div class="card__prod">
+                                <img class="card__img" src="image/" alt="" onerror="this.onerror=null; this.src='image/default_product_image.png'">
+                                <div class="card__content">
+                                    <p class="card__prod-title">Название стекла</p>
+                                    <div class="card__prod-description">
+                                        <p class="card__prod-item"> <i class="bi bi-caret-right-fill"></i>Производитель: <span>Салават</span></p>
+                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Толщина: <span>4мм</span></p>
+                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Марка: <span>M1</span></p>
+                                        <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
+                                    </div>
+                                    <div class="button__group">
+                                        <button class="button">
+                                            <div class="button__content">
+                                                <span>Заказать</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Bottom-Card-->
+
+                        </div>
+
+                        <div class="button__group">
+                            <button class="button">
+                                <div class="button__content">
+                                    <i class="bi bi-cart-fill"></i>
+                                    <span>Полный каталог</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service Section-->
+            <section class="services__section">
+                <div class="page-width">
+                    <div class="section__title">Услуги</div>
+                    <div class="services__content">
+                        <div class="services__left">
+                            <p class="section__content_title">И порежем и доставим</p>
+                            <p class="section__content_text"> Мы не только порежем стекло по нужным размерам, но и быстро доставим его прямо к вам.
+                        </div>
+                        <div class="services__center">
+                            <i class="bi bi-car-front-fill"></i>
+                            <h2>Доставка стекла</h2>
+                            <p class="section__content_text">Готовое стекло доставим прямо к вам — быстро и надёжно!</p>
+                            <a class="services__button">
+                                <span>Подробнее</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="services__right">
+                            <i class="bi bi-aspect-ratio"></i>
+                            <h2>Резка стекла</h2>
+                            <p class="section__content_text">Нарежем стекло под ваш размер и аккуратно упакуем</p>
+                            <a class="services__button">
+                                <span>Подробнее</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
