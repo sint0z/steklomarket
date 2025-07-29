@@ -47,6 +47,7 @@
     --stroke-color: #DDE1E6;
     --support-background-color: #F2F4F8;
     --default-content-padding: 40px;
+    --deep-blue: #142E49;
 }
 
 *,
@@ -56,6 +57,8 @@
 }
 
 a{
+    height: auto;
+    margin:0;
     transition: 0.3s;
     text-decoration: none;
 }
@@ -76,6 +79,7 @@ h5,
 h6 {
     color: var(--accent-color);
     font-family: var(--default-font), sans-serif;
+    margin: 0;
 }
 
 html, body {
@@ -113,6 +117,7 @@ body {
         max-width: 1096px
     }
 }
+
 .button{
     display: inline-block;
     width: 100%;
@@ -123,6 +128,19 @@ body {
     color: #fdfffd;
 }
 
+.button.text-button{
+    color: var(--accent-color);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+.button.text-button .button__content{
+    justify-content: start;
+    height: auto;
+    width: auto;
+}
 
 .button span{
     display: block;
@@ -195,6 +213,66 @@ body {
     display: flex;
     flex-direction: column !important;
     white-space: nowrap;
+}
+
+.section{
+    background-color: var(--support-background-color);
+    width: 100%;
+    height: auto;
+    padding-top: var(--default-content-padding);
+    padding-bottom: var(--default-content-padding);
+}
+
+.section__content{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(2,minmax(0, 1fr));
+    column-gap: 20px;
+}
+
+.section__left{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    grid-column: 1/ span 3;
+    grid-row: 1/span 2;
+    gap: 20px;
+}
+
+.section__right{
+    width: 100%;
+    max-height: 100vh;
+    align-self: center;
+    justify-self: center;
+    grid-column: 4/ span 3;
+    grid-row: 1/span 2;
+}
+
+.section__right img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+.content__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section.section-white{
+    background-color: var(--background-color);
+    border-top: 1px solid var(--stroke-color);
+    border-bottom: 1px solid var(--stroke-color);
+}
+
+.section__left .button__group{
+    justify-content: start;
+    gap: 20px;
 }
 
 .section__content_title{
@@ -296,6 +374,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .logo-text-bottom{ color: var(--support-color); }
 
 .header__center{ display: none;}
@@ -347,7 +426,6 @@ body {
         color: var(--contrast-color);
         font-weight: 700;
     }
-
 }
 
 .header__right{
@@ -388,7 +466,6 @@ body {
        justify-self: end;
        align-self: center;
     }
-
 }
 
 /*----------------------------------------
@@ -425,9 +502,7 @@ body {
     font-size: 16px;
 }
 
-.sidebar.active {
-    right: 0;
-}
+.sidebar.active {right: 0;}
 
 .sidebar__content .button .button__content span{
     display: block;
@@ -457,7 +532,6 @@ body {
 /*----------------------------------------
             Main Section
 ---------------------------------------*/
-
 main{
     position: relative;
     display: flex;
@@ -465,7 +539,6 @@ main{
     z-index: 99;
     flex: 1 0 auto;
 }
-
 
 /*----------------------------------------
              Hero Section
@@ -498,14 +571,13 @@ main{
     grid-row: 1/span 2;
 
 }
-.hero__text-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
 
 .hero__right{
+    height: 420px;       /* фиксированная высота */
+    width: 100%;
+    overflow: hidden;    /* обрезка выходит за пределы */
+    position: relative;  /* чтобы вложенные абсолютные элементы правильно позиционировались */
+    max-width: 100%;
     align-self: center;
     justify-self: center;
     padding: 12px;
@@ -513,20 +585,29 @@ main{
     grid-row: 1/span 2;
 }
 
-
 .hero__left .button{
     margin-top: unset;
 }
+
 .hero__right>img{
-    width: auto;
-    height: 420px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* заполнит блок с сохранением пропорций, обрежет по необходимости */
+    display: block;
 }
 
 .hero__left .button__group{
     justify-content: start;
     gap: 20px;
 }
+
 .hero__left .button{
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.button.button-sm{
     width: auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -537,6 +618,7 @@ main{
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
 }
+
 /*----------------------------------------
           Best Product Section
 ---------------------------------------*/
@@ -553,14 +635,15 @@ main{
     flex-direction: column;
     gap: 20px;
 }
+
 .section__title {
     font-family: var(--default-font), sans-serif;
     color: var(--accent-color);
     font-size: 24px;
-    margin: 0;
     font-weight: 550;
     letter-spacing: 1px;
     line-height: 1;
+    margin: 0 0 10px;
 }
 
 .section__title p{ margin: 0 }
@@ -603,7 +686,6 @@ main{
     height: 100px;
     box-sizing: border-box;
     border-top-left-radius: 16px;
-
 }
 
 .card__prod::after {
@@ -666,6 +748,7 @@ main{
     object-fit: contain;
     margin-bottom: 1px;
 }
+
 .card__content{
     position: relative;
     padding-top: 10px
@@ -682,7 +765,6 @@ main{
 }
 
 .production__content .button__group{margin-top: 10px}
-
 /*----------------------------------------
             Service Section
 ---------------------------------------*/
@@ -692,19 +774,19 @@ main{
     padding-top: var(--default-content-padding);
     padding-bottom: var(--default-content-padding);
 }
-.services__section .section__title{
-    margin-bottom: 20px;
-}
 
 .services__content{
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
     grid-template-rows: repeat(2,minmax(0, 1fr));
-    column-gap: 40px;
+    column-gap: 100px;
     align-items: center;
 }
 
 .services__left{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     grid-column: 1/span 3;
     grid-row: 1/span 2;
 }
@@ -718,6 +800,109 @@ main{
     grid-column: 7/span 3;
     grid-row: 1/span 2;
     justify-self: end;
+}
+
+.services__center > i,
+.services__right > i{
+ font-size: 48px;
+}
+
+.services__center, .services__right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*----------------------------------------
+            About Section
+---------------------------------------*/
+.about__left .section__content_text>span{
+    display: block;
+    text-indent: 20px;
+    margin-bottom: 4px;
+}
+
+.about__content{
+    padding-bottom: 12px;
+}
+
+.about__right{
+    width: 100%;
+    overflow: hidden;
+}
+.about__right img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+/*----------------------------------------
+           About-cards Section
+---------------------------------------*/
+.testimonials__content{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 26px;
+}
+
+
+.about__card{
+    height:auto;
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.about__card .content__wrapper{
+    gap: 10px;
+    width:60%;
+
+}
+.about__card .section__content_text{
+    font-size: 16px;
+}
+.about__card .section__content_title{
+    font-size: 16px;
+}
+
+.about__card-icon{
+    width: 100%; /* чтобы карточка занимала всю ширину колонки */
+    max-width: 100px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;       /* The same as your div height */
+    font-size: 48px;
+    background-color: transparent;
+}
+
+.about__card-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 3px solid var(--accent-color);
+    border-left: 3px solid var(--accent-color);
+    width: 40px;
+    height: 60px;
+}
+
+.about__card-icon::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid var(--accent-color);
+    border-right: 3px solid var(--accent-color);
+    width: 40px;
+    height: 60px;
 }
 /*----------------------------------------
             Footer Section

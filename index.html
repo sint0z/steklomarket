@@ -13,6 +13,7 @@
 
 </head>
 <body>
+
     <div class="wrapper">
         <header class="header">
 
@@ -123,12 +124,12 @@
         <div class="overlay"></div>
 
         <main class="main">
-            <!-- Hero section -->
+            <!--Hero section -->
             <section class="hero__section">
                 <div class="page-width">
                     <div class="hero__content">
                         <div class="hero__left">
-                            <div class="hero__text-wrapper">
+                            <div class="content__wrapper">
                                 <p class="section__content_title">
                                     Продажа стекольных<br> изделий в Барнауле
                                 </p>
@@ -160,8 +161,8 @@
                 </div>
             </section>
 
-            <!-- TODO - To approve the presence of a block with partners on the website, and, if agreed, to develop it -->
-            <!-- The section is under approval -->
+            <!--TODO - To approve the presence of a block with partners on the website, and, if agreed, to develop it -->
+            <!--The section is under approval -->
             <section class="partners__section" style=" width: 100%; height: 180px; background-color: transparent; border-bottom: 1px solid var(--stroke-color);">
                 <div class="page-width">
                     <div class="partners__content">
@@ -173,11 +174,8 @@
             <!--Best sales production section-->
             <section class="production__section">
                 <div class="page-width">
+                    <h2 class="section__title"> Лидеры продаж </h2>
                     <div class="production__content">
-
-                        <div class="section__title">
-                            <p>Лидеры продаж</p>
-                        </div>
 
                         <!--TODO - Create script, that generate these cards from a list-->
                         <!--Start production card -->
@@ -262,8 +260,8 @@
                 </div>
             </section>
 
-            <!-- Service Section-->
-            <section class="services__section">
+            <!--Service Section-->
+            <section class="services__section section section-white">
                 <div class="page-width">
                     <div class="section__title">Услуги</div>
                     <div class="services__content">
@@ -275,25 +273,161 @@
                             <i class="bi bi-car-front-fill"></i>
                             <h2>Доставка стекла</h2>
                             <p class="section__content_text">Готовое стекло доставим прямо к вам — быстро и надёжно!</p>
-                            <a class="services__button">
-                                <span>Подробнее</span>
-                                <i class="bi bi-arrow-right"></i>
+                            <a class="button text-button">
+                                <div class="button__content">
+                                    <span>Подробнее</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
                             </a>
                         </div>
                         <div class="services__right">
                             <i class="bi bi-aspect-ratio"></i>
                             <h2>Резка стекла</h2>
                             <p class="section__content_text">Нарежем стекло под ваш размер и аккуратно упакуем</p>
-                            <a class="services__button">
-                                <span>Подробнее</span>
-                                <i class="bi bi-arrow-right"></i>
+                            <a class="button text-button">
+                                <div class="button__content">
+                                    <span>Подробнее</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
 
+            <!--About us Section-->
+            <section class="about__ass section">
+                <div class="page-width">
+                    <h2 class="section__title">Немного о нас</h2>
+                    <div class="about__content section__content">
+                        <div class="about__left section__left">
+                            <div class="content__wrapper">
+                                <h1 class="section__content_title"> Ваш идеальный партнёр в мире стекла!</h1>
+                                <p class="section__content_text">
+                                    <span><span style="color:var(--deep-blue); font-weight:600">ООО «Витрум»</span> — надёжный поставщик стекла и стекольной продукции в г. Барнаул и регионе.
+                                    Мы предлагаем широкий ассортимент качественных материалов и профессиональное обслуживание для частных и корпоративных клиентов.<br>
+                                    </span>
+                                    <span>Наша компания работает на рынке давно и зарекомендовала себя как ответственный и стабильный партнёр.
+                                    Мы постоянно расширяем ассортимент и внедряем современные технологии, чтобы удовлетворять запросы самых требовательных клиентов.
+                                    </span>
+                                    <span>Наши специалисты готовы проконсультировать по выбору продукции и помочь с оформлением заказов любой сложности.<br>
+                                    Мы стремимся создавать долгосрочные отношения с клиентами, предлагая выгодные условия и высокое качество продукции.
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="button__group">
+                                <button class="button button-sm">
+                                    <div class="button__content">
+                                        <span>Подробнее</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="about__right section__right">
+                            <img class="about__img" src="image/" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--About us card Section-->
+            <section class="testimonials__section section section-white">
+                <div class="page-width">
+                    <h2 class="section__title">Почему выбирают нас</h2>
+                    <div class="testimonials__content">
+                        <!--About-card-start-->
+                        <div class="about__card">
+                            <div class="about__card-icon">
+                                <i class="bi bi-aspect-ratio"></i>
+                            </div>
+                            <div class="content__wrapper">
+                                <h3 class="section__content_title">Наличие товара</h3>
+                                <p class="section__content_text">
+                                    Подходящее стекло есть всегда! <br>
+                                </p>
+                            </div>
+                        </div>
+                        <!--About-card-end-->
+
+                        <!--About-card-start-->
+                        <div class="about__card">
+                            <div class="about__card-icon">
+                                <i class="bi bi-clipboard-data-fill"></i>
+                            </div>
+                            <div class="content__wrapper">
+                                <h3 class="section__content_title">Стабильность</h3>
+                                <p class="section__content_text">
+                                    Наша надежность подтверждена
+                                    рекомендациями ведущих
+                                    компаний.
+                                </p>
+                            </div>
+                        </div>
+                        <!--About-card-end-->
+
+                        <!--About-card-start-->
+                        <div class="about__card">
+                            <div class="about__card-icon">
+                                <i class="bi bi-person-badge"></i>
+                            </div>
+                            <div class="content__wrapper">
+                                <h3 class="section__content_title">Профессионализм</h3>
+                                <p class="section__content_text">
+                                    Анализируем потребности
+                                    и усовершенствуем услуги.
+                                </p>
+                            </div>
+                        </div>
+                        <!--About-card-end-->
+
+                        <!--About-card-start-->
+                        <div class="about__card">
+                            <div class="about__card-icon">
+                                <i class="bi bi-award"></i>
+                            </div>
+                            <div class="content__wrapper">
+                                <h3 class="section__content_title">Качество</h3>
+                                <p class="section__content_text">
+                                    У нас многоэтапный контроль
+                                    качества продукции
+                                </p>
+                            </div>
+                        </div>
+                        <!--About-card-end-->
+
+                        <!--About-card-start-->
+                        <div class="about__card">
+                            <div class="about__card-icon">
+                                <i class="bi bi-truck-flatbed"></i>
+                            </div>
+                            <div class="content__wrapper">
+                                <h3 class="section__content_title">Быстрая доставка</h3>
+                                <p class="section__content_text">
+                                    Быстрая и аккуратная доставка собственным транспортом 24/7.
+                                </p>
+                            </div>
+                        </div>
+                        <!--About-card-end-->
+
+                        <!--About-card-start-->
+                        <div class="about__card">
+                            <div class="about__card-icon">
+                                <i class="bi bi-arrow-repeat "></i>
+                            </div>
+                            <div class="content__wrapper">
+                                <h3 class="section__content_title">Оперативность</h3>
+                                <p class="section__content_text">
+                                    Оперативный подход, и грамотно выстроенная логистика.
+                                </p>
+                            </div>
+                        </div>
+                        <!--About-card-end-->
+
+                    </div>
+                </div>
+            </section>
+        </main>
         <footer class="footer">
             <div class="page-width">
                 <div class="footer__content">
