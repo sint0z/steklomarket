@@ -293,6 +293,14 @@ body {
     letter-spacing: 1px;
     line-height: 1;
 }
+
+@media(max-width: 1024px) {
+    .section__content{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+}
 /*----------------------------------------
             Header Section
 ---------------------------------------*/
@@ -618,7 +626,6 @@ main{
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
 }
-
 /*----------------------------------------
           Best Product Section
 ---------------------------------------*/
@@ -812,6 +819,8 @@ main{
     flex-direction: column;
     gap: 10px;
 }
+
+
 
 /*----------------------------------------
             About Section
@@ -1031,4 +1040,21 @@ main{
     }
 
     .footer__main .footer__copyright{ align-self: normal; }
+}
+
+
+@media (max-width: 1024px) {
+    .services__content{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: start;
+    }
+
+    .hero__content{
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
 }
