@@ -15,7 +15,35 @@
 </head>
 <body>
 
-    <div class="wrapper">
+
+<div class="wrapper">
+
+        <!-- Modal window -->
+        <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal__content">
+                <button class="modal__close" id="modalCloseBtn" aria-label="Закрыть модальное окно">&times;</button>
+                <div class="modal__body">
+                    <p>Хотите купить?</p>
+                    <p>Позвоните или напишите нам:</p>
+                    <div class="modal__phone-contact">
+
+                        <div class="content__item">
+                            <i class="bi bi-whatsapp"></i>
+                            <span class="days" data-number="+7-923-003-22-00">+7-923-003-22-00</span>
+                        </div>
+                        <div class="content__item">
+                            <i class="bi bi-phone-fill"></i>
+                            <span class="days" data-number="+7-923-003-77-00">+7-923-003-77-00</span>
+                        </div>
+                        <div class="content__item">
+                            <i class="bi bi bi-envelope-at-fill"></i>
+                            <span>sale@steklomarket.ru</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header class="header">
 
             <div class="header-container">
@@ -140,7 +168,7 @@
                                 </p>
                             </div>
                             <div class="button__group">
-                                <button class="button" id="button_order">
+                                <button class="button" id="button_order" onclick="openModal()">
                                     <div class="button__content">
                                         <i class="bi bi-cart-plus-fill"></i>
                                         <span>Заказать</span>
@@ -163,7 +191,7 @@
             </section>
 
             <!-- Partners section -->
-            <section class="partners__section section section-white"S>
+            <section class="partners__section section section-white">
                 <div class="page-width">
                     <h2 class="section__title">Партнеры</h2>
                     <div class="partners__content content__wrapper">

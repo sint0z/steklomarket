@@ -72,3 +72,38 @@ function scrollToSection(button_selector, section_selector, redirect_page) {
 
 
 scrollToSection(".btn-map", ".map__section", "index.html")
+
+
+const modal = document.getElementById('modal');
+const closeModalBtn = document.getElementById('modalCloseBtn');
+
+
+function openModal() {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+
+function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+
+closeModalBtn.addEventListener('click', closeModal);
+
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+    }
+});
