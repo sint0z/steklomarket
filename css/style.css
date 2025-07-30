@@ -48,8 +48,12 @@
     --base-white-color: #F0F0F0;
     --stroke-color: #DDE1E6;
     --support-background-color: #F2F4F8;
-    --default-content-padding: 40px;
     --deep-blue: #142E49;
+}
+
+:root{
+    --default-content-padding: 40px;
+    --default-gap: 12px;
 }
 
 *,
@@ -173,12 +177,21 @@ body {
 
 .button__mobile__menu{
     display: block;
-    width: 48px;
+    width: 42px;
     height: 48px;
     background-color: #FFFFFF;
     border: 1px solid var(--support-color);
     color: var(--contrast-color);
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
+
+.button__mobile__menu:focus,
+.button__mobile__menu:active {
+    border: 1px solid var(--support-color);
+    outline: none;
+}
+
 
 @media(min-width: 1024px){
    .header .button__mobile__menu{
@@ -237,7 +250,6 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
-
     grid-column: 1/ span 3;
     grid-row: 1/span 2;
     gap: 20px;
@@ -302,6 +314,22 @@ body {
         flex-direction: column-reverse;
         gap: 30px;
     }
+}
+
+.partners__content.content__wrapper{
+    gap: 5px;
+    font-size: 22px;
+}
+.partners__content .section__content_text{
+    text-indent: 20px;
+    hyphens: auto;
+    text-align: justify;
+}
+.partners__content .content__item{
+    gap: var(--default-gap);
+    color: var(--contrast-color);
+    font-weight: bold;
+    text-indent: 20px;
 }
 /*----------------------------------------
             Header Section
@@ -502,14 +530,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
+    gap: var(--default-gap);
     margin-bottom: 24px;
 }
 
 .sidebar__nav>.content__item{
     color: var(--contrast-color);
     gap:10px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .sidebar.active {right: 0;}
@@ -819,14 +847,16 @@ main{
 .services__center, .services__right{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--default-gap);
 }
-
-
 
 /*----------------------------------------
             About Section
 ---------------------------------------*/
+.about__content .section__content_text{
+    hyphens: auto;
+    text-align: justify;
+}
 .about__left .section__content_text>span{
     display: block;
     text-indent: 20px;
@@ -840,7 +870,11 @@ main{
 .about__right{
     width: 100%;
     overflow: hidden;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
+
 .about__right img{
     width: 100%;
     height: 100%;
@@ -866,12 +900,12 @@ main{
     background-color: var(--background-color);
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: var(--default-gap);
     align-items: center;
 }
 
 .about__card .content__wrapper{
-    gap: 10px;
+    gap: var(--default-gap);
     width:60%;
 
 }
@@ -963,7 +997,7 @@ main{
 .footer__navbar nav{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--default-gap);
     font-family: var(--default-font), sans-serif;
     color: var(--base-white-color);
     letter-spacing: 1px;
@@ -997,7 +1031,7 @@ main{
     font-size: 22px;
     color: var(--base-white-color);
     font-weight: 300;
-    gap: 10px
+    gap: var(--default-gap);
 }
 
 .footer__phone-contact p{
@@ -1049,14 +1083,21 @@ main{
     .services__content{
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 24px;
         align-items: start;
     }
+}
 
+@media (max-width: 700px) {
     .hero__content{
         display:flex;
         flex-direction: column;
         gap: 10px;
     }
 
+    .hero__content .hero__left,
+    .hero__content .hero__right{
+        height: auto;
+
+    }
 }
