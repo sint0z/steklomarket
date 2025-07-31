@@ -6,6 +6,48 @@ const icon_button = menu_button.querySelector("i");
 const map_button = document.querySelector('#map-button');
 const headerHeight = header.offsetHeight;
 
+const preloader = document.getElementById('preloader');
+const progressBar = document.getElementById('progress-bar');
+const loadingText = document.getElementById('loading-text');
+const content = document.getElementById('content');
+
+let progress = 0;
+let intervalId = null;
+
+
+function startLoading() {
+    intervalId = setInterval(() => {
+        if (progress < 90) {
+            progress += Math.floor(Math.random() * 3) + 1; // прибавляем 1-3%
+            if (progress > 90) progress = 90;
+            progressBar.style.width = progress + '%';
+            loadingText.textContent =  progress + '%';
+        }
+    }, 100);
+}
+
+
+function hidePreloader() {
+    setTimeout(() => {
+        preloader.style.opacity = '0';
+        preloader.style.pointerEvents = 'none';
+        preloader.style.display = 'none';
+        content.classList.add('visible');
+    }, 500);
+}
+
+
+startLoading();
+
+window.addEventListener('load', () => {
+    clearInterval(intervalId);
+    progress = 100;
+    progressBar.style.width = '100%';
+    loadingText.textContent = '100%';
+
+    setTimeout(hidePreloader, 300);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('main').style.paddingTop = headerHeight + 'px';
     sidebar.style.top = headerHeight + 'px';

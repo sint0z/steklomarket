@@ -49,6 +49,9 @@
     --stroke-color: #DDE1E6;
     --support-background-color: #F2F4F8;
     --deep-blue: #142E49;
+
+    --color-heading: #9B0000;
+    --color-subheading: #486284;
 }
 
 :root{
@@ -83,7 +86,6 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--accent-color);
     font-family: var(--default-font), sans-serif;
     margin: 0;
 }
@@ -865,6 +867,7 @@ main{
 
 .about__content{
     padding-bottom: 12px;
+    column-gap: 60px;
 }
 
 .about__right{
@@ -1165,4 +1168,70 @@ main{
     font-family: var(--default-font), sans-serif;
     letter-spacing: 1px;
     line-height: 1;
+}
+
+#preloader{
+    position:fixed;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.progress-bar-container {
+    width: 80%;
+    max-width: 400px;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+#preloader div:first-child{
+    color: var(--accent-color);
+    font-weight: bold;
+    font-family: var(--default-font), sans-serif;
+    font-size: 20px;
+}
+
+.progress-bar{
+    height: 100vh;
+    width: 0;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+#preloader.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#loading-text {
+    font-family: var(--default-font), sans-serif;
+    font-size: 18px;
+    color: var(--accent-color);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+
+#content.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
