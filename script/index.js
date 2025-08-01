@@ -79,6 +79,7 @@ window.addEventListener('load', () => {
 });
 
 
+
 menu_button.addEventListener('click', e => {
     let isActive = e.target.classList.toggle('active');
     sidebar.classList.toggle('active');
