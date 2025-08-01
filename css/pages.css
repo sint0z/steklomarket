@@ -67,7 +67,6 @@
 
 .contact__content{
     padding-top: 20px;
-    padding-bottom: 20px;
     display: grid;
     width: 100%;
     height: auto;
@@ -114,11 +113,10 @@
         gap:26px;
     }
 
-    .contact__content.content__item:nth-child(1),
-    .contact__content.content__item:nth-child(2),
-    .contact__content.content__item:nth-child(3) {
+    .contact__content .content__item:nth-child(1),
+    .contact__content .content__item:nth-child(2),
+    .contact__content .content__item:nth-child(3) {
         justify-self:start;
-
     }
 }
 
