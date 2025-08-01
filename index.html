@@ -14,16 +14,8 @@
 
 </head>
 <body>
-<div id="preloader">
-    <div>Подождите контент загружается...</div>
-    <div class="progress-bar-container">
-        <div class="progress-bar" id="progress-bar"></div>
-    </div>
-    <div id="loading-text">0%</div>
-</div>
 
 <div class="wrapper" id="content">
-
         <!-- Modal window -->
         <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <div class="modal__content">
@@ -78,7 +70,7 @@
                     <div class="page-width">
                         <div class="header__content">
                             <!-- logo -->
-                            <a class="header__left" href="index.html">
+                            <a class="header__left" href="index.html" data-page="main">
                                 <img src="image/logo.png" alt="">
                                 <div class="logo-text">
                                     <span class="logo-text-top">STEKLO</span>
@@ -88,10 +80,10 @@
                             <!-- header-nav-bar -->
                             <div class="header__center">
                                 <nav>
-                                    <a href="test.html">О компании</a>
-                                    <a href="#">Продукция</a>
-                                    <a href="#">Контакты</a>
-                                    <a href="#">Наши проекты</a>
+                                    <a href="page/about.html" data-page="about">О компании</a>
+                                    <a href="page/production.html" data-page="production">Продукция</a>
+                                    <a href="page/contact.html" data-page="contact">Контакты</a>
+                                    <a href="page/project.html" data-page="projects">Наши проекты</a>
                                 </nav>
                             </div>
 
@@ -99,7 +91,7 @@
                             <div class="header__right">
                                 <div class="button__group">
                                     <!-- contact button -->
-                                    <button class="button btn-map" id="map-button">
+                                    <button class="button btn-primary btn-map" id="map-button">
                                         <div class="button__content">
                                             <i class="bi bi-map-fill"></i>
                                             <span>Как к нам добраться?</span>
@@ -137,7 +129,7 @@
                     </div>
                     <div class="content__item">
                         <i class="bi bi-pin-map-fill"></i>
-                        <span> <a href="#">Контакты</a></span>
+                        <span> <a href="page/contact.html">Контакты</a></span>
                     </div>
                     <div class="content__item">
                         <i class="bi bi-shop"></i>
@@ -146,7 +138,7 @@
                 </nav>
                 <div class="button__group">
                     <!-- contact button in sidebar -->
-                    <button class="button btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
+                    <button class="button btn-primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
                         <div class="button__content">
                             <i class="bi bi-map-fill"></i>
                             <span>Как к нам добраться?</span>
@@ -174,13 +166,13 @@
                                 </p>
                             </div>
                             <div class="button__group">
-                                <button class="button" id="button_order" onclick="openModal()">
+                                <button class="button btn-primary" id="button_order" onclick="openModal()">
                                     <div class="button__content">
                                         <i class="bi bi-cart-plus-fill"></i>
                                         <span>Заказать</span>
                                     </div>
                                 </button>
-                                <button class="button" id="button_about">
+                                <button class="button btn-secondary" id="button_about">
                                     <div class="button__content">
                                         <span>Подробнее</span>
                                         <i class="bi bi-arrow-right"></i>
@@ -246,7 +238,7 @@
                                         <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
                                     </div>
                                     <div class="button__group">
-                                        <button class="button">
+                                        <button class="button btn-primary" onclick="openModal()">
                                             <div class="button__content">
                                                 <span>Заказать</span>
                                             </div>
@@ -268,7 +260,7 @@
                                         <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
                                     </div>
                                     <div class="button__group">
-                                        <button class="button">
+                                        <button class="button btn-primary" onclick="openModal()">
                                             <div class="button__content">
                                                 <span>Заказать</span>
                                             </div>
@@ -290,7 +282,7 @@
                                         <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
                                     </div>
                                     <div class="button__group">
-                                        <button class="button">
+                                        <button class="button btn-primary" onclick="openModal()">
                                             <div class="button__content">
                                                 <span>Заказать</span>
                                             </div>
@@ -303,7 +295,7 @@
                         </div>
 
                         <div class="button__group">
-                            <button class="button">
+                            <button class="button btn-primary">
                                 <div class="button__content">
                                     <i class="bi bi-cart-fill"></i>
                                     <span>Полный каталог</span>
@@ -373,7 +365,7 @@
                                 </p>
                             </div>
                             <div class="button__group">
-                                <button class="button button-sm">
+                                <button class="button btn-primary button-sm">
                                     <div class="button__content">
                                         <span>Подробнее</span>
                                         <i class="bi bi-arrow-right"></i>
@@ -489,9 +481,11 @@
             <section class="map__section section" style="padding-bottom: 5px">
                 <div class="page-width">
                     <h2 class="section__title">Мы на карте</h2>
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A283196c4c2bbd3428ee0dcb4336102d8a1ec76660f470a553f537418f302228e&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
+                    <div class="map-wrapper">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A283196c4c2bbd3428ee0dcb4336102d8a1ec76660f470a553f537418f302228e&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
+                        <div class="map-overlay"></div>
+                    </div>
                 </div>
-
             </section>
         </main>
 
@@ -515,10 +509,10 @@
                         <!-- nav-bar -->
                         <div class="footer__navbar">
                             <nav>
-                                <a href="#">О компании</a>
-                                <a href="#">Продукция</a>
-                                <a href="#">Контакты</a>
-                                <a href="#">Наши проекты</a>
+                                <a href="page/about.html" data-page="about">О компании</a>
+                                <a href="page/production.html" data-page="production">Продукция</a>
+                                <a href="page/contact.html" data-page="contact">Контакты</a>
+                                <a href="page/project.html" data-page="projects">Наши проекты</a>
                             </nav>
                         </div>
 
@@ -558,7 +552,10 @@
                         </div>
 
                         <!-- Organization copyright-->
-                        <p class="footer__copyright">© 2025 <span>ООО «Витрум».</span> Все права защищены.</p>
+                        <p class="footer__copyright">
+                            © 2025 <span>SHZE TEAM — союз независимых разработчиков </span> - права на программный код и дизайн сайта принадлежат разработчику. <br>
+                            Вся информация и содержимое сайта принадлежат ООО "Витрум".
+                        </p>
                     </div>
 
                     <!-- Developer contact-->

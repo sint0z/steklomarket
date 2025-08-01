@@ -14,45 +14,70 @@ const content = document.getElementById('content');
 let progress = 0;
 let intervalId = null;
 
+function generatePreloader() {
+    const preloaderElement = document.createElement('div');
+    preloaderElement.id = 'preloader';
 
-function startLoading() {
+    preloaderElement.innerHTML = `<div>Подождите, контент загружается...</div>
+                                        <div class="progress-bar-container">
+                                            <div class="progress-bar" id="progress-bar"></div>
+                                        </div>
+                                    <div id="loading-text">0%</div>`
+
+    document.body.prepend(preloaderElement);
+
+    const progressBar = document.getElementById('progress-bar');
+    const loadingText = document.getElementById('loading-text');
+
+    startLoading(progressBar, loadingText, preloaderElement);
+}
+
+function startLoading(progressBar, loadingText, preloader) {
     intervalId = setInterval(() => {
         if (progress < 90) {
-            progress += Math.floor(Math.random() * 3) + 1; // прибавляем 1-3%
+            progress += Math.floor(Math.random() * 3) + 1;
             if (progress > 90) progress = 90;
             progressBar.style.width = progress + '%';
-            loadingText.textContent =  progress + '%';
+            loadingText.textContent = progress + '%';
         }
     }, 100);
 }
 
 
-function hidePreloader() {
+function hidePreloader(preloader) {
     setTimeout(() => {
+
         preloader.style.opacity = '0';
         preloader.style.pointerEvents = 'none';
-        preloader.style.display = 'none';
-        content.classList.add('visible');
+        preloader.style.transition = 'opacity 0.5s ease';
+
+        setTimeout(() => {
+            preloader.remove();
+
+            const content = document.getElementById('content');
+            if (content) {
+                content.classList.add('visible');
+            }
+        }, 500);
     }, 500);
 }
-
-
-startLoading();
 
 window.addEventListener('load', () => {
     clearInterval(intervalId);
     progress = 100;
-    progressBar.style.width = '100%';
-    loadingText.textContent = '100%';
+    const progressBar = document.getElementById('progress-bar');
+    const loadingText = document.getElementById('loading-text');
+    const preloader = document.getElementById('preloader');
 
-    setTimeout(hidePreloader, 300);
+    if (progressBar && loadingText) {
+        progressBar.style.width = '100%';
+        loadingText.textContent = '100%';
+    }
+    if (preloader) {
+        hidePreloader(preloader);
+    }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('main').style.paddingTop = headerHeight + 'px';
-    sidebar.style.top = headerHeight + 'px';
-    sidebar.style.height = `calc(100vh - ${headerHeight}px)`;
-})
 
 menu_button.addEventListener('click', e => {
     let isActive = e.target.classList.toggle('active');
@@ -149,3 +174,77 @@ window.addEventListener('keydown', (e) => {
         closeModal();
     }
 });
+
+const mapWrapper = document.querySelector(".map-wrapper");
+const iframe = mapWrapper.querySelector('iframe');
+const mapOverlay = document.querySelector(".map-overlay");
+
+mapOverlay.addEventListener('click', () => {
+    iframe.style.pointerEvents = 'auto';
+    mapOverlay.style.display = 'none';
+    mapWrapper.style.cursor = 'default';
+})
+
+
+
+const HIDE_DURATION = 300000; // Time
+
+function closeBanner(btnBanner){
+    const banner = btnBanner.closest('.banner');
+
+    if(banner){
+        banner.remove();
+        localStorage.setItem('bannerClosedAt', Date.now());
+        checkAndShowBanner();
+    }
+
+}
+
+
+function generateBanner(){
+
+    const banner = document.createElement('div');
+    banner.id = 'banner__info';
+    banner.classList.add('banner');
+
+    banner.innerHTML = `<button id="btn__banner-close" onClick="closeBanner(this)" aria-label="Скрыть баннер">&times;</button>
+                        <span id="banner-title"> Dev-версия сайта не для коммерческой реализации</span>
+                        <span id ="banner-text">За информацией обращаться к разработчику:</span>
+                        <a href="https://t.me/sikita_s">
+                              <i class="bi-telegram"></i>
+                              <span>S1ntoz (Стоцкий Никита)</span>
+                        </a>`
+
+
+    document.body.appendChild(banner);
+}
+
+function checkAndShowBanner() {
+    console.log("check")
+    const closedAt = localStorage.getItem('bannerClosedAt');
+    if (closedAt) {
+        const elapsed = Date.now() - closedAt;
+        if (elapsed >= HIDE_DURATION) {
+            generateBanner();
+            localStorage.removeItem('bannerClosedAt');
+        } else {
+
+            setTimeout(() => {
+                generateBanner();
+                localStorage.removeItem('bannerClosedAt');
+            }, HIDE_DURATION - elapsed);
+        }
+    } else {
+        generateBanner();
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('main').style.paddingTop = headerHeight + 'px';
+    sidebar.style.top = headerHeight + 'px';
+    sidebar.style.height = `calc(100vh - ${headerHeight}px)`;
+    setTimeout(generateBanner, 2000);
+})
+
+generatePreloader();
