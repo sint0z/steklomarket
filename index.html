@@ -7,14 +7,41 @@
     <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, стеклянная тара, поставки стекла, строительное стекло, клейкое стекло, барнаул стекло, стекло">
 
     <title>Стекломаркет</title>
-
+    <link rel="icon" href="image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 <body>
 
-    <div class="wrapper">
+<div class="wrapper" id="content">
+        <!-- Modal window -->
+        <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal__content">
+                <button class="modal__close" id="modalCloseBtn" aria-label="Закрыть модальное окно">&times;</button>
+                <div class="modal__body">
+                    <p>Хотите купить?</p>
+                    <p>Позвоните или напишите нам:</p>
+                    <div class="modal__phone-contact">
+
+                        <div class="content__item">
+                            <i class="bi bi-whatsapp"></i>
+                            <span class="days" data-number="+7-923-003-22-00">+7-923-003-22-00</span>
+                        </div>
+                        <div class="content__item">
+                            <i class="bi bi-phone-fill"></i>
+                            <span class="days" data-number="+7-923-003-77-00">+7-923-003-77-00</span>
+                        </div>
+                        <div class="content__item">
+                            <i class="bi bi bi-envelope-at-fill"></i>
+                            <span>sale@steklomarket.ru</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header class="header">
 
             <div class="header-container">
@@ -43,7 +70,7 @@
                     <div class="page-width">
                         <div class="header__content">
                             <!-- logo -->
-                            <a class="header__left" href="index.html">
+                            <a class="header__left" href="index.html" data-page="main">
                                 <img src="image/logo.png" alt="">
                                 <div class="logo-text">
                                     <span class="logo-text-top">STEKLO</span>
@@ -53,10 +80,10 @@
                             <!-- header-nav-bar -->
                             <div class="header__center">
                                 <nav>
-                                    <a href="#">О компании</a>
-                                    <a href="#">Продукция</a>
-                                    <a href="#">Контакты</a>
-                                    <a href="#">Наши проекты</a>
+                                    <a href="page/about.html" data-page="about">О компании</a>
+                                    <a href="page/production.html" data-page="production">Продукция</a>
+                                    <a href="page/contact.html" data-page="contact">Контакты</a>
+                                    <a href="page/project.html" data-page="projects">Наши проекты</a>
                                 </nav>
                             </div>
 
@@ -64,7 +91,7 @@
                             <div class="header__right">
                                 <div class="button__group">
                                     <!-- contact button -->
-                                    <button class="button" id="map-button">
+                                    <button class="button btn-primary btn-map" id="map-button">
                                         <div class="button__content">
                                             <i class="bi bi-map-fill"></i>
                                             <span>Как к нам добраться?</span>
@@ -102,7 +129,7 @@
                     </div>
                     <div class="content__item">
                         <i class="bi bi-pin-map-fill"></i>
-                        <span> <a href="#">Контакты</a></span>
+                        <span> <a href="page/contact.html">Контакты</a></span>
                     </div>
                     <div class="content__item">
                         <i class="bi bi-shop"></i>
@@ -111,7 +138,7 @@
                 </nav>
                 <div class="button__group">
                     <!-- contact button in sidebar -->
-                    <button class="button"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
+                    <button class="button btn-primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
                         <div class="button__content">
                             <i class="bi bi-map-fill"></i>
                             <span>Как к нам добраться?</span>
@@ -139,13 +166,13 @@
                                 </p>
                             </div>
                             <div class="button__group">
-                                <button class="button" id="button_order">
+                                <button class="button btn-primary" id="button_order" onclick="openModal()">
                                     <div class="button__content">
                                         <i class="bi bi-cart-plus-fill"></i>
                                         <span>Заказать</span>
                                     </div>
                                 </button>
-                                <button class="button" id="button_about">
+                                <button class="button btn-secondary" id="button_about">
                                     <div class="button__content">
                                         <span>Подробнее</span>
                                         <i class="bi bi-arrow-right"></i>
@@ -161,12 +188,31 @@
                 </div>
             </section>
 
-            <!--TODO - To approve the presence of a block with partners on the website, and, if agreed, to develop it -->
-            <!--The section is under approval -->
-            <section class="partners__section" style=" width: 100%; height: 180px; background-color: transparent; border-bottom: 1px solid var(--stroke-color);">
+            <!-- Partners section -->
+            <section class="partners__section section section-white">
                 <div class="page-width">
-                    <div class="partners__content">
+                    <h2 class="section__title">Партнеры</h2>
+                    <div class="partners__content content__wrapper">
+                        <p class="section__content_text">
+                            Наши партнёры — признанные лидеры стекольной отрасли, с которыми нас связывает многолетнее успешное сотрудничество.<br>
+                            Именно благодаря тесным партнёрским отношениям мы гарантируем стабильные поставки высококачественного стекла и современной стекольной продукции.
+                        </p>
+                        <div class="content__item">
+                            <i class="bi  bi-arrow-bar-right"></i>
+                            <span>Salavat Steklo</span>
+                        </div>
+                        <div class="content__item">
+                            <i class="bi  bi-arrow-bar-right"></i>
+                            <span>Interglass</span>
+                        </div>
+                        <div class="content__item">
+                            <i class="bi bi-arrow-bar-right"></i>
+                            <span>Larta Glass</span>
+                        </div>
 
+                        <p class="section__content_text">
+                            Их опыт, надёжность и инновационный подход позволяют нам обеспечивать клиентов продукцией, соответствующей самым высоким стандартам рынка.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -192,7 +238,7 @@
                                         <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
                                     </div>
                                     <div class="button__group">
-                                        <button class="button">
+                                        <button class="button btn-primary" onclick="openModal()">
                                             <div class="button__content">
                                                 <span>Заказать</span>
                                             </div>
@@ -214,7 +260,7 @@
                                         <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
                                     </div>
                                     <div class="button__group">
-                                        <button class="button">
+                                        <button class="button btn-primary" onclick="openModal()">
                                             <div class="button__content">
                                                 <span>Заказать</span>
                                             </div>
@@ -236,7 +282,7 @@
                                         <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
                                     </div>
                                     <div class="button__group">
-                                        <button class="button">
+                                        <button class="button btn-primary" onclick="openModal()">
                                             <div class="button__content">
                                                 <span>Заказать</span>
                                             </div>
@@ -249,7 +295,7 @@
                         </div>
 
                         <div class="button__group">
-                            <button class="button">
+                            <button class="button btn-primary">
                                 <div class="button__content">
                                     <i class="bi bi-cart-fill"></i>
                                     <span>Полный каталог</span>
@@ -310,13 +356,16 @@
                                     <span>Наша компания работает на рынке давно и зарекомендовала себя как ответственный и стабильный партнёр.
                                     Мы постоянно расширяем ассортимент и внедряем современные технологии, чтобы удовлетворять запросы самых требовательных клиентов.
                                     </span>
-                                    <span>Наши специалисты готовы проконсультировать по выбору продукции и помочь с оформлением заказов любой сложности.<br>
-                                    Мы стремимся создавать долгосрочные отношения с клиентами, предлагая выгодные условия и высокое качество продукции.
+                                    <span>Наши специалисты готовы проконсультировать по выбору продукции и помочь с оформлением заказов любой сложности.
+
+                                    </span>
+                                    <span>
+                                        Мы стремимся создавать долгосрочные отношения с клиентами, предлагая выгодные условия и высокое качество продукции.
                                     </span>
                                 </p>
                             </div>
                             <div class="button__group">
-                                <button class="button button-sm">
+                                <button class="button btn-primary button-sm">
                                     <div class="button__content">
                                         <span>Подробнее</span>
                                         <i class="bi bi-arrow-right"></i>
@@ -325,7 +374,7 @@
                             </div>
                         </div>
                         <div class="about__right section__right">
-                            <img class="about__img" src="image/" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'">
+                            <img class="about__img" src="image/about-photo.png" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'">
                         </div>
                     </div>
                 </div>
@@ -427,7 +476,20 @@
                     </div>
                 </div>
             </section>
+
+            <!--Map Section-->
+            <section class="map__section section" style="padding-bottom: 5px">
+                <div class="page-width">
+                    <h2 class="section__title">Мы на карте</h2>
+                    <div class="map-wrapper">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A283196c4c2bbd3428ee0dcb4336102d8a1ec76660f470a553f537418f302228e&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
+                        <div class="map-overlay"></div>
+                    </div>
+                </div>
+            </section>
         </main>
+
+
         <footer class="footer">
             <div class="page-width">
                 <div class="footer__content">
@@ -447,17 +509,17 @@
                         <!-- nav-bar -->
                         <div class="footer__navbar">
                             <nav>
-                                <a href="#">О компании</a>
-                                <a href="#">Продукция</a>
-                                <a href="#">Контакты</a>
-                                <a href="#">Наши проекты</a>
+                                <a href="page/about.html" data-page="about">О компании</a>
+                                <a href="page/production.html" data-page="production">Продукция</a>
+                                <a href="page/contact.html" data-page="contact">Контакты</a>
+                                <a href="page/project.html" data-page="projects">Наши проекты</a>
                             </nav>
                         </div>
 
                         <!-- Information about the organization-->
                         <div class="footer__contact">
                             <div class="content__item">
-                                <i class="bi bi-passport-fill"></i>
+                                <i class="bi bi-credit-card-2-front"></i>
                                 <div class="content__item__content">
                                     <span>ООО “Витрум”</span>
                                     <span>ИНН: 2222829160</span>
@@ -490,7 +552,10 @@
                         </div>
 
                         <!-- Organization copyright-->
-                        <p class="footer__copyright">© 2025 <span>ООО «Витрум».</span> Все права защищены.</p>
+                        <p class="footer__copyright">
+                            © 2025 <span>SHZE TEAM — союз независимых разработчиков </span> - права на программный код и дизайн сайта принадлежат разработчику. <br>
+                            Вся информация и содержимое сайта принадлежат ООО "Витрум".
+                        </p>
                     </div>
 
                     <!-- Developer contact-->
