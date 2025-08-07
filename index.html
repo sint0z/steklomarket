@@ -79,11 +79,20 @@
                             </a>
                             <!-- header-nav-bar -->
                             <div class="header__center">
-                                <nav>
-                                    <a href="page/about.html" data-page="about">О компании</a>
-                                    <a href="page/production.html" data-page="production">Продукция</a>
-                                    <a href="page/contact.html" data-page="contact">Контакты</a>
-                                    <a href="page/project.html" data-page="projects">Наши проекты</a>
+                                <nav class="header__nav">
+                                    <a href="page/about.html" class="nav-item" data-page="about">О компании</a>
+                                    <div class="nav-item dropdown">
+                                        <div class="dropdown-toggle"  data-page="production">
+                                            <span>Продукция</span>
+                                            <i class="bi bi-caret-down-fill"></i>
+                                        </div>
+                                        <nav class="sub-nav">
+                                            <a href=""><i class="bi bi-arrow-right-short"></i>Каталог</a>
+                                            <a href=""><i class="bi bi-arrow-right-short"></i>Услуги</a>
+                                        </nav>
+                                    </div>
+                                    <a href="page/contact.html"  class="nav-item" data-page="contact">Контакты</a>
+                                    <a href="page/project.html" class="nav-item" data-page="projects">Наши проекты</a>
                                 </nav>
                             </div>
 
@@ -198,14 +207,22 @@
                             Именно благодаря тесным партнёрским отношениям мы гарантируем стабильные поставки высококачественного стекла и современной стекольной продукции.
                         </p>
                         <div class="content__item">
-                            <i class="bi  bi-arrow-bar-right"></i>
+                            <i class="bi bi-1-square"></i>
+                            <i class="bi bi-arrow-bar-right"></i>
                             <span>Salavat Steklo</span>
                         </div>
                         <div class="content__item">
-                            <i class="bi  bi-arrow-bar-right"></i>
+                            <i class="bi bi-2-square"></i>
+                            <i class="bi bi-arrow-bar-right"></i>
                             <span>Interglass</span>
                         </div>
                         <div class="content__item">
+                            <i class="bi bi-3-square"></i>
+                            <i class="bi bi-arrow-bar-right"></i>
+                            <span>Orda Glass</span>
+                        </div>
+                        <div class="content__item">
+                            <i class="bi bi-4-square"></i>
                             <i class="bi bi-arrow-bar-right"></i>
                             <span>Larta Glass</span>
                         </div>

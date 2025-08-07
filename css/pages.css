@@ -29,6 +29,10 @@
     justify-content: space-between;
     gap: 40px;
 }
+
+/*---------------------------------------
+            Page Contact
+-------------------------------------- */
 .section__contact-office .section__left,
 .section__contact-office .section__right,
 .section__contact-warehouse .section__left,
@@ -139,3 +143,313 @@
     }
 }
 
+/*---------------------------------------
+            Page Production
+-------------------------------------- */
+
+.price__list{
+    display: grid;
+    grid-template-areas: "tabs data data data"
+                         "tabs data data data";
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.price__category{
+    grid-area: tabs;
+    height: 100%;
+    width: 260px;
+    position: relative;
+
+}
+
+.price__data{
+    grid-area: data;
+    width: 100%;
+    height: auto;
+
+}
+
+.price__category .button__group{
+    margin-top: 22px;
+    flex-direction: column;
+    align-items: start;
+}
+
+.tab-wrapper {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tab-button {
+    width: 230px;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 1px solid var(--contrast-color);
+    background-color: var(--stroke-color);
+    color: var(--contrast-color);
+    font-size: 18px;
+    font-family: var(--default-font), sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.triangle {
+    width: 30px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-radius: 0 8px 8px 0;
+    clip-path: polygon(25% 0%, 100% 50%, 25% 100%, 0% 100%, 0% 0%);
+    transform: translateX(2px);
+}
+
+
+.tab-button .button__content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.tab-button .button__content i {
+    margin-left: 0;
+    margin-right: 15%
+}
+
+
+.tab-button .button__content {
+    width: auto;
+    justify-content: flex-start;
+    font-family:  var(--default-font), sans-serif;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    font-family:  var(--default-font), sans-serif;
+    font-size: 16px;
+    color: var(--stroke-color);
+    background-color: var(--support-background-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+
+.table thead th {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 700;
+    border-bottom: 3px solid darkred;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+.table thead th:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    right: 0;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.table tbody {
+    max-height: 540px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding:17px 4px;
+}
+
+.table thead,
+.table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.description-glass {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    color: var(--contrast-color);
+    text-align: justify;
+    margin-top:0;
+    padding: 4px 4px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    box-shadow: 1px 4px 10px rgba(0,0,0,0.08);
+    backdrop-filter: blur(6px);
+}
+
+.table tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #ffe6e6;
+}
+
+.table tbody th,
+.table tbody td {
+    padding: 12px 15px;
+    border-top: 1px solid transparent;
+    position: relative;
+}
+
+.table tbody th:not(:last-child)::after,
+.table tbody td:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: 0;
+    width: 1px;
+    height: 70%;
+    background-color: #ddd;
+}
+
+.table tbody th {
+    font-weight: 600;
+    color: var(--contrast-color);
+}
+
+.table tbody td:last-child {
+    text-align: center;
+}
+
+.table tbody td img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.table tbody th:first-child,
+.table tbody td:first-child {
+    text-align: left;
+}
+
+.table tbody th:not(:first-child),
+.table tbody td:not(:first-child) {
+    text-align: center;
+}
+
+.price__data .section__content_text{
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-indent: 20px;
+    hyphens: auto;
+    text-align: justify;
+}
+
+.price__table-container{
+    width: 100%;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+.price__data-content{
+    padding: 0 4px;
+    display: none;
+    flex-direction: column;
+    gap: var(--default-gap)
+}
+
+.table thead{
+    display: table;
+    background-color: var(--accent-color);
+    padding-right: 17px;
+    border-radius: 8px 8px 0 0 ;
+}
+
+.table thead tr {
+    display: flex;
+    width: 100%;
+}
+
+.table tbody {
+    display: block;
+    max-height: 540px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.table tbody tr {
+    display: flex;
+    width: 100%;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #ffe6e6;
+}
+
+.table thead th,
+.table tbody td,
+.table tbody th {
+    padding: 12px 15px;
+    box-sizing: border-box;
+}
+
+.table thead th:nth-child(1),
+.table tbody td:nth-child(1),
+.table tbody th:nth-child(1) {
+    flex-basis: 35%;
+    text-align: left;
+}
+
+.table thead th:nth-child(2),
+.table tbody td:nth-child(2),
+.table tbody th:nth-child(2) {
+    flex-basis: 25%;
+    text-align: center;
+}
+
+.table thead th:nth-child(3),
+.table tbody td:nth-child(3),
+.table tbody th:nth-child(3) {
+    flex-basis: 82px;
+    text-align: center;
+    white-space: normal;
+}
+
+.table thead th:nth-child(4),
+.table tbody td:nth-child(4),
+.table tbody th:nth-child(4) {
+    flex-basis: 15%;
+    text-align: center;
+}
+
+.table thead th:nth-child(5),
+.table tbody td:nth-child(5),
+.table tbody th:nth-child(5) {
+    flex-basis: 15%;
+    text-align: center;
+}
+
+.tab-button.active{
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--base-white-color);
+}
+
+.price__data-content.show{
+    display: flex;
+}
