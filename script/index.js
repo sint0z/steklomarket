@@ -94,9 +94,7 @@ menu_button.addEventListener('click', e => {
     }
 })
 
-overlay.addEventListener('click', e => {
-    closeSidebar()
-})
+overlay.addEventListener('click',closeSidebar)
 
 
 function closeSidebar() {
@@ -154,16 +152,13 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-
 closeModalBtn.addEventListener('click', closeModal);
-
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         closeModal();
     }
 });
-
 
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
@@ -188,7 +183,7 @@ function enableMapInteraction() {
 }
 
 
-const HIDE_DURATION = 300000; // Time
+const HIDE_DURATION = 300000;
 
 function closeBanner(btnBanner){
     const banner = btnBanner.closest('.banner');
@@ -198,7 +193,6 @@ function closeBanner(btnBanner){
         localStorage.setItem('bannerClosedAt', Date.now());
         checkAndShowBanner();
     }
-
 }
 
 
@@ -265,12 +259,14 @@ function isMobile() {
     return window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('main').style.paddingTop = headerHeight + 'px';
     sidebar.style.top = headerHeight + 'px';
     sidebar.style.height = `calc(100vh - ${headerHeight}px)`;
     enableMapInteraction();
     setTimeout(generateBanner, 2000);
+    activeNav();
 
     const tb = document.getElementById('data-table-body');
 
@@ -360,7 +356,7 @@ const showTab = (buttonTab) => {
 }
 
 
-window.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', () => {
 
     const flList = document.getElementById('following_list');
     const placeholder = flList.parentElement;
@@ -375,12 +371,14 @@ window.addEventListener('scroll', (e) => {
             flList.style.position = 'fixed';
             flList.style.top = (headerHeight + 20) + 'px';
             flList.style.bottom = '';
+            flList.style.width = placeholder.offsetWidth + 'px';
         }
     } else if (scrollY > endPos) {
         if (currentPosition !== 'absolute') {
             flList.style.position = 'absolute';
             flList.style.top = '';
             flList.style.bottom = '0';
+            flList.style.width = '100%';
         }
     } else {
         if (currentPosition !== 'static') {
@@ -389,5 +387,23 @@ window.addEventListener('scroll', (e) => {
             flList.style.bottom = '';
         }
     }
-    console.log(endPos, scrollY, flList.style.position);
+
 });
+
+
+const activeNav = () =>{
+    const body = document.getElementsByTagName('body')[0]
+
+    const targetPage = body.getAttribute('page');
+
+    if(!targetPage){
+        return;
+    }
+
+    document.querySelectorAll(`.nav-item[data-page='${targetPage}']`)
+        .forEach(nav => {
+            if(!nav.classList.contains('active')) {
+                nav.classList.add('active');
+            }
+    })
+}

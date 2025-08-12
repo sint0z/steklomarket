@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Продажа качественного стекла, надежные поставки и профессиональная консультация. Широкий ассортимент стекла для строительных и промышленных целей.">
-    <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, стеклянная тара, поставки стекла, строительное стекло, клейкое стекло, барнаул стекло, стекло">
-
+    <meta name="description" content="Стекломаркет - продажа качественного стекла, надежные поставки и профессиональная консультация. Широкий ассортимент стекла для строительных и промышленных целей.">
+    <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, поставки стекла, строительное стекло, купить стекло, барнаул стекло, стекло">
     <title>Стекломаркет</title>
-    <link rel="icon" href="image/logo.png" type="image/x-icon" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -70,13 +71,15 @@
                     <div class="page-width">
                         <div class="header__content">
                             <!-- logo -->
-                            <a class="header__left" href="index.html" data-page="main">
-                                <img src="image/logo.png" alt="">
-                                <div class="logo-text">
-                                    <span class="logo-text-top">STEKLO</span>
-                                    <span class="logo-text-bottom">MARKET</span>
-                                </div>
-                            </a>
+                            <div class="header__left">
+                                <a class="logo" href="index.html" data-page="main">
+                                    <img src="image/logo.png" alt="">
+                                    <div class="logo-text">
+                                        <span class="logo-text-top">STEKLO</span>
+                                        <span class="logo-text-bottom">MARKET</span>
+                                    </div>
+                                </a>
+                            </div>
                             <!-- header-nav-bar -->
                             <div class="header__center">
                                 <nav class="header__nav">
@@ -87,12 +90,12 @@
                                             <i class="bi bi-caret-down-fill"></i>
                                         </div>
                                         <nav class="sub-nav">
-                                            <a href=""><i class="bi bi-arrow-right-short"></i>Каталог</a>
-                                            <a href=""><i class="bi bi-arrow-right-short"></i>Услуги</a>
+                                            <a href="page/production.html"><i class="bi bi-arrow-right-short"></i>Каталог</a>
+                                            <a href="page/services.html"><i class="bi bi-arrow-right-short"></i>Услуги</a>
                                         </nav>
                                     </div>
                                     <a href="page/contact.html"  class="nav-item" data-page="contact">Контакты</a>
-                                    <a href="page/project.html" class="nav-item" data-page="projects">Наши проекты</a>
+                                    <a href="page/projects.html" class="nav-item" data-page="projects">Наши проекты</a>
                                 </nav>
                             </div>
 
@@ -121,41 +124,45 @@
         </header>
 
         <aside class="sidebar" id="sidebar" aria-hidden="true">
-            <div class="sidebar__content">
-                <!-- sidebar navigation -->
-                <nav class="sidebar__nav">
-                    <div class="content__item">
-                        <i class="bi bi-house-door-fill"></i>
-                        <span><a href="index.html">Главная</a></span>
-                    </div>
-                    <div class="content__item">
-                        <i class="bi bi-info-square-fill"></i>
-                        <span><a href="#">О компании</a></span>
-                    </div>
-                    <div class="content__item">
-                        <i class="bi bi-aspect-ratio"></i>
-                        <span> <a href="#">Продукция</a></span>
-                    </div>
-                    <div class="content__item">
-                        <i class="bi bi-pin-map-fill"></i>
-                        <span> <a href="page/contact.html">Контакты</a></span>
-                    </div>
-                    <div class="content__item">
-                        <i class="bi bi-shop"></i>
-                        <span><a href="#">Наши проекты</a></span>
-                    </div>
-                </nav>
-                <div class="button__group">
-                    <!-- contact button in sidebar -->
-                    <button class="button btn-primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
-                        <div class="button__content">
-                            <i class="bi bi-map-fill"></i>
-                            <span>Как к нам добраться?</span>
-                        </div>
-                    </button>
+        <div class="sidebar__content">
+            <!-- sidebar navigation -->
+            <nav class="sidebar__nav">
+                <div class="content__item nav-item">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span><a href="/">Главная</a></span>
                 </div>
+                <div class="content__item nav-item" data-page="about">
+                    <i class="bi bi-info-square-fill"></i>
+                    <span><a href="/about">О компании</a></span>
+                </div>
+                <div class="content__item nav-item" data-page="production">
+                    <i class="bi bi-aspect-ratio"></i>
+                    <span> <a href="/production">Продукция</a></span>
+                </div>
+                <div class="content__item nav-item" data-page="services">
+                    <i class="bi bi-briefcase-fill"></i>
+                    <span> <a href="/services">Услуги</a></span>
+                </div>
+                <div class="content__item nav-item" data-page="contact">
+                    <i class="bi bi-pin-map-fill"></i>
+                    <span> <a href="/contact">Контакты</a></span>
+                </div>
+                <div class="content__item nav-item" data-page="projects">
+                    <i class="bi bi-shop"></i>
+                    <span><a href="/projects">Наши проекты</a></span>
+                </div>
+            </nav>
+            <div class="button__group">
+                <!-- contact button in sidebar -->
+                <button class="button btn-primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
+                    <div class="button__content">
+                        <i class="bi bi-map-fill"></i>
+                        <span>Как к нам добраться?</span>
+                    </div>
+                </button>
             </div>
-        </aside>
+        </div>
+    </aside>
 
         <div class="overlay"></div>
 
@@ -167,7 +174,7 @@
                         <div class="hero__left">
                             <div class="content__wrapper">
                                 <p class="section__content_title">
-                                    Продажа стекольных<br> изделий в Барнауле
+                                    Оптово-розничная продажа стекла и зеркал <span style="color:var(--contrast-color); font-weight: 900">от листа до вагона</span>
                                 </p>
                                 <p class="section__content_text">
                                     Мы предлагаем широкий ассортимент стекольных изделий: прозрачное стекло, стекло химического травления, зеркала.<br>
@@ -330,29 +337,23 @@
                     <div class="services__content">
                         <div class="services__left">
                             <p class="section__content_title">И порежем и доставим</p>
-                            <p class="section__content_text"> Мы не только порежем стекло по нужным размерам, но и быстро доставим его прямо к вам.
+                            <p class="section__content_text"> Мы не только порежем стекло по нужным размерам, но и быстро доставим его прямо к вам.</p>
+                            <a class="button text-button">
+                                <div class="button__content">
+                                    <span>Подробнее</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                            </a>
                         </div>
-                        <div class="services__center">
+                        <div class="services__center services__info">
                             <i class="bi bi-car-front-fill"></i>
                             <h2>Доставка стекла</h2>
                             <p class="section__content_text">Готовое стекло доставим прямо к вам — быстро и надёжно!</p>
-                            <a class="button text-button">
-                                <div class="button__content">
-                                    <span>Подробнее</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </div>
-                            </a>
                         </div>
-                        <div class="services__right">
+                        <div class="services__right services__info">
                             <i class="bi bi-aspect-ratio"></i>
                             <h2>Резка стекла</h2>
                             <p class="section__content_text">Нарежем стекло под ваш размер и аккуратно упакуем</p>
-                            <a class="button text-button">
-                                <div class="button__content">
-                                    <span>Подробнее</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </div>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -367,7 +368,7 @@
                             <div class="content__wrapper">
                                 <h1 class="section__content_title"> Ваш идеальный партнёр в мире стекла!</h1>
                                 <p class="section__content_text">
-                                    <span><span style="color:var(--deep-blue); font-weight:600">ООО «Витрум»</span> — надёжный поставщик стекла и стекольной продукции в г. Барнаул и регионе.
+                                    <span><span style="color:var(--deep-blue); font-weight:600">ООО «Витрум» (бренд «Стекломаркет»)</span> — надёжный поставщик стекла и стекольной продукции в г. Барнаул и регионе.
                                     Мы предлагаем широкий ассортимент качественных материалов и профессиональное обслуживание для частных и корпоративных клиентов.<br>
                                     </span>
                                     <span>Наша компания работает на рынке давно и зарекомендовала себя как ответственный и стабильный партнёр.
@@ -456,7 +457,7 @@
                                 <h3 class="section__content_title">Качество</h3>
                                 <p class="section__content_text">
                                     У нас многоэтапный контроль
-                                    качества продукции
+                                    качества продукции.
                                 </p>
                             </div>
                         </div>
@@ -470,7 +471,7 @@
                             <div class="content__wrapper">
                                 <h3 class="section__content_title">Быстрая доставка</h3>
                                 <p class="section__content_text">
-                                    Быстрая и аккуратная доставка собственным транспортом 24/7.
+                                    Быстрая и аккуратная доставка собственным транспортом.
                                 </p>
                             </div>
                         </div>
@@ -513,8 +514,8 @@
                     <div class="footer__main">
 
                         <!-- logo -->
-                        <div class="header__left">
-                            <a class="header__left" href="index.html">
+                        <div class="footer__left">
+                            <a class="logo" href="index.html">
                                 <img src="image/logo.png" alt="">
                                 <div class="logo-text">
                                     <span class="logo-text-top">STEKLO</span>
@@ -559,12 +560,19 @@
                         <div class="footer__phone-contact">
                             <p>Позвонить нам:</p>
                             <div class="content__item">
+                                <div class="signature__icon">
+                                    <i class="bi bi-printer-fill"></i>
+                                    <small>Факс</small>
+                                </div>
+                                <span>+7-(385)-250-18-54</span>
+                            </div>
+                            <div class="content__item">
                                 <i class="bi bi-whatsapp"></i>
-                                <span class="days">+7-923-003-22-00</span>
+                                <span class="days">+7-(923)-003-22-00</span>
                             </div>
                             <div class="content__item">
                                 <i class="bi bi-phone-fill"></i>
-                                <span class="days">+7-923-003-77-00</span>
+                                <span class="days">+7-(923)-003-77-00</span>
                             </div>
                         </div>
 
