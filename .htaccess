@@ -1,0 +1,13 @@
+DirectoryIndex index.php index.html
+
+RewriteEngine on
+
+RewriteRule ^$ /index.html [L]
+
+RewriteCond %{THE_REQUEST} \s/page/([^/.]+)\.html [NC]
+RewriteRule ^page/([^/.]+)\.html$ /$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/.]+)$ /page/$1.html [L]
+

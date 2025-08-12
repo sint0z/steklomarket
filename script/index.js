@@ -7,10 +7,6 @@ const map_button = document.querySelector('#map-button');
 const headerHeight = header.offsetHeight;
 
 const preloader = document.getElementById('preloader');
-const progressBar = document.getElementById('progress-bar');
-const loadingText = document.getElementById('loading-text');
-const content = document.getElementById('content');
-
 let progress = 0;
 let intervalId = null;
 
@@ -79,7 +75,6 @@ window.addEventListener('load', () => {
 });
 
 
-
 menu_button.addEventListener('click', e => {
     let isActive = e.target.classList.toggle('active');
     sidebar.classList.toggle('active');
@@ -99,9 +94,7 @@ menu_button.addEventListener('click', e => {
     }
 })
 
-overlay.addEventListener('click', e => {
-    closeSidebar()
-})
+overlay.addEventListener('click',closeSidebar)
 
 
 function closeSidebar() {
@@ -139,7 +132,7 @@ function scrollToSection(button_selector, section_selector, redirect_page) {
 }
 
 
-scrollToSection(".btn-map", ".map__section", "index.html")
+scrollToSection(".btn-map", ".map__section", "contact.html")
 
 
 const modal = document.getElementById('modal');
@@ -159,9 +152,7 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-
 closeModalBtn.addEventListener('click', closeModal);
-
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
@@ -169,26 +160,30 @@ modal.addEventListener('click', (e) => {
     }
 });
 
-
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
         closeModal();
     }
 });
 
-const mapWrapper = document.querySelector(".map-wrapper");
-const iframe = mapWrapper.querySelector('iframe');
-const mapOverlay = document.querySelector(".map-overlay");
+function enableMapInteraction() {
+    const mapWrapper = document.querySelector('.map-wrapper');
+    if (!mapWrapper) return;
 
-mapOverlay.addEventListener('click', () => {
-    iframe.style.pointerEvents = 'auto';
-    mapOverlay.style.display = 'none';
-    mapWrapper.style.cursor = 'default';
-})
+    const iframe = mapWrapper.querySelector('iframe');
+    const mapOverlay = document.querySelector('.map-overlay');
+
+    if (!iframe || !mapOverlay) return;
+
+    mapOverlay.addEventListener('click', () => {
+        iframe.style.pointerEvents = 'auto';
+        mapOverlay.style.display = 'none';
+        mapWrapper.style.cursor = 'default';
+    });
+}
 
 
-
-const HIDE_DURATION = 300000; // Time
+const HIDE_DURATION = 300000;
 
 function closeBanner(btnBanner){
     const banner = btnBanner.closest('.banner');
@@ -198,7 +193,6 @@ function closeBanner(btnBanner){
         localStorage.setItem('bannerClosedAt', Date.now());
         checkAndShowBanner();
     }
-
 }
 
 
@@ -240,12 +234,176 @@ function checkAndShowBanner() {
     }
 }
 
+function generateRow(size){
+
+    if(size < 0) throw ErrorEvent("Size 0");
+
+    let rows = [];
+    for (let i = 0; i < size; i++) {
+        const row = document.createElement('tr');
+        row.innerHTML = `<tr>
+                            <th data-label="Наименование" >Стекло красивое №${i}</th>
+                            <th data-label="Производитель">Salawat</th>
+                            <th data-label="Толщина, мм">4</th>
+                            <th data-label="Цена">от 100 руб/</th>
+                            <th data-label="Цена">Фото</th> 
+                        </tr>`
+        rows.push(row);
+    }
+
+    return rows;
+}
+
+
+function isMobile() {
+    return window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('main').style.paddingTop = headerHeight + 'px';
     sidebar.style.top = headerHeight + 'px';
     sidebar.style.height = `calc(100vh - ${headerHeight}px)`;
+    enableMapInteraction();
     setTimeout(generateBanner, 2000);
+    activeNav();
+
+    const tb = document.getElementById('data-table-body');
+
+    generateRow(15).forEach(row =>{
+        tb.appendChild(row);
+    })
+
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle')
+
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+
+            if (isMobile()) {
+                e.preventDefault();
+            }
+
+            const subNav = toggle.nextElementSibling;
+            const icon = toggle.querySelector('.bi.bi-caret-down-fill');
+
+
+            if (subNav.style.display === 'flex') {
+                subNav.style.display = 'none';
+                if (icon) icon.classList.toggle('rotate');
+            } else {
+                document.querySelectorAll('.sub-nav').forEach(menu => {
+                    menu.style.display = 'none';
+                });
+                subNav.style.display = 'flex';
+                if (icon && !icon.classList.contains('rotate')) icon.classList.add('rotate');
+            }
+        });
+    })
+
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown-toggle')) {
+            document.querySelectorAll('.bi.bi-caret-down-fill').forEach(icon => {
+                if (icon && icon.classList.contains('rotate')) icon.classList.toggle('rotate');
+            })
+            document.querySelectorAll('.sub-nav').forEach(menu => {
+                if (menu.style.display === 'flex') {
+                    menu.style.display = 'none';
+                }
+            });
+        }
+    });
 })
 
 generatePreloader();
+
+const changeButton = (buttonTab, activeBtn) => {
+
+    if (buttonTab.classList.contains('.active')) {
+        return;
+    }
+
+    if (activeBtn) {
+        activeBtn.classList.toggle('active');
+        const triangle = activeBtn.nextElementSibling;
+
+        if (triangle && triangle.classList.contains('triangle')) {
+            activeBtn.parentNode.removeChild(triangle);
+        }
+        buttonTab.classList.toggle('active');
+        buttonTab.parentNode.appendChild(triangle)
+    }
+}
+
+const showTab = (buttonTab) => {
+    const contentContainer = buttonTab.closest(".price__list");
+
+    if(buttonTab.classList.contains('active')){
+        console.log("Click active")
+        return;
+    }
+
+    const targetData = buttonTab.getAttribute('data-target');
+    const targetSection = contentContainer.querySelector(`.price__data-content[data-section='${targetData}']`);
+    if(targetSection){
+        const activeBtn = contentContainer.querySelector(".tab-button.active");
+        const activeTab = contentContainer.querySelector('.price__data-content.show');
+
+        if (activeTab) activeTab.classList.remove('show');
+        changeButton(buttonTab, activeBtn);
+
+        targetSection.classList.add('show');
+    }
+}
+
+
+window.addEventListener('scroll', () => {
+
+    const flList = document.getElementById('following_list');
+    const placeholder = flList.parentElement;
+    const currentPosition = flList.style.position;
+
+    const startPos = placeholder.offsetTop - 20;
+    const endPos = placeholder.offsetTop + placeholder.offsetHeight - flList.offsetHeight - 20;
+    const scrollY = window.scrollY + headerHeight;
+
+    if (scrollY >= startPos && scrollY <= endPos) {
+        if (currentPosition !== 'fixed') {
+            flList.style.position = 'fixed';
+            flList.style.top = (headerHeight + 20) + 'px';
+            flList.style.bottom = '';
+            flList.style.width = placeholder.offsetWidth + 'px';
+        }
+    } else if (scrollY > endPos) {
+        if (currentPosition !== 'absolute') {
+            flList.style.position = 'absolute';
+            flList.style.top = '';
+            flList.style.bottom = '0';
+            flList.style.width = '100%';
+        }
+    } else {
+        if (currentPosition !== 'static') {
+            flList.style.position = 'static';
+            flList.style.top = '';
+            flList.style.bottom = '';
+        }
+    }
+
+});
+
+
+const activeNav = () =>{
+    const body = document.getElementsByTagName('body')[0]
+
+    const targetPage = body.getAttribute('page');
+
+    if(!targetPage){
+        return;
+    }
+
+    document.querySelectorAll(`.nav-item[data-page='${targetPage}']`)
+        .forEach(nav => {
+            if(!nav.classList.contains('active')) {
+                nav.classList.add('active');
+            }
+    })
+}

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Стекломаркет - продажа качественного стекла, надежные поставки и профессиональная консультация. Широкий ассортимент стекла для строительных и промышленных целей.">
     <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, поставки стекла, строительное стекло, купить стекло, барнаул стекло, стекло">
-    <title>Контакты</title>
+
+    <title>Услуги</title>
     <link rel="icon" href="../image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/pages.css">
@@ -13,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
-<body page="contact">
+<body page="services">
 
 <div class="wrapper" id="content">
 
@@ -85,13 +86,13 @@
                             <nav class="header__nav">
                                 <a href="about.html" class="nav-item" data-page="about">О компании</a>
                                 <div class="nav-item dropdown">
-                                    <div class="dropdown-toggle"  data-page="production">
+                                    <div class="dropdown-toggle">
                                         <span>Продукция</span>
                                         <i class="bi bi-caret-down-fill"></i>
                                     </div>
                                     <nav class="sub-nav">
-                                        <a href="production.html"><i class="bi bi-arrow-right-short"></i>Каталог</a>
-                                        <a href=""><i class="bi bi-arrow-right-short"></i>Услуги</a>
+                                        <a href="production.html" class="nav-item" data-page="production"><i class="bi bi-arrow-right-short"></i>Каталог</a>
+                                        <a href="services.html"  class="nav-item" data-page="services"><i class="bi bi-arrow-right-short active"></i>Услуги</a>
                                     </nav>
                                 </div>
                                 <a href="contact.html"  class="nav-item" data-page="contact">Контакты</a>
@@ -127,25 +128,29 @@
         <div class="sidebar__content">
             <!-- sidebar navigation -->
             <nav class="sidebar__nav">
-                <div class="content__item">
+                <div class="content__item nav-item">
                     <i class="bi bi-house-door-fill"></i>
-                    <span><a href="index.html">Главная</a></span>
+                    <span><a href="/">Главная</a></span>
                 </div>
-                <div class="content__item">
+                <div class="content__item nav-item" data-page="about">
                     <i class="bi bi-info-square-fill"></i>
-                    <span><a href="#">О компании</a></span>
+                    <span><a href="/about">О компании</a></span>
                 </div>
-                <div class="content__item">
+                <div class="content__item nav-item" data-page="production">
                     <i class="bi bi-aspect-ratio"></i>
-                    <span> <a href="#">Продукция</a></span>
+                    <span> <a href="/production">Продукция</a></span>
                 </div>
-                <div class="content__item">
+                <div class="content__item nav-item" data-page="services">
+                    <i class="bi bi-briefcase-fill"></i>
+                    <span> <a href="/services">Услуги</a></span>
+                </div>
+                <div class="content__item nav-item" data-page="contact">
                     <i class="bi bi-pin-map-fill"></i>
-                    <span> <a href="#">Контакты</a></span>
+                    <span> <a href="/contact">Контакты</a></span>
                 </div>
-                <div class="content__item">
+                <div class="content__item nav-item" data-page="projects">
                     <i class="bi bi-shop"></i>
-                    <span><a href="#">Наши проекты</a></span>
+                    <span><a href="/projects">Наши проекты</a></span>
                 </div>
             </nav>
             <div class="button__group">
@@ -173,9 +178,9 @@
                             <span>Главная</span>
                         </a>
                         <i class="bi bi-chevron-right"></i>
-                        <span>Контакты</span>
+                        <span>Услуги</span>
                     </div>
-                    <h3>Контакты</h3>
+                    <h3>Услуги</h3>
                 </div>
             </div>
         </section>
@@ -183,99 +188,53 @@
         <!-- Address warehouse -->
         <section class="section section-white section__contact-warehouse">
             <div class="page-width">
-                <div class="section__content">
-                    <div class="section__left">
-                        <h2>Стекломаркет "Склад"</h2>
-                        <div class="section__content_text">
-                            <h3>Адрес:</h3>
-                            <h5>656922, Алтайский край, г. Барнаул,<br>просп. Космонавтов, д. 8, корп. 1.</h5>
-                        </div>
-                        <div class="section__content_text">
-                            <h3>Режим работы:</h3>
-                            <span>Пн-Чт: 8:00-17:00</span>
-                            <small> перерыв: 12:00-12:48</small>
-                            <span>Пятница: 8:00-16:00</span>
-                            <small> перерыв: 12:00-12:48</small>
-                            <span>Суббота и воскресенье выходной</span>
-                        </div>
+                <div class="contact-warehouse__container">
+                    <div>
+                        <h2>Наши услуги: качество и скорость для вашего удобства</h2>
+                        <p class="section__content_text">Наша компания предлагает профессиональную резку стекла с высокой точностью<br>  и быструю доставку по Барнаулу и соседним районам.<br>
+                            Мы заботимся о качестве и комфорте наших клиентов — закажите услуги с гарантией и в удобное для вас время.</p>
                     </div>
 
-                    <div class="section__right">
-                        <img class="about__img" src="../image/about-photo.png" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Address office -->
-        <section class="section section__contact-office">
-            <div class="page-width">
-                <div class="section__content">
-                    <div class="section__left">
-                        <h2>Стекломаркет "Офис"</h2>
-                        <div class="section__content_text">
-                            <h3>Адрес:</h3>
-                            <h5>656922, Алтайский край, г. Барнаул,<br>ул. Попова, д. 179б, офис 3.</h5>
+                    <div class="service__cards">
+                        <div class="service__card">
+                            <i class="bi bi-scissors"></i>
+                            <h3>Резка стекла</h3>
+                            <ul>
+                                <li>Профессиональная точная резка стекла любой формы и размер</li>
+                                <li>Используем современное оборудование</li>
+                                <li>Выполняем индивидуальные заказы по чертежам</li>
+                                <li>Минимальные сроки изготовления</li>
+                            </ul>
                         </div>
-                        <div class="section__content_text">
-                            <h3>Режим работы:</h3>
-                            <span>Пн-Пт: 8:00-17:00</span>
-                            <small> перерыв: 12:00-13:00</small>
-                            <span>Суббота и воскресенье выходной</span>
+
+                        <div class="service__card">
+                            <i class="bi bi-truck-front-fill"></i>
+                            <h3>Резка стекла</h3>
+                            <ul>
+                                <li>Профессиональная точная резка стекла любой формы и размер</li>
+                                <li>Используем современное оборудование</li>
+                                <li>Выполняем индивидуальные заказы по чертежам</li>
+                                <li>Минимальные сроки изготовления</li>
+                            </ul>
                         </div>
+
                     </div>
 
-                    <div class="section__right">
-                        <img class="about__img" src="../image/about-photo.png" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
+
+                    <div class="block__enticing">
+                        <p class="section__content_text">Гарантия качества, индивидуальный подход, оптимальные цены <br>и быстрая обратная связь — мы ценим каждого клиента.</p>
+                    </div>
+
+                    <div class="button__group">
+                        <button class="button btn-primary">
+                            <i class="bi bi-plus"></i>
+                            <span>Связаться с нами</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact information -->
-        <section class="section section-white section__contact">
-            <div class="page-width">
-                <div class="section__title">Контактная информация</div>
-                <div class="contact__content">
-                    <div class="content__item">
-                        <div class="signature__icon">
-                            <i class="bi bi-printer-fill"></i>
-                            <small>Тел./Факс</small>
-                        </div>
-                        <span>+7-(385)-250-18-54</span>
-                    </div>
-
-                    <div class="content__item">
-                        <i class="bi bi-phone-fill"></i>
-                        <span>+7-(923)-003-77-00</span>
-                    </div>
-
-
-                    <div class="content__item">
-                        <i class="bi bi-whatsapp"></i>
-                        <span>+7-(923)-003-22-00</span>
-                    </div>
-
-                    <div class="content__item">
-                        <i class="bi bi bi-envelope-at-fill"></i>
-                        <span>sale@steklomarket.ru</span>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Section map -->
-        <section class="map__section section" style="padding-bottom: 5px">
-            <div class="page-width">
-                <h2 class="section__title">Мы на карте</h2>
-                <div class="map-wrapper">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A283196c4c2bbd3428ee0dcb4336102d8a1ec76660f470a553f537418f302228e&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
-                    <div class="map-overlay"></div>
-                </div>
-            </div>
-        </section>
     </main>
 
 
