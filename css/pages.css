@@ -42,19 +42,19 @@
     justify-content: center
 }
 
-.section__contact-office .section__content_text,
-.section__contact-warehouse .section__content_text{
+.section__contact-office .text,
+.section__contact-warehouse .text{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.section__contact-office .section__content_text small,
-.section__contact-warehouse .section__content_text small{
+.section__contact-office .text small,
+.section__contact-warehouse .text small{
     margin-left:12px ;
 }
-.section__contact-office .section__content_text span:last-child,
-.section__contact-warehouse .section__content_text span:last-child{
+.section__contact-office .text span:last-child,
+.section__contact-warehouse .text span:last-child{
     font-weight: 700;
     margin-top: 12px;
     font-size: 20px;
@@ -352,7 +352,7 @@
     text-align: center;
 }
 
-.price__data .section__content_text{
+.price__data .text{
     letter-spacing: 1px;
     font-size: 16px;
     text-indent: 20px;

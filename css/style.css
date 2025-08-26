@@ -387,7 +387,7 @@ body {
     gap: 20px;
 }
 
-.section__content_title{
+.text-heading{
     font-family: var(--default-font), sans-serif;
     font-size: 44px;
     margin: 0;
@@ -396,7 +396,7 @@ body {
     line-height: 1;
 }
 
-.section__content_text{
+.text{
     font-family: var(--default-font), sans-serif;
     color: var(--contrast-color);
     font-size: 20px;
@@ -418,7 +418,7 @@ body {
     gap: 5px;
     font-size: 22px;
 }
-.partners__content .section__content_text{
+.partners__content .text{
     text-indent: 20px;
     hyphens: auto;
     text-align: justify;
@@ -775,7 +775,6 @@ main{
     gap: 50px;
     grid-column: 1/ span 3;
     grid-row: 1/span 2;
-
 }
 
 .hero__right{
@@ -1021,13 +1020,13 @@ main{
 /*----------------------------------------
             About Section
 ---------------------------------------*/
-.about__content .section__content_text{
+.about__content .text{
 
     text-align: justify;
     line-break: loose;
 }
 
-.about__left .section__content_text>span{
+.about__left .text>span{
     display: block;
     text-indent: 20px;
     margin-bottom: 4px;
@@ -1065,7 +1064,7 @@ main{
 }
 
 
-.about__card{
+.about-card{
     height:auto;
     width: 100%;
     background-color: var(--background-color);
@@ -1075,20 +1074,20 @@ main{
     align-items: center;
 }
 
-.about__card .content__wrapper{
+.about-card .content__wrapper{
     gap: var(--default-gap);
     width:60%;
 
 }
-.about__card .section__content_text{
+.about-card .text{
     font-size: 16px;
 }
-.about__card .section__content_title{
+.about-card .text-heading{
     font-size: 16px;
     color: var(--accent-color);
 }
 
-.about__card-icon{
+.about-card__icon{
     width: 100%;
     max-width: 100px;
     height: 100px;
@@ -1100,7 +1099,7 @@ main{
     background-color: transparent;
 }
 
-.about__card-icon::before {
+.about-card__icon::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1111,7 +1110,7 @@ main{
     height: 60px;
 }
 
-.about__card-icon::after {
+.about-card__icon::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1150,6 +1149,7 @@ main{
     padding-bottom: 8px;
     z-index: 99;
 }
+
 .footer__logo{
     grid-area: logo;
 }
