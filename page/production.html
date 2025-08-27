@@ -71,7 +71,7 @@
                             </nav>
                         </div>
                         <a href="contact.html" class="nav__item" data-page="contact">Контакты</a>
-                        <a href="projects.html" class="nav__item" data-page="projects">Наши проекты</a>
+                        <a href="faq.html" class="nav__item" data-page="faq">FAQ</a>
                     </nav>
                 </div>
 
@@ -102,38 +102,29 @@
             <nav class="sidebar__nav">
                 <div class="item nav__item">
                     <i class="bi bi-house-door-fill"></i>
-                    <span><a href="/">Главная</a></span>
+                    <span><a href="../index.html">Главная</a></span>
                 </div>
                 <div class="item nav__item" data-page="about">
                     <i class="bi bi-info-square-fill"></i>
-                    <span><a href="/about">О компании</a></span>
+                    <span><a href="../page/about.html">О компании</a></span>
                 </div>
                 <div class="item nav__item" data-page="production">
                     <i class="bi bi-aspect-ratio"></i>
-                    <span> <a href="depricated/production.html">Продукция</a></span>
+                    <span> <a href="../page/production.html">Продукция</a></span>
                 </div>
                 <div class="item nav__item" data-page="services">
                     <i class="bi bi-briefcase-fill"></i>
-                    <span> <a href="depricated/services.html">Услуги</a></span>
+                    <span> <a href="../page/services.html">Услуги</a></span>
                 </div>
                 <div class="item nav__item" data-page="contact">
                     <i class="bi bi-pin-map-fill"></i>
-                    <span> <a href="depricated/contact.html">Контакты</a></span>
+                    <span> <a href="../page/contact.html">Контакты</a></span>
                 </div>
-                <div class="item nav__item" data-page="projects">
+                <div class="item nav__item" data-page="faq">
                     <i class="bi bi-shop"></i>
-                    <span><a href="/projects">Наши проекты</a></span>
+                    <span><a href="../page/faq">FAQ</a></span>
                 </div>
             </nav>
-            <div class="btn-group">
-                <!-- contact button in sidebar -->
-                <button class="btn btn--primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
-                    <div class="item btn__item">
-                        <i class="bi bi-map-fill btn__icon"></i>
-                        <span class="btn__text">Как к нам добраться?</span>
-                    </div>
-                </button>
-            </div>
         </div>
     </aside>
     <div class="overlay"></div>
@@ -163,7 +154,7 @@
                     <div class="select-buttons">
 
                         <div class="select-button">
-                            <button class="btn btn-tab active" data-target="clearGlass" onclick="showTab(this)">
+                            <button class="btn btn-tab active" data-target="clearGlass">
                                 <div class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Стекло прозрачное</span>
@@ -173,7 +164,7 @@
                         </div>
 
                         <div class="select-button">
-                            <button class="btn btn-tab"  data-target="colorfulGlass" onclick="showTab(this)">
+                            <button class="btn btn-tab"  data-target="colorfulGlass">
                                 <div class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Стекло красивое</span>
@@ -328,6 +319,34 @@
 
                         </div>
                     </div>
+                    <div class="price-data__container" data-section="colorfulGlass">
+                        <h1 class="text-heading price-data__title">Стекло Красивое</h1>
+                        <p class="price-data__description">
+                            «Стекло красивое» — описание.
+                        </p>
+                        <div class="price-table__container">
+
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Наименование</th>
+                                        <th>Изготовитель</th>
+                                        <th>Цвет</th>
+                                        <th>Толщина,<br>мм</th>
+                                        <th>Размер</th>
+                                        <th>Лист,<br>м2</th>
+                                        <th>Цена,<br>руб</th>
+                                        <th>Фото</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -352,7 +371,7 @@
                     <a class="item footer__nav-item" href="about.html" data-page="about">О компании</a>
                     <a class="item footer__nav-item" href="production.html" data-page="production">Продукция</a>
                     <a class="item footer__nav-item" href="contact.html" data-page="contact">Контакты</a>
-                    <a class="item footer__nav-item" href="project.html" data-page="projects">Наши проекты</a>
+                    <a class="item footer__nav-item" href="faq.html" data-page="faq">FAQ</a>
                 </nav>
 
                 <div class="content-container footer__company-data">

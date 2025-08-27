@@ -1152,18 +1152,42 @@
 .price__container{
     position: relative;
     display: grid;
-    grid-template-areas: "tabs data data data"
-                         "tabs data data data";
-    grid-template-columns: 260px 1fr 1fr 1fr;
-    column-gap: 10px;
+    grid-template-areas: "tabs"
+                         "data";
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 
 .price-category{
     grid-area: tabs;
     height: 100%;
-    width: 260px;
     position: relative;
+    width: 100%;
+}
 
+@media (min-width: 640px) {
+    .price__container{
+        position: relative;
+        display: grid;
+        grid-template-areas: "tabs data data data"
+                         "tabs data data data";
+        grid-template-columns: 260px 1fr 1fr 1fr;
+    }
+
+        .price-category{ width: 260px; }
+        .btn-tab{
+            max-width: 200px;
+        }
+
+        .triangle{
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-left: 40px solid var(--contrast-color);
+            border-bottom: 20px solid transparent;
+            border-radius: 16px;
+            display: block !important;
+        }
 }
 
 .price-data{
@@ -1186,7 +1210,6 @@
 .btn-tab{
     height: 40px;
     width: 100%;
-    max-width: 200px;
     border: 1px solid var(--accent-color);
     background-color: var(--stroke-color);
     color: var(--accent-color);
@@ -1200,12 +1223,7 @@
     border-color: rgba(155, 0, 0, 0.4);
 }
 .triangle {
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-left: 40px solid var(--contrast-color);
-    border-bottom: 20px solid transparent;
-    border-radius: 16px;
+    display: none;
 }
 
 .price-data__description {
@@ -1241,8 +1259,8 @@
     display: inline-block;
     background-color: #fff;
     color: var(--accent-color);
-    max-height: 800px; /* или нужная высота */
-    overflow-y: auto; /* вертикальный скролл */
+    max-height: 800px;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -1265,7 +1283,6 @@ table th, table td {
     padding: 10px;
     text-align: center;
     border-right: 1px solid #ddd;
-    margin-bottom: 100px;
 }
 
 table th {
@@ -1281,7 +1298,8 @@ table th {
 }
 
 
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 910px) {
     table {
         border: 0;
     }
@@ -1388,9 +1406,6 @@ table th {
     grid-template-columns: repeat(1, auto);
 }
 
-
-
-
 .stats{
     grid-area: stats;
     padding: var(--spacing-xl);
@@ -1452,7 +1467,6 @@ table th {
     max-width: 500px;
     min-width: 300px;
     border-radius: 32px;
-    /*border: 1px solid var(--accent-color);*/
     padding: var(--spacing-xl);
     box-shadow: 0 0 5px 0 var(--accent-color);
 }
@@ -1472,7 +1486,6 @@ table th {
     font-size: 16px;
     font-weight: 500
 }
-
 
 .details__container{
     font-family: var(--text-font), sans-serif;
@@ -1625,4 +1638,65 @@ table th {
         flex: 0 0 100%;
         height: 250px;
     }
+}
+
+
+.faq__list .question:hover,
+.faq__list .question:hover::after {
+    cursor: pointer;
+    color: var(--contrast-color);
+}
+.faq__list .question:hover::after {
+    border: 1px solid var(--contrast-color);
+}
+.faq__list .question.active {
+    color: var(--contrast-color);
+    border-bottom: 1px solid  var(--contrast-color);
+}
+
+.question{
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    color: var(--accent-color);
+    font-size: 18px;
+    font-family: var(--title-font), sans-serif;
+    font-weight: 600;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.answer{
+    opacity: 0;
+    padding: 0 1rem;
+    max-height: 0;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    clear: both;
+    -webkit-transition: all 0.2s ease 0.15s;
+    -o-transition: all 0.2s ease 0.15s;
+    transition: all 0.2s ease 0.15s;
+}
+
+.answer.active {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 100%;
+    -webkit-transition: all 0.35s ease 0.15s;
+    -o-transition: all 0.35s ease 0.15s;
+    transition: all 0.35s ease 0.15s;
+}
+
+.answer .answer__text{
+    font-size: 16px;
+    font-family: var(--text-font), sans-serif;
+    font-weight: 300;
 }

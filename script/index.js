@@ -493,3 +493,78 @@ function disableScroll() {
         }
     })
 })();
+
+
+
+(function (){
+    const contentContainer = document.querySelector(".price__container");
+    console.log(contentContainer)
+    if(!contentContainer){
+        return;
+    }
+
+    function changeButton (buttonTab, activeBtn) {
+
+        if (buttonTab.classList.contains('.active')) {
+            return;
+        }
+
+        if (activeBtn) {
+            activeBtn.classList.toggle('active');
+            const triangle = activeBtn.nextElementSibling;
+
+            if (triangle && triangle.classList.contains('triangle')) {
+                activeBtn.parentNode.removeChild(triangle);
+            }
+            buttonTab.classList.toggle('active');
+            buttonTab.parentNode.appendChild(triangle)
+        }
+    }
+
+    function showTab(buttonTab){
+
+        if(buttonTab.classList.contains('active')){
+            return;
+
+        }
+
+        const targetData = buttonTab.getAttribute('data-target');
+
+        const targetSection = contentContainer.querySelector(`.price-data__container[data-section='${targetData}']`);
+        if(targetSection){
+            const activeBtn = contentContainer.querySelector(".btn-tab.active");
+            const activeTab = contentContainer.querySelector('.price-data__container.show');
+
+            if (activeTab) activeTab.classList.remove('show');
+            changeButton(buttonTab, activeBtn);
+
+            targetSection.classList.add('show');
+        }
+    }
+
+    contentContainer.querySelectorAll(".btn-tab").forEach((btn) => {
+        if(!btn) return;
+        console.log(btn)
+        btn.addEventListener('click', () =>
+            {
+                showTab(btn)
+            }
+        );
+    })
+})();
+
+
+(function (){
+    const items = document.querySelectorAll(".faq__list .question");
+
+    console.log(items);
+    if(items.length <= 0){
+        return;
+    }
+
+    function toggleAccordion(){
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('active');
+    }
+    items.forEach(item => item.addEventListener('click', toggleAccordion));
+})();
