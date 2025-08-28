@@ -210,6 +210,24 @@ document.addEventListener('DOMContentLoaded', () => {
     btnClick(btnToTop, () => window.scroll({top: 0, behavior: 'smooth'}));
 
 
+    const activeNav = () =>{
+        const body = document.getElementsByTagName('body')[0]
+
+        const targetPage = body.getAttribute('page');
+
+        if(!targetPage){
+            return;
+        }
+
+        document.querySelectorAll(`.nav__item[data-page='${targetPage}']`)
+            .forEach(nav => {
+                if(!nav.classList.contains('active')) {
+                    nav.classList.add('active');
+                }
+            })
+    }
+
+    activeNav();
 
     function scrollToSection(button_selector, section_selector, redirect_page) {
         let buttons = document.querySelectorAll(button_selector);
@@ -328,8 +346,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-(() => {
+//LIFE функция для работы слайдера
+(function (){
     const slider = document.getElementById('slider');
 
     if (!slider) return;
@@ -347,6 +365,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return slides[0].offsetWidth;
     }
 
+
+    //gap size into slides
     function getGap() {
         return parseInt(window.getComputedStyle(sliderTrack).gap) || 0;
     }
@@ -426,8 +446,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 
-
-
 function enableScroll() {
     const scrollY = parseInt(document.body.style.top || '0') * -1;
     document.body.classList.remove('no-scroll');
@@ -442,8 +460,6 @@ function disableScroll() {
     document.body.classList.add('no-scroll');
     document.body.style.top = `-${scrollY}px`;
 }
-
-
 
 
 (function (){
@@ -493,7 +509,6 @@ function disableScroll() {
         }
     })
 })();
-
 
 
 (function (){
@@ -565,6 +580,7 @@ function disableScroll() {
     function toggleAccordion(){
         this.classList.toggle('active');
         this.nextElementSibling.classList.toggle('active');
+        this.parentElement.classList.toggle('active');
     }
     items.forEach(item => item.addEventListener('click', toggleAccordion));
 })();

@@ -64,8 +64,8 @@
                                 <i class="bi bi-caret-down-fill"></i>
                             </div>
                             <nav class="sub__nav">
-                                <a href="page/production.html"><i class="bi bi-arrow-right-short"></i>Каталог</a>
-                                <a href="page/services.html"><i class="bi bi-arrow-right-short"></i>Услуги</a>
+                                <a class="nav__item" href="page/production.html" data-page="production"><i class="bi bi-arrow-right-short"></i>Каталог</a>
+                                <a class="nav__item" href="page/services.html" data-page="services"><i class="bi bi-arrow-right-short"></i>Услуги</a>
                             </nav>
                         </div>
                         <a href="page/contact.html" class="nav__item" data-page="contact">Контакты</a>
@@ -162,12 +162,12 @@
                             </div>
                         </button>
 
-                        <div class="btn btn--secondary">
+                        <a class="btn btn--secondary" href="page/about.html">
                             <div class="item item--icon-right btn__item">
                                 <i class="bi bi-arrow-right btn__icon"></i>
                                 <span class="btn__text">Подробнее</span>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
@@ -242,7 +242,7 @@
                         </div>
 
                         <div class="btn-group card__buttons">
-                            <button class="btn btn--primary btn-card">
+                            <button class="btn btn--primary btn-card " data-modal="#modal_contact">
                                 <div class="item btn__item">
                                     <span class="btn__text">Заказать</span>
                                 </div>
@@ -267,7 +267,7 @@
                         </div>
 
                         <div class="btn-group card__buttons">
-                            <button class="btn btn--primary btn-card">
+                            <button class="btn btn--primary btn-card" data-modal="#modal_contact">
                                 <div class="item btn__item">
                                     <span class="btn__text">Заказать</span>
                                 </div>
@@ -292,7 +292,7 @@
                         </div>
 
                         <div class="btn-group card__buttons">
-                            <button class="btn btn--primary btn-card">
+                            <button class="btn btn--primary btn-card" data-modal="#modal_contact">
                                 <div class="item btn__item">
                                     <span class="btn__text">Заказать</span>
                                 </div>
@@ -301,6 +301,15 @@
                     </div>
                     <!-- Card End -->
 
+                </div>
+
+                <div class="btn-group catalog__btn">
+                    <a class="btn btn--primary" href="page/production.html">
+                        <div class="item btn__item">
+                            <i class="bi bi-cart-dash-fill"></i>
+                            <span class="btn__text">Полный каталог</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -351,12 +360,12 @@
                             Широкий ассортимент и профессиональный сервис — для частных и корпоративных клиентов.
                         </p>
                         <div class="btn-group">
-                            <button class="btn btn--primary">
+                            <a class="btn btn--primary" href="/page/about.html">
                                 <div class="item btn__item item--icon-right">
                                     <i class="bi bi-arrow-bar-right item__icon"></i>
                                     <span class="btn__text">Подробнее</span>
                                 </div>
-                            </button>
+                            </a>
                         </div>
 
                     </div>
