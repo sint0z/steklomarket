@@ -235,7 +235,6 @@ button:disabled:hover{
     font-family: var(--text-font), sans-serif;
     font-weight: var(--fw-regular);
     font-size: var(--font-size-base);
-    letter-spacing: var(--letter-spacing-standart);
     margin: 0;
     padding: 0;
 }
