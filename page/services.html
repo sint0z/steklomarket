@@ -160,7 +160,7 @@
                             <i class="bi bi-scissors service-card__icon"></i>
                             <h3 class="text-heading subsection__title">Резка стекла</h3>
                             <ul>
-                                <li><i class="bi bi-chevron-right"></i>Профессиональная точная резка стекла любой формы и размер</li>
+                                <li><i class="bi bi-chevron-right"></i>Профессиональная точная резку прямолинейных форм стекла и зеркал</li>
                                 <li><i class="bi bi-chevron-right"></i>Используем современное оборудование</li>
                                 <li><i class="bi bi-chevron-right"></i>Выполняем индивидуальные заказы по чертежам</li>
                                 <li><i class="bi bi-chevron-right"></i>Минимальные сроки изготовления</li>
@@ -171,9 +171,9 @@
                             <i class="bi bi-truck service-card__icon"></i>
                             <h3 class="text-heading subsection__title">Доставка</h3>
                             <ul>
+                                <li><i class="bu bi-chevron-right"></i> Отгрузка стекла из Китая контейнерами в любую точку России</li>
                                 <li><i class="bi bi-chevron-right"></i>Оперативная и бережная доставка к вам на объект</li>
                                 <li><i class="bi bi-chevron-right"></i>Обслуживаем Барнаул и ближайшие районы</li>
-                                <li><i class="bi bi-chevron-right"></i>Аккуратная разгрузка для вашего удобства и безопасности материала.</li>
                                 <li><i class="bi bi-chevron-right"></i>Гарантируем ответственное отношение к вашему заказу.</li>
                             </ul>
                         </div>
@@ -182,7 +182,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="block__enticing">
             <div class="container bg-support section-border">
@@ -193,7 +192,7 @@
         <section class="section section-white section-services-btn ">
             <div class="container">
                 <div class="btn-group">
-                    <button class="btn btn--primary">
+                    <button class="btn btn--primary" data-modal="#modal_contact">
                         <div class="item btn__item">
                             <i class="bi bi-plus btn__icon"></i>
                             <span class="btn__text">Связаться с нами</span>
@@ -277,6 +276,41 @@
     <button class="btn" id="btn-to-top">
         <i class="bi bi-arrow-up"></i>
     </button>
+    <div id="modal_contact" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2 class="text modal-header__title">Хотите купить?</h2>
+            </div>
+            <button class="modal__close" id="modal-close" aria-label="Закрыть модальное окно">&times;</button>
+            <div class="modal__body">
+                <h3 class="text">Позвоните или напишите нам:</h3>
+                <div class="modal__phone-contact">
+                    <div class="item modal__item">
+                        <div class="signature-icon">
+                            <i class="signature-icon__icon bi bi-printer-fill"></i>
+                            <small class="signature-icon__text">Факс</small>
+                        </div>
+                        <span>+7-(385)-250-18-54</span>
+                    </div>
+
+                    <div class="item modal__item">
+                        <i class="bi bi-whatsapp"></i>
+                        <span class="days" data-number="+7-(923)-003-22-00">+7-(923)-003-22-00</span>
+                    </div>
+                    <div class="item modal__item">
+                        <i class="bi bi-phone-fill"></i>
+                        <span class="days" data-number="+7-(923)-003-77-00">+7-(923)-003-77-00</span>
+                    </div>
+                    <div class="item modal__item">
+                        <i class="bi bi bi-envelope-at-fill"></i>
+                        <span>sale@steklomarket.ru</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <script src="../script/index.js"></script>

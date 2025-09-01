@@ -462,53 +462,52 @@ function disableScroll() {
 }
 
 
-(function (){
-    const minimized = document.querySelector('.minimized'); // или '#minimized' для id
+(function () {
+    const minimizedElements = document.querySelectorAll ('.minimized'); // или '#minimized' для id
 
-    if(!minimized){
-        return;
-    }
 
-    const imgTitle = minimized.getAttribute('img-title')
-    const pathToImage = minimized.getAttribute('src');
-    const defaultZIndex = overlay.style.zIndex;
+    minimizedElements.forEach ((minimized) => {
+        const imgTitle = minimized.getAttribute ('img-title')
+        const pathToImage = minimized.getAttribute ('src');
+        const defaultZIndex = overlay.style.zIndex;
 
-    const magnify = document.createElement('div');
-    magnify.classList.add('magnify');
-    magnify.innerHTML =  `<img src='${pathToImage}' alt=""><div id="close-popup"><i></i></div>`;
+        const magnify = document.createElement ('div');
+        magnify.classList.add ('magnify');
+        magnify.innerHTML = `<img src='${pathToImage}' alt=""><div id="close-popup"><i></i></div>`;
 
-    if(imgTitle){
-        magnify.insertAdjacentHTML('beforeend', `<div class=img-title><p class="text">${imgTitle}</p></div>`);
-    }
+        if (imgTitle) {
+            magnify.insertAdjacentHTML ('beforeend', `<div class=img-title><p class="text">${imgTitle}</p></div>`);
+        }
 
-    minimized.addEventListener('click', e => {
-        overlay.classList.add('active');
-        overlay.style.zIndex = '999';
-        overlay.appendChild(magnify);
-        disableScroll();
-    })
-    magnify.addEventListener('click', e => {
-        e.stopPropagation();
-    })
+        minimized.addEventListener ('click', e => {
+            overlay.classList.add ('active');
+            overlay.style.zIndex = '999';
+            overlay.appendChild (magnify);
+            disableScroll ();
+        })
+        magnify.addEventListener ('click', e => {
+            e.stopPropagation ();
+        })
 
-    magnify.querySelector("#close-popup").addEventListener('click', e => {
-        if(magnify){
-            hideOverlay(() => {
-                magnify.remove()
+        magnify.querySelector ("#close-popup").addEventListener ('click', e => {
+            if (magnify) {
+                hideOverlay (() => {
+                    magnify.remove ()
+                    overlay.style.zIndex = defaultZIndex;
+                    enableScroll ();
+                });
+            }
+        })
+
+        overlay.addEventListener ('click', e => {
+            if (magnify) {
+                hideOverlay (() => magnify.remove ());
                 overlay.style.zIndex = defaultZIndex;
-                enableScroll();
-            });
-        }
+                enableScroll ();
+            }
+        })
     })
-
-    overlay.addEventListener('click', e => {
-        if(magnify){
-            hideOverlay(() => magnify.remove());
-            overlay.style.zIndex = defaultZIndex;
-            enableScroll();
-        }
-    })
-})();
+}) ();
 
 
 (function (){
