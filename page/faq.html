@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
 
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <meta name="description" content="Стекломаркет - продажа качественного стекла, надежные поставки и профессиональная консультация. Широкий ассортимент стекла для строительных и промышленных целей.">
     <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, поставки стекла, строительное стекло, купить стекло, барнаул стекло, стекло,зеркало,резка стекла">
 
-    <title>Контакты</title>
+    <title>Часто задаваемые вопросы</title>
 
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body page="contact">
+<body page="faq">
 
 <div class="page" id="contact">
     <header class="header">
@@ -61,7 +61,7 @@
                     <nav class="header__nav">
                         <a href="about.html" class="nav__item" data-page="about">О компании</a>
                         <div class="nav__item dropdown__item">
-                            <div class="dropdown__toggle"  >
+                            <div class="dropdown__toggle">
                                 <span>Продукция</span>
                                 <i class="bi bi-caret-down-fill"></i>
                             </div>
@@ -71,7 +71,7 @@
                             </nav>
                         </div>
                         <a href="contact.html" class="nav__item" data-page="contact">Контакты</a>
-                        <a class="nav__item" href="faq.html" data-page="faq">FAQ</a>
+                        <a href="faq.html" class="nav__item" data-page="faq">FAQ</a>
                     </nav>
                 </div>
 
@@ -125,6 +125,15 @@
                     <span><a href="../page/faq">FAQ</a></span>
                 </div>
             </nav>
+            <div class="btn-group">
+                <!-- contact button in sidebar -->
+                <button class="btn btn--primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
+                    <div class="item btn__item">
+                        <i class="bi bi-map-fill btn__icon"></i>
+                        <span class="btn__text">Как к нам добраться?</span>
+                    </div>
+                </button>
+            </div>
         </div>
     </aside>
     <div class="overlay"></div>
@@ -139,100 +148,79 @@
                         <span class="text breadcrumbs__text">Главная</span>
                     </a>
                     <i class="bi bi-chevron-right"></i>
-                    <span class="text text-contrast breadcrumbs__text">Контакт</span>
+                    <span class="text text-contrast breadcrumbs__text">FAQ</span>
                 </div>
-                <h3 class="text-heading breadcrumbs__title">Контакты</h3>
+                <h3 class="text-heading breadcrumbs__title">Часто задаваемые вопросы</h3>
             </div>
         </section>
 
-        <!-- Section CONTACT WAREHOUSE -->
-        <section class="contact-warehouse section section-border bg-white">
-            <div class="container container-column">
-                <div class="container-column__info">
-                    <h1 class="text-heading">Стекломаркет "Склад"</h1>
-                    <img class="image" src="../image/warehouse.png" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                    <div class="subsection contact-address">
-                        <h2 class="text-heading subsection__title">Адрес:</h2>
-                        <p class="text contact-address__text">656922, Алтайский край, г.Барнаул, <br>просп. Космонавтов, д. 8, корп. 1.</p>
-                    </div>
-                    <div class="subsection contact-time-work">
-                        <h2 class="text-heading subsection__title">Режим работы:</h2>
-                        <ul class="contact-time__list">
-                            <li class="time-work">Пн-Чт: 8:00-17:00</li>
-                            <li class="time-work time-work-small"> перерыв: 12:00-12:48</li>
-                            <li class="time-work">Пятница: 8:00-16:00</li>
-                            <li class = "time-work time-work-small"> перерыв: 12:00-12:48</li>
-                            <li class="time-work">Суббота и воскресенье выходной</li>
-                        </ul>
-                    </div>
+        <section class="section section-border faq bg-main">
+            <div class="container faq__container">
+                <div class="faq__title">
+                    <h1 class="text-heading">Вопросы и ответы</h1>
+                    <h1 class="text-heading" style="font-size:32px; color: var(--accent-color)">по нашим продуктам</h1>
                 </div>
-                <div class="container-column__image">
-                    <img class="image" src="../image/warehouse.png" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                </div>
-            </div>
-        </section>
+                <div class="faq__list">
 
-        <!-- Section CONTACT OFFICE -->
-        <section class="contact-office section bg-support">
-            <div class="container container-column reverse">
-                <div class="container-column__info">
-                    <h1 class="text-heading">Стекломаркет "Офис"</h1>
-                    <img class="image" src="../image/office.jpeg" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                    <div class="subsection contact-address">
-                        <h2 class="text-heading subsection__title">Адрес:</h2>
-                        <p class="text contact-address__text">656922, Алтайский край, г. Барнаул,<br>ул. Попова, д. 179б, офис 3.</p>
-                    </div>
-                    <div class="subsection contact-time-work">
-                        <h2 class="text-heading subsection__title">Режим работы:</h2>
-                        <ul class="contact-time__list">
-                            <li class="time-work">Пн-Чт: 8:00-17:00</li>
-                            <li class="time-work time-work-small"> перерыв: 12:00-13:00</li>
-                            <li class="time-work">Суббота и воскресенье выходной</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="container-column__image">
-                    <img class="image" src="../image/office.jpeg" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                </div>
-            </div>
-        </section>
-
-        <!-- Section PHONE CONTACT -->
-        <section class="phones-contact section section section-border bg-white">
-            <div class="container phone-contact__container">
-                <h2 class="text-heading section__title">Контактная информация</h2>
-                <div class="phones__list">
-                    <div class="item modal__item">
-                        <div class="signature-icon">
-                            <i class="signature-icon__icon bi bi-printer-fill"></i>
-                            <small class="signature-icon__text">Факс</small>
+                    <div class="faq__item">
+                        <h3 class="question">Какие виды стекла и зеркал вы продаёте?</h3>
+                        <div class="answer">
+                            <p class="answer__text">
+                                Мы предлагаем широкий ассортимент стекла и зеркал: листовое, тонированное, бесцветное, химического травления, прокатное ребристое, зеркала различных форм и толщин — от стандартных листов до нестандартных изделий.
+                            </p>
                         </div>
-                        <span>+7-(385)-250-18-54</span>
                     </div>
 
-                    <div class="item modal__item">
-                        <i class="bi bi-whatsapp"></i>
-                        <span class="days" data-number="+7-(923)-003-22-00">+7-(923)-003-22-00</span>
-                    </div>
-                    <div class="item modal__item">
-                        <i class="bi bi-phone-fill"></i>
-                        <span class="days" data-number="+7-(923)-003-77-00">+7-(923)-003-77-00</span>
-                    </div>
-                    <div class="item modal__item">
-                        <i class="bi bi bi-envelope-at-fill"></i>
-                        <span>sale@steklomarket.ru</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <div class="faq__item">
 
-        <!-- Section MAP -->
-        <section id="map" class="section bg-support">
-            <div class="container map__container">
-                <h2 class="text-heading section__title">Мы на карте</h2>
-                <div class="map-wrapper">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A283196c4c2bbd3428ee0dcb4336102d8a1ec76660f470a553f537418f302228e&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
-                    <div class="map-overlay"></div>
+                        <h3 class="question">Можно ли заказать стекло или зеркало в нестандартном размере?</h3>
+                        <div class="answer">
+                            <p class="answer__text">
+                                Да, мы выполняем резку стекла и зеркал по вашим размерам с высокой точностью. Вы можете заказать изделие под индивидуальные размеры
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="question">Осуществляете ли вы доставку?</h3>
+                        <div class="answer">
+                            <p class="answer__text">
+                                Да, мы выполняем оперативную и бережную доставку до вашего объекта в Барнауле и ближайших районах.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="question">Как быстро оформляется заказ и доставка?</h3>
+                        <div class="answer">
+                            <p class="answer__text">
+                                Заказ обрабатывается оперативно, доставка осуществляется в согласованное с вами время, чтобы максимально удобно подстроиться под ваш график.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="question"> Можно ли получить консультацию по выбору стекла или зеркал?</h3>
+                        <div class="answer">
+                            <p class="answer__text">
+                                Наши специалисты всегда готовы помочь подобрать идеальный вариант для ваших задач и условий эксплуатации, учитывая характеристики и особенности продукции.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="question">Как оформить заказ?</h3>
+                        <div class="answer">
+                            <span class="answer__text">
+                                Вы можете оформить заказ, позвонив нашим менеджерам по телефонам:
+                                <strong>+7-(923)-003-77-00</strong> или <br><strong>+7-(385)-250-18-54</strong> (для государственных учреждений),
+                                а также <strong>+7-(923)-003-22-00</strong> (WhatsApp).
+                            </span>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </section>
@@ -256,7 +244,7 @@
                     <a class="item footer__nav-item" href="about.html" data-page="about">О компании</a>
                     <a class="item footer__nav-item" href="production.html" data-page="production">Продукция</a>
                     <a class="item footer__nav-item" href="contact.html" data-page="contact">Контакты</a>
-                    <a class="item footer__nav-item" href="faq.html" data-page="faq">FAQ</a>
+                    <a class="item footer__nav-item" href="project.html" data-page="projects">Наши проекты</a>
                 </nav>
 
                 <div class="content-container footer__company-data">
@@ -313,6 +301,6 @@
     </button>
 </div>
 
-    <script src="../script/index.js"></script>
+<script src="../script/index.js"></script>
 </body>
 </html>

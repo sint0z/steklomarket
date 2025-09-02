@@ -1,571 +1,694 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru" >
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Продажа качественного стекла, надежные поставки и профессиональная консультация. Широкий ассортимент стекла для строительных и промышленных целей.">
-    <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, стеклянная тара, поставки стекла, строительное стекло, клейкое стекло, барнаул стекло, стекло">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index, contact, production">
+    <meta name="description" content="Стекломаркет - продажа качественного стекла, надежные поставки и профессиональная консультация. Широкий ассортимент стекла для строительных и промышленных целей.">
+    <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, поставки стекла, строительное стекло, купить стекло, барнаул стекло, стекло,зеркало,резка стекла">
 
-    <title>Стекломаркет</title>
-    <link rel="icon" href="image/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Стекломаркет - продажа стекла от листа до вагона</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
 </head>
 <body>
+<div class="page" id="page">
+    <header class="header">
 
-<div class="wrapper" id="content">
-        <!-- Modal window -->
-        <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <div class="modal__content">
-                <button class="modal__close" id="modalCloseBtn" aria-label="Закрыть модальное окно">&times;</button>
-                <div class="modal__body">
-                    <p>Хотите купить?</p>
-                    <p>Позвоните или напишите нам:</p>
-                    <div class="modal__phone-contact">
-
-                        <div class="content__item">
-                            <i class="bi bi-whatsapp"></i>
-                            <span class="days" data-number="+7-923-003-22-00">+7-923-003-22-00</span>
-                        </div>
-                        <div class="content__item">
-                            <i class="bi bi-phone-fill"></i>
-                            <span class="days" data-number="+7-923-003-77-00">+7-923-003-77-00</span>
-                        </div>
-                        <div class="content__item">
-                            <i class="bi bi bi-envelope-at-fill"></i>
-                            <span>sale@steklomarket.ru</span>
-                        </div>
+        <div class="header__top bg-support">
+            <div class="header__container container">
+                <div class="item header__info-item">
+                    <i class="bi bi-alarm-fill"></i>
+                    <span class="text header__text">Пн-Пт:<span class="text text-contrast">08:00-17:00</span></span>
+                </div>
+                <div class="header__phone-container">
+                    <div class="item header__info-item">
+                        <i class="bi bi-whatsapp"></i>
+                        <span class="text header__text">+7-923-003-22-00</span>
+                    </div>
+                    <div class="item header__info-item">
+                        <i class="bi bi-phone-fill"></i>
+                        <span class="text header__text">+7-923-003-77-00</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <header class="header">
-
-            <div class="header-container">
-                <div class="header-top">
-                    <div class="page-width">
-                        <div class="header__content">
-                            <div class="content__item">
-                                <i class="bi bi-alarm-fill"></i>
-                                <span class="days">Пн-Пт:<span class="times">08:00-17:00</span></span>
-                            </div>
-                            <div class="phone__container">
-                                <div class="content__item">
-                                    <i class="bi bi-whatsapp"></i>
-                                    <span class="days">+7-923-003-22-00</span>
-                                </div>
-                                <div class="content__item">
-                                    <i class="bi bi-phone-fill"></i>
-                                    <span class="days">+7-923-003-77-00</span>
-                                </div>
-                            </div>
+        <div class="header__main bg-main">
+            <div class="header__container container">
+                <!-- header logo -->
+                <div class="header__left">
+                    <a class="logo" href="index.html" data-page="main">
+                        <img class="logo__img" src="image/logo.png" alt="">
+                        <div class="logo-text__container">
+                            <span class="logo-text__top">STEKLO</span>
+                            <span class="logo-text__bottom">MARKET</span>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                <!-- header-nav-bar -->
+                <div class="header__center">
+                    <nav class="header__nav">
+                        <a href="page/about.html" class="nav__item" data-page="about">О компании</a>
+                        <div class="nav__item dropdown__item">
+                            <div class="dropdown__toggle"  data-page="production">
+                                <span>Продукция</span>
+                                <i class="bi bi-caret-down-fill"></i>
+                            </div>
+                            <nav class="sub__nav">
+                                <a class="nav__item" href="page/production.html" data-page="production"><i class="bi bi-arrow-right-short"></i>Каталог</a>
+                                <a class="nav__item" href="page/services.html" data-page="services"><i class="bi bi-arrow-right-short"></i>Услуги</a>
+                            </nav>
+                        </div>
+                        <a href="page/contact.html" class="nav__item" data-page="contact">Контакты</a>
+                        <a class="nav__item" href="page/faq.html" data-page="faq">FAQ</a>
+                    </nav>
                 </div>
 
-                <div class="header-section">
-                    <div class="page-width">
-                        <div class="header__content">
-                            <!-- logo -->
-                            <a class="header__left" href="index.html" data-page="main">
-                                <img src="image/logo.png" alt="">
-                                <div class="logo-text">
-                                    <span class="logo-text-top">STEKLO</span>
-                                    <span class="logo-text-bottom">MARKET</span>
-                                </div>
-                            </a>
-                            <!-- header-nav-bar -->
-                            <div class="header__center">
-                                <nav>
-                                    <a href="page/about.html" data-page="about">О компании</a>
-                                    <a href="page/production.html" data-page="production">Продукция</a>
-                                    <a href="page/contact.html" data-page="contact">Контакты</a>
-                                    <a href="page/project.html" data-page="projects">Наши проекты</a>
-                                </nav>
+                <!-- header-button-->
+                <div class="header__right">
+                    <div class="btn-group">
+                        <button class="btn btn--primary btn-map">
+                            <div class="item btn__item">
+                                <i class="bi bi-map-fill btn__icon"></i>
+                                <span class="btn__text">Как к нам добраться?</span>
                             </div>
+                        </button>
 
-                            <!-- buttons -->
-                            <div class="header__right">
-                                <div class="button__group">
-                                    <!-- contact button -->
-                                    <button class="button btn-primary btn-map" id="map-button">
-                                        <div class="button__content">
-                                            <i class="bi bi-map-fill"></i>
-                                            <span>Как к нам добраться?</span>
-                                        </div>
-                                    </button>
-                                    <!-- mobile version button, on desktop - hide-->
-                                    <button class="button button__mobile__menu" aria-expanded="false">
-                                        <div class="button__content">
-                                            <i class="bi bi-list"></i>
-                                        </div>
-                                    </button>
-                                </div>
+                        <button class="btn btn--mobile">
+                            <div class="item btn__item btn__item--mob">
+                                <i class="bi bi-list btn__icon"></i>
                             </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <aside class="sidebar" id="sidebar" aria-hidden="true">
-            <div class="sidebar__content">
-                <!-- sidebar navigation -->
-                <nav class="sidebar__nav">
-                    <div class="content__item">
-                        <i class="bi bi-house-door-fill"></i>
-                        <span><a href="index.html">Главная</a></span>
+    <aside class="sidebar" id="sidebar" aria-hidden="true">
+        <div class="sidebar__content">
+            <!-- sidebar navigation -->
+            <nav class="sidebar__nav">
+                <div class="item nav__item">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span><a href="/">Главная</a></span>
+                </div>
+                <div class="item nav__item" data-page="about">
+                    <i class="bi bi-info-square-fill"></i>
+                    <span><a href="page/about.html">О компании</a></span>
+                </div>
+                <div class="item nav__item" data-page="production">
+                    <i class="bi bi-aspect-ratio"></i>
+                    <span> <a href="page/production.html">Продукция</a></span>
+                </div>
+                <div class="item nav__item" data-page="services">
+                    <i class="bi bi-briefcase-fill"></i>
+                    <span> <a href="page/services.html">Услуги</a></span>
+                </div>
+                <div class="item nav__item" data-page="contact">
+                    <i class="bi bi-pin-map-fill"></i>
+                    <span> <a href="page/contact.html">Контакты</a></span>
+                </div>
+                <div class="item nav__item" data-page="faq">
+                    <i class="bi bi-shop"></i>
+                    <span><a href="page/faq.html">FAQ</a></span>
+                </div>
+            </nav>
+            <div class="btn-group">
+                <!-- contact button in sidebar -->
+                <button class="btn btn--primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
+                    <div class="item btn__item">
+                        <i class="bi bi-map-fill btn__icon"></i>
+                        <span class="btn__text">Как к нам добраться?</span>
                     </div>
-                    <div class="content__item">
-                        <i class="bi bi-info-square-fill"></i>
-                        <span><a href="#">О компании</a></span>
+                </button>
+            </div>
+        </div>
+    </aside>
+    <div class="overlay"></div>
+
+    <main class="main">
+        <!-- Section HERO -->
+        <section class="hero section bg-support">
+            <div class="container hero__container">
+                <div class="hero__left">
+                    <h1 class="text text-heading">
+                        Оптово-розничная продажа <br> стекла и зеркал <br>
+                        <span>от листа до вагона</span>
+                    </h1>
+
+                    <!-- Mobile version image in page-->
+                    <img src="image/hero-img.png" alt="Hero Glass Image" class="hero__image">
+
+                    <p class="text hero__text">
+                        Мы предлагаем широкий ассортимент стекольных изделий: прозрачное стекло, стекло химического травления, зеркала.<br>
+                        Работаем по индивидуальным заказам и предлагаем выгодные условия для наших клиентов.
+                    </p>
+
+                    <div class="btn-group hero__buttons">
+                        <button class="btn btn--primary" data-modal="#modal_contact">
+                            <div class="item btn__item">
+                                <i class="bi bi-cart-plus-fill btn__icon"></i>
+                                <span class="btn__text">Заказать</span>
+                            </div>
+                        </button>
+
+                        <a class="btn btn--secondary" href="page/about.html">
+                            <div class="item item--icon-right btn__item">
+                                <i class="bi bi-arrow-right btn__icon"></i>
+                                <span class="btn__text">Подробнее</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="content__item">
-                        <i class="bi bi-aspect-ratio"></i>
-                        <span> <a href="#">Продукция</a></span>
-                    </div>
-                    <div class="content__item">
-                        <i class="bi bi-pin-map-fill"></i>
-                        <span> <a href="page/contact.html">Контакты</a></span>
-                    </div>
-                    <div class="content__item">
-                        <i class="bi bi-shop"></i>
-                        <span><a href="#">Наши проекты</a></span>
-                    </div>
-                </nav>
-                <div class="button__group">
-                    <!-- contact button in sidebar -->
-                    <button class="button btn-primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
-                        <div class="button__content">
-                            <i class="bi bi-map-fill"></i>
-                            <span>Как к нам добраться?</span>
-                        </div>
-                    </button>
+
+                </div>
+
+                <!-- Desktop version image in page-->
+                <div class="hero__right">
+                    <img src="image/hero-img.png" alt="Hero Glass Image" class="hero__image">
                 </div>
             </div>
-        </aside>
 
-        <div class="overlay"></div>
+        </section>
 
-        <main class="main">
-            <!--Hero section -->
-            <section class="hero__section">
-                <div class="page-width">
-                    <div class="hero__content">
-                        <div class="hero__left">
-                            <div class="content__wrapper">
-                                <p class="section__content_title">
-                                    Продажа стекольных<br> изделий в Барнауле
-                                </p>
-                                <p class="section__content_text">
-                                    Мы предлагаем широкий ассортимент стекольных изделий: прозрачное стекло, стекло химического травления, зеркала.<br>
-                                    Работаем по индивидуальным заказам и предлагаем выгодные условия для наших клиентов.
-                                </p>
-                            </div>
-                            <div class="button__group">
-                                <button class="button btn-primary" id="button_order" onclick="openModal()">
-                                    <div class="button__content">
-                                        <i class="bi bi-cart-plus-fill"></i>
-                                        <span>Заказать</span>
-                                    </div>
-                                </button>
-                                <button class="button btn-secondary" id="button_about">
-                                    <div class="button__content">
-                                        <span>Подробнее</span>
-                                        <i class="bi bi-arrow-right"></i>
-                                    </div>
-                                </button>
-                            </div>
+        <!-- Section PARTNERS -->
+        <section class="partners section section-border bg-white">
+            <div class="container partners__container">
+                <h3 class="text-heading section__title">Наши партнеры</h3>
 
-                        </div>
-                        <div class="hero__right">
-                            <img src="image/hero-img.png" alt="Hero Glass Image" class="hero__image">
-                        </div>
-                    </div>
-                </div>
-            </section>
+                <p class="text partners__text">
+                    Наши партнёры — признанные лидеры стекольной отрасли, с которыми нас связывает многолетнее успешное сотрудничество.<br>
+                    Именно благодаря тесным партнёрским отношениям мы гарантируем стабильные поставки высококачественного стекла и современной стекольной продукции.
+                </p>
+                <ul class="partners__list">
+                    <li class="item partners__item">
+                        <i class="bi bi-1-square"></i>
+                        <i class="bi bi-arrow-bar-right"></i>
+                        <span>Salavat Steklo</span>
+                    </li>
+                    <li class="item partners__item">
+                        <i class="bi bi-2-square"></i>
+                        <i class="bi bi-arrow-bar-right"></i>
+                        <span>Interglass</span>
+                    </li>
+                    <li class="item partners__item">
+                        <i class="bi bi-3-square"></i>
+                        <i class="bi bi-arrow-bar-right"></i>
+                        <span>Orda Glass</span>
+                    </li>
+                    <li class="item partners__item">
+                        <i class="bi bi-4-square"></i>
+                        <i class="bi bi-arrow-bar-right"></i>
+                        <span>Larta Glass</span>
+                    </li>
+                </ul>
+                <p class="text partners__text">
+                    Их опыт, надёжность и инновационный подход позволяют нам обеспечивать клиентов продукцией,
+                    соответствующей самым высоким стандартам рынка.
+                </p>
+            </div>
+        </section>
 
-            <!-- Partners section -->
-            <section class="partners__section section section-white">
-                <div class="page-width">
-                    <h2 class="section__title">Партнеры</h2>
-                    <div class="partners__content content__wrapper">
-                        <p class="section__content_text">
-                            Наши партнёры — признанные лидеры стекольной отрасли, с которыми нас связывает многолетнее успешное сотрудничество.<br>
-                            Именно благодаря тесным партнёрским отношениям мы гарантируем стабильные поставки высококачественного стекла и современной стекольной продукции.
-                        </p>
-                        <div class="content__item">
-                            <i class="bi  bi-arrow-bar-right"></i>
-                            <span>Salavat Steklo</span>
+        <!-- Section CATALOG -->
+        <section class="best-catalog section bg-support">
+            <div class="container best-catalog__container">
+                <h2 class="text-heading section__title"> Лидеры продаж </h2>
+
+                <!--Start production card -->
+                <div class="catalog-cards">
+                    <!-- Card №1 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                          <img class="card-img minimized" src="image/glass/glass-1.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Стекло рельефное Дельта на скрине">
                         </div>
-                        <div class="content__item">
-                            <i class="bi  bi-arrow-bar-right"></i>
-                            <span>Interglass</span>
-                        </div>
-                        <div class="content__item">
-                            <i class="bi bi-arrow-bar-right"></i>
-                            <span>Larta Glass</span>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Стекло рельефное Дельта на скрине</p>
                         </div>
 
-                        <p class="section__content_text">
-                            Их опыт, надёжность и инновационный подход позволяют нам обеспечивать клиентов продукцией, соответствующей самым высоким стандартам рынка.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!--Best sales production section-->
-            <section class="production__section">
-                <div class="page-width">
-                    <h2 class="section__title"> Лидеры продаж </h2>
-                    <div class="production__content">
-
-                        <!--TODO - Create script, that generate these cards from a list-->
-                        <!--Start production card -->
-                        <div class="production__cards">
-                            <!-- Top-Card-->
-                            <div class="card__prod">
-                                <img class="card__img" src="image/" alt="" onerror="this.onerror=null; this.src='image/default_product_image.png'">
-                                <div class="card__content">
-                                    <p class="card__prod-title">Название стекла</p>
-                                    <div class="card__prod-description">
-                                        <p class="card__prod-item"> <i class="bi bi-caret-right-fill"></i>Производитель: <span>Салават</span></p>
-                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Толщина: <span>4мм</span></p>
-                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Марка: <span>M1</span></p>
-                                        <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
-                                    </div>
-                                    <div class="button__group">
-                                        <button class="button btn-primary" onclick="openModal()">
-                                            <div class="button__content">
-                                                <span>Заказать</span>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Bottom-Card-->
-
-                            <!-- Top-Card-->
-                            <div class="card__prod">
-                                <img class="card__img" src="image/" alt="" onerror="this.onerror=null; this.src='image/default_product_image.png'">
-                                <div class="card__content">
-                                    <p class="card__prod-title">Название стекла</p>
-                                    <div class="card__prod-description">
-                                        <p class="card__prod-item"> <i class="bi bi-caret-right-fill"></i>Производитель: <span>Салават</span></p>
-                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Толщина: <span>4мм</span></p>
-                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Марка: <span>M1</span></p>
-                                        <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
-                                    </div>
-                                    <div class="button__group">
-                                        <button class="button btn-primary" onclick="openModal()">
-                                            <div class="button__content">
-                                                <span>Заказать</span>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Bottom-Card-->
-
-                            <!-- Top-Card-->
-                            <div class="card__prod">
-                                <img class="card__img" src="image/" alt="" onerror="this.onerror=null; this.src='image/default_product_image.png'">
-                                <div class="card__content">
-                                    <p class="card__prod-title">Название стекла</p>
-                                    <div class="card__prod-description">
-                                        <p class="card__prod-item"> <i class="bi bi-caret-right-fill"></i>Производитель: <span>Салават</span></p>
-                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Толщина: <span>4мм</span></p>
-                                        <p class="card__prod-item"><i class="bi bi-caret-right-fill"></i>Марка: <span>M1</span></p>
-                                        <p class="card__prod-item card__prod-item-price">от 100 руб/м<sup>2</sup></p>
-                                    </div>
-                                    <div class="button__group">
-                                        <button class="button btn-primary" onclick="openModal()">
-                                            <div class="button__content">
-                                                <span>Заказать</span>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Bottom-Card-->
-
-                        </div>
-
-                        <div class="button__group">
-                            <button class="button btn-primary">
-                                <div class="button__content">
-                                    <i class="bi bi-cart-fill"></i>
-                                    <span>Полный каталог</span>
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card " data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
                                 </div>
                             </button>
                         </div>
                     </div>
-                </div>
-            </section>
+                    <!-- Card End -->
 
-            <!--Service Section-->
-            <section class="services__section section section-white">
-                <div class="page-width">
-                    <div class="section__title">Услуги</div>
-                    <div class="services__content">
-                        <div class="services__left">
-                            <p class="section__content_title">И порежем и доставим</p>
-                            <p class="section__content_text"> Мы не только порежем стекло по нужным размерам, но и быстро доставим его прямо к вам.
+                    <!-- Card №2 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                            <img class="card-img minimized" src="image/glass/glass-2.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Стекло рельефное 'Пазл' (Бронза)">
                         </div>
-                        <div class="services__center">
-                            <i class="bi bi-car-front-fill"></i>
-                            <h2>Доставка стекла</h2>
-                            <p class="section__content_text">Готовое стекло доставим прямо к вам — быстро и надёжно!</p>
-                            <a class="button text-button">
-                                <div class="button__content">
-                                    <span>Подробнее</span>
-                                    <i class="bi bi-arrow-right"></i>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Стекло рельефное "Пазл" (Бронза)</p>
+                        </div>
+
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card" data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card №3 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                            <img class="card-img minimized" src="image/glass/glass-3.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Мору/Moru Ultra clear">
+                        </div>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Мору/Moru Ultra clear</p>
+                        </div>
+
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card" data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+
+                    <!-- Card №4 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                            <img class="card-img minimized" src="image/glass/glass-5.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Moru серое с напылением">
+                        </div>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Moru серое с напылением</p>
+                        </div>
+
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card" data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card №5 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                            <img class="card-img minimized" src="image/glass/glass-8.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Tinted Grey Moru Glass">
+                        </div>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Tinted Grey Moru Glass</p>
+                        </div>
+
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card" data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card №6 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                            <img class="card-img minimized" src="image/glass/glass-7.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Стекло армированное 6мм">
+                        </div>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Стекло армированное 6мм</p>
+                        </div>
+
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card " data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card №7 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                            <img class="card-img minimized" src="image/glass/glass-9.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Стекло окрашенное в массе Tinted Black Glass (PG10)">
+                        </div>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Стекло окрашенное в массе Tinted Black Glass (PG10)</p>
+                        </div>
+
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card " data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card №8 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                            <img class="card-img minimized" src="image/glass/glass-10.JPG" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Стекло матовое (Сатин)">
+                        </div>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Стекло матовое (Сатин)</p>
+                        </div>
+
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card " data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                    <!-- Card №9 Start -->
+                    <div class="card">
+                        <div class="card__top">
+                            <img class="card-img minimized" src="image/glass/glass-11.png" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'" img-title="Зеркало с лкп с рисунком, Фьюзи (БРОНЗА)">
+                        </div>
+                        <div class="card__bottom">
+                            <p class="text-heading card__title">Зеркало с лкп с рисунком, Фьюзи (Бронза)</p>
+                        </div>
+
+                        <div class="btn-group card__buttons">
+                            <button class="btn btn--primary btn-card " data-modal="#modal_contact">
+                                <div class="item btn__item">
+                                    <span class="btn__text">Заказать</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card End -->
+
+                </div>
+
+                <div class="btn-group catalog__btn">
+                    <a class="btn btn--primary" href="page/production.html">
+                        <div class="item btn__item">
+                            <i class="bi bi-cart-dash-fill"></i>
+                            <span class="btn__text">Полный каталог</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section SERVICES -->
+        <section class="services section section-border bg-white">
+            <div class="container services__container">
+                <h2 class="text-heading section__title">Услуги</h2>
+                <div class="services__cards">
+                    <div class="services__start">
+                        <h1 class="text text-heading"> И порежем, и доставим </h1>
+                        <p class="text text__service-info">Мы не только порежем стекло по нужным размерам, но и быстро доставим его прямо к вам.</p>
+                        <div class="btn-group services__buttons">
+                            <a class="btn btn--secondary btn--text" href="page/services.html">
+                                <div class="item btn__item item--icon-right">
+                                    <i class="bi bi-arrow-right btn__icon"></i>
+                                    <span class="btn__text">Подробнее</span>
                                 </div>
                             </a>
                         </div>
-                        <div class="services__right">
-                            <i class="bi bi-aspect-ratio"></i>
-                            <h2>Резка стекла</h2>
-                            <p class="section__content_text">Нарежем стекло под ваш размер и аккуратно упакуем</p>
-                            <a class="button text-button">
-                                <div class="button__content">
-                                    <span>Подробнее</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </div>
-                            </a>
-                        </div>
                     </div>
-                </div>
-            </section>
-
-            <!--About us Section-->
-            <section class="about__ass section">
-                <div class="page-width">
-                    <h2 class="section__title">Немного о нас</h2>
-                    <div class="about__content section__content">
-                        <div class="about__left section__left">
-                            <div class="content__wrapper">
-                                <h1 class="section__content_title"> Ваш идеальный партнёр в мире стекла!</h1>
-                                <p class="section__content_text">
-                                    <span><span style="color:var(--deep-blue); font-weight:600">ООО «Витрум»</span> — надёжный поставщик стекла и стекольной продукции в г. Барнаул и регионе.
-                                    Мы предлагаем широкий ассортимент качественных материалов и профессиональное обслуживание для частных и корпоративных клиентов.<br>
-                                    </span>
-                                    <span>Наша компания работает на рынке давно и зарекомендовала себя как ответственный и стабильный партнёр.
-                                    Мы постоянно расширяем ассортимент и внедряем современные технологии, чтобы удовлетворять запросы самых требовательных клиентов.
-                                    </span>
-                                    <span>Наши специалисты готовы проконсультировать по выбору продукции и помочь с оформлением заказов любой сложности.
-
-                                    </span>
-                                    <span>
-                                        Мы стремимся создавать долгосрочные отношения с клиентами, предлагая выгодные условия и высокое качество продукции.
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="button__group">
-                                <button class="button btn-primary button-sm">
-                                    <div class="button__content">
-                                        <span>Подробнее</span>
-                                        <i class="bi bi-arrow-right"></i>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="about__right section__right">
-                            <img class="about__img" src="image/about-photo.png" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'">
-                        </div>
+                    <div class="services__center service__card">
+                        <i class="bi bi-car-front-fill service-info__icon"></i>
+                        <h2 class="text-heading service-info__title">Доставка стекла</h2>
+                        <p class="text text__service-info">Готовое стекло доставим прямо к вам — быстро и надёжно!</p>
                     </div>
-                </div>
-            </section>
-
-            <!--About us card Section-->
-            <section class="testimonials__section section section-white">
-                <div class="page-width">
-                    <h2 class="section__title">Почему выбирают нас</h2>
-                    <div class="testimonials__content">
-                        <!--About-card-start-->
-                        <div class="about__card">
-                            <div class="about__card-icon">
-                                <i class="bi bi-aspect-ratio"></i>
-                            </div>
-                            <div class="content__wrapper">
-                                <h3 class="section__content_title">Наличие товара</h3>
-                                <p class="section__content_text">
-                                    Подходящее стекло есть всегда! <br>
-                                </p>
-                            </div>
-                        </div>
-                        <!--About-card-end-->
-
-                        <!--About-card-start-->
-                        <div class="about__card">
-                            <div class="about__card-icon">
-                                <i class="bi bi-clipboard-data-fill"></i>
-                            </div>
-                            <div class="content__wrapper">
-                                <h3 class="section__content_title">Стабильность</h3>
-                                <p class="section__content_text">
-                                    Наша надежность подтверждена
-                                    рекомендациями ведущих
-                                    компаний.
-                                </p>
-                            </div>
-                        </div>
-                        <!--About-card-end-->
-
-                        <!--About-card-start-->
-                        <div class="about__card">
-                            <div class="about__card-icon">
-                                <i class="bi bi-person-badge"></i>
-                            </div>
-                            <div class="content__wrapper">
-                                <h3 class="section__content_title">Профессионализм</h3>
-                                <p class="section__content_text">
-                                    Анализируем потребности
-                                    и усовершенствуем услуги.
-                                </p>
-                            </div>
-                        </div>
-                        <!--About-card-end-->
-
-                        <!--About-card-start-->
-                        <div class="about__card">
-                            <div class="about__card-icon">
-                                <i class="bi bi-award"></i>
-                            </div>
-                            <div class="content__wrapper">
-                                <h3 class="section__content_title">Качество</h3>
-                                <p class="section__content_text">
-                                    У нас многоэтапный контроль
-                                    качества продукции
-                                </p>
-                            </div>
-                        </div>
-                        <!--About-card-end-->
-
-                        <!--About-card-start-->
-                        <div class="about__card">
-                            <div class="about__card-icon">
-                                <i class="bi bi-truck-flatbed"></i>
-                            </div>
-                            <div class="content__wrapper">
-                                <h3 class="section__content_title">Быстрая доставка</h3>
-                                <p class="section__content_text">
-                                    Быстрая и аккуратная доставка собственным транспортом 24/7.
-                                </p>
-                            </div>
-                        </div>
-                        <!--About-card-end-->
-
-                        <!--About-card-start-->
-                        <div class="about__card">
-                            <div class="about__card-icon">
-                                <i class="bi bi-arrow-repeat "></i>
-                            </div>
-                            <div class="content__wrapper">
-                                <h3 class="section__content_title">Оперативность</h3>
-                                <p class="section__content_text">
-                                    Оперативный подход, и грамотно выстроенная логистика.
-                                </p>
-                            </div>
-                        </div>
-                        <!--About-card-end-->
-
-                    </div>
-                </div>
-            </section>
-
-            <!--Map Section-->
-            <section class="map__section section" style="padding-bottom: 5px">
-                <div class="page-width">
-                    <h2 class="section__title">Мы на карте</h2>
-                    <div class="map-wrapper">
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A283196c4c2bbd3428ee0dcb4336102d8a1ec76660f470a553f537418f302228e&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
-                        <div class="map-overlay"></div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-
-        <footer class="footer">
-            <div class="page-width">
-                <div class="footer__content">
-                    <div class="footer__main">
-
-                        <!-- logo -->
-                        <div class="header__left">
-                            <a class="header__left" href="index.html">
-                                <img src="image/logo.png" alt="">
-                                <div class="logo-text">
-                                    <span class="logo-text-top">STEKLO</span>
-                                    <span class="logo-text-bottom">MARKET</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- nav-bar -->
-                        <div class="footer__navbar">
-                            <nav>
-                                <a href="page/about.html" data-page="about">О компании</a>
-                                <a href="page/production.html" data-page="production">Продукция</a>
-                                <a href="page/contact.html" data-page="contact">Контакты</a>
-                                <a href="page/project.html" data-page="projects">Наши проекты</a>
-                            </nav>
-                        </div>
-
-                        <!-- Information about the organization-->
-                        <div class="footer__contact">
-                            <div class="content__item">
-                                <i class="bi bi-credit-card-2-front"></i>
-                                <div class="content__item__content">
-                                    <span>ООО “Витрум”</span>
-                                    <span>ИНН: 2222829160</span>
-                                    <span>ОГРН: 1142223012667</span>
-                                </div>
-                            </div>
-                            <div class="content__item">
-                                <i class="bi bi bi-envelope-at-fill"></i>
-                                <span>sale@steklomarket.ru</span>
-                            </div>
-                            <div class="content__item">
-                                <div class="content__item">
-                                    <i class="bi bi-alarm-fill"></i>
-                                    <span class="days">Пн-Пт:<span class="times">08:00-17:00</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Phone number organization-->
-                        <div class="footer__phone-contact">
-                            <p>Позвонить нам:</p>
-                            <div class="content__item">
-                                <i class="bi bi-whatsapp"></i>
-                                <span class="days">+7-923-003-22-00</span>
-                            </div>
-                            <div class="content__item">
-                                <i class="bi bi-phone-fill"></i>
-                                <span class="days">+7-923-003-77-00</span>
-                            </div>
-                        </div>
-
-                        <!-- Organization copyright-->
-                        <p class="footer__copyright">
-                            © 2025 <span>SHZE TEAM — союз независимых разработчиков </span> - права на программный код и дизайн сайта принадлежат разработчику. <br>
-                            Вся информация и содержимое сайта принадлежат ООО "Витрум".
-                        </p>
-                    </div>
-
-                    <!-- Developer contact-->
-                    <div class="footer__bottom">
-                        <p class="dev__info">Development by - <a href="https://github.com/sint0z" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> S1ntoz / Shze Team</a></p>
+                    <div class="services__end service__card">
+                        <i class="bi bi-aspect-ratio service-info__icon"></i>
+                        <h2 class="text-heading service-info__title">Резка стекла</h2>
+                        <p class="text text__service-info">Нарежем стекло под ваш размер и аккуратно упакуем</p>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <!-- Section ABOUT-US -->
+        <section class="about-us section bg-support">
+            <div class="container about-us__container">
+                <h2 class="text-heading section__title">Немного о нас</h2>
+                <div class="container-column">
+                    <div class="container-column__info">
+                        <h1 class="text-heading">Ваш идеальный партнёр в мире стекла!</h1>
+                        <img class="image" src="image/car.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'">
+                        <p class="text text--by-width">
+                            <span class="text text-contrast">ООО «Витрум» (бренд «Стекломаркет»)</span>
+                            — надёжный поставщик стекла и стекольной продукции в Барнауле и регионе.
+                            Мы работаем с ведущими производителями России и Китая, поставляя стекло от листового до вагонных партий.
+                            Широкий ассортимент и профессиональный сервис — для частных и корпоративных клиентов.
+                        </p>
+                        <div class="btn-group">
+                            <a class="btn btn--primary" href="/page/about.html">
+                                <div class="item btn__item item--icon-right">
+                                    <i class="bi bi-arrow-bar-right item__icon"></i>
+                                    <span class="btn__text">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="container-column__image">
+                        <img class="image" src="image/car.jpg" alt="" onerror="this.onerror=null; this.src='image/no-image.jpg'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section TESTIMONIALS -->
+        <section class="testimonials section section-border bg-white">
+            <div class="container testimonials__container">
+                <h2 class="text-heading section__title">Почему выбирают нас</h2>
+                <div class="testimonials__content">
+                    <!--About-card-start-->
+                    <div class="about-card">
+                        <div class="about-card__icon">
+                            <i class="bi bi-aspect-ratio"></i>
+                        </div>
+                        <div class="about-card__text">
+                            <h3 class="text-heading">Наличие товара</h3>
+                            <p class="text">
+                                Подходящее стекло есть всегда! <br>
+                            </p>
+                        </div>
+                    </div>
+                    <!--About-card-end-->
+
+                    <!--About-card-start-->
+                    <div class="about-card">
+                        <div class="about-card__icon">
+                            <i class="bi bi-clipboard-data-fill"></i>
+                        </div>
+                        <div class="content__wrapper">
+                            <h3 class="text-heading">Стабильность</h3>
+                            <p class="text">
+                                Наша надежность подтверждена
+                                рекомендациями ведущих
+                                компаний.
+                            </p>
+                        </div>
+                    </div>
+                    <!--About-card-end-->
+
+                    <!--About-card-start-->
+                    <div class="about-card">
+                        <div class="about-card__icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <div class="content__wrapper">
+                            <h3 class="text-heading">Профессионализм</h3>
+                            <p class="text">
+                                Анализируем потребности
+                                и усовершенствуем услуги.
+                            </p>
+                        </div>
+                    </div>
+                    <!--About-card-end-->
+
+                    <!--About-card-start-->
+                    <div class="about-card">
+                        <div class="about-card__icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <div class="content__wrapper">
+                            <h3 class="text-heading">Качество</h3>
+                            <p class="text">
+                                У нас многоэтапный контроль
+                                качества продукции.
+                            </p>
+                        </div>
+                    </div>
+                    <!--About-card-end-->
+
+                    <!--About-card-start-->
+                    <div class="about-card">
+                        <div class="about-card__icon">
+                            <i class="bi bi-truck-flatbed"></i>
+                        </div>
+                        <div class="content__wrapper">
+                            <h3 class="text-heading">Быстрая доставка</h3>
+                            <p class="text">
+                                Быстрая и аккуратная доставка собственным транспортом.
+                            </p>
+                        </div>
+                    </div>
+                    <!--About-card-end-->
+
+                    <!--About-card-start-->
+                    <div class="about-card">
+                        <div class="about-card__icon">
+                            <i class="bi bi-arrow-repeat "></i>
+                        </div>
+                        <div class="content__wrapper">
+                            <h3 class="text-heading">Оперативность</h3>
+                            <p class="text">
+                                Оперативный подход, и грамотно выстроенная логистика.
+                            </p>
+                        </div>
+                    </div>
+                    <!--About-card-end-->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section MAP -->
+        <section id="map" class="section bg-support">
+            <div class="container map__container">
+                <h2 class="text-heading section__title">Мы на карте</h2>
+                <div class="map-wrapper">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A283196c4c2bbd3428ee0dcb4336102d8a1ec76660f470a553f537418f302228e&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
+                    <div class="map-overlay"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer-content">
+
+                <div class="footer__logo">
+                    <a class="logo" href="index.html" data-page="main">
+                        <img class="logo__img" src="image/logo.png" alt="">
+                        <div class="logo-text__container">
+                            <span class="logo-text__top">STEKLO</span>
+                            <span class="logo-text__bottom">MARKET</span>
+                        </div>
+                    </a>
+                </div>
+
+                <nav class="content-container footer__nav">
+                    <a class="item footer__nav-item" href="page/about.html" data-page="about">О компании</a>
+                    <a class="item footer__nav-item" href="page/production.html" data-page="production">Продукция</a>
+                    <a class="item footer__nav-item" href="page/contact.html" data-page="contact">Контакты</a>
+                    <a class="item footer__nav-item" href="page/faq.html" data-page="faq">FAQ</a>
+                </nav>
+
+                <div class="content-container footer__company-data">
+                    <div class="item">
+                        <i class="bi bi-credit-card-2-front"></i>
+                        <div class="company-data">
+                            <span>ООО “Витрум”</span>
+                            <span>ИНН: 2222829160</span>
+                            <span>ОГРН: 1142223012667</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="bi bi bi-envelope-at-fill"></i>
+                        <span>sale@steklomarket.ru</span>
+                    </div>
+                    <div class="item">
+                        <i class="bi bi-alarm-fill"></i>
+                        <span>Пн-Пт:<span class="footer__time text text-heading">08:00-17:00</span></span>
+                    </div>
+                </div>
+
+                <div class="content-container footer__contact">
+                    <p class="text text-heading contact__title">Позвонить нам:</p>
+                    <div class="item footer-contact__item">
+                        <div class="signature-icon">
+                            <i class="signature-icon__icon bi bi-printer-fill"></i>
+                            <small class="signature-icon__text">Факс</small>
+                        </div>
+                        <span>+7-(385)-250-18-54</span>
+                    </div>
+                    <div class="item footer-contact__item">
+                        <i class="bi bi-whatsapp"></i>
+                        <span class="days">+7-(923)-003-22-00</span>
+                    </div>
+                    <div class="item footer-contact__item">
+                        <i class="bi bi-phone-fill"></i>
+                        <span class="days">+7-(923)-003-77-00</span>
+                    </div>
+                </div>
+                <!-- Organization copyright-->
+                <p class="text footer__copyright">
+                    © 2025 SHZE TEAM — союз независимых разработчиков </span> - права на программный код и дизайн сайта принадлежат разработчику.
+                    Вся информация и содержимое сайта принадлежат ООО&nbsp;"Витрум".
+                </p>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="dev__info">Development by - <a href="https://github.com/sint0z" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> S1ntoz / Shze Team</a></p>
+            </div>
+        </div>
+    </footer>
+    <button class="btn" id="btn-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <div id="modal_contact" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2 class="text modal-header__title">Хотите купить?</h2>
+            </div>
+            <button class="modal__close" id="modal-close" aria-label="Закрыть модальное окно">&times;</button>
+            <div class="modal__body">
+                <h3 class="text">Позвоните или напишите нам:</h3>
+                <div class="modal__phone-contact">
+                    <div class="item modal__item">
+                        <div class="signature-icon">
+                            <i class="signature-icon__icon bi bi-printer-fill"></i>
+                            <small class="signature-icon__text">Факс</small>
+                        </div>
+                        <span>+7-(385)-250-18-54</span>
+                    </div>
+
+                    <div class="item modal__item">
+                        <i class="bi bi-whatsapp"></i>
+                        <span class="days" data-number="+7-(923)-003-22-00">+7-(923)-003-22-00</span>
+                    </div>
+                    <div class="item modal__item">
+                        <i class="bi bi-phone-fill"></i>
+                        <span class="days" data-number="+7-(923)-003-77-00">+7-(923)-003-77-00</span>
+                    </div>
+                    <div class="item modal__item">
+                        <i class="bi bi bi-envelope-at-fill"></i>
+                        <span>sale@steklomarket.ru</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
     <script src="script/index.js"></script>
 </body>

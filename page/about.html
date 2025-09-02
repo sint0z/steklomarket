@@ -10,7 +10,7 @@
     <meta name="description" content="Стекломаркет - продажа качественного стекла, надежные поставки и профессиональная консультация. Широкий ассортимент стекла для строительных и промышленных целей.">
     <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, поставки стекла, строительное стекло, купить стекло, барнаул стекло, стекло,зеркало,резка стекла">
 
-    <title>Контакты</title>
+    <title>О компании</title>
 
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 
@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body page="contact">
+<body page="about">
 
-<div class="page" id="contact">
+<div class="page" id="page">
     <header class="header">
 
         <div class="header__top bg-support">
@@ -61,7 +61,7 @@
                     <nav class="header__nav">
                         <a href="about.html" class="nav__item" data-page="about">О компании</a>
                         <div class="nav__item dropdown__item">
-                            <div class="dropdown__toggle"  >
+                            <div class="dropdown__toggle">
                                 <span>Продукция</span>
                                 <i class="bi bi-caret-down-fill"></i>
                             </div>
@@ -125,6 +125,15 @@
                     <span><a href="../page/faq">FAQ</a></span>
                 </div>
             </nav>
+            <div class="btn-group">
+                <!-- contact button in sidebar -->
+                <button class="btn btn--primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
+                    <div class="item btn__item">
+                        <i class="bi bi-map-fill btn__icon"></i>
+                        <span class="btn__text">Как к нам добраться?</span>
+                    </div>
+                </button>
+            </div>
         </div>
     </aside>
     <div class="overlay"></div>
@@ -139,100 +148,136 @@
                         <span class="text breadcrumbs__text">Главная</span>
                     </a>
                     <i class="bi bi-chevron-right"></i>
-                    <span class="text text-contrast breadcrumbs__text">Контакт</span>
+                    <span class="text text-contrast breadcrumbs__text">О компании</span>
                 </div>
-                <h3 class="text-heading breadcrumbs__title">Контакты</h3>
+                <h3 class="text-heading breadcrumbs__title">О компании</h3>
             </div>
         </section>
 
-        <!-- Section CONTACT WAREHOUSE -->
-        <section class="contact-warehouse section section-border bg-white">
-            <div class="container container-column">
-                <div class="container-column__info">
-                    <h1 class="text-heading">Стекломаркет "Склад"</h1>
-                    <img class="image" src="../image/warehouse.png" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                    <div class="subsection contact-address">
-                        <h2 class="text-heading subsection__title">Адрес:</h2>
-                        <p class="text contact-address__text">656922, Алтайский край, г.Барнаул, <br>просп. Космонавтов, д. 8, корп. 1.</p>
-                    </div>
-                    <div class="subsection contact-time-work">
-                        <h2 class="text-heading subsection__title">Режим работы:</h2>
-                        <ul class="contact-time__list">
-                            <li class="time-work">Пн-Чт: 8:00-17:00</li>
-                            <li class="time-work time-work-small"> перерыв: 12:00-12:48</li>
-                            <li class="time-work">Пятница: 8:00-16:00</li>
-                            <li class = "time-work time-work-small"> перерыв: 12:00-12:48</li>
-                            <li class="time-work">Суббота и воскресенье выходной</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="container-column__image">
-                    <img class="image" src="../image/warehouse.png" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                </div>
-            </div>
-        </section>
+        <!-- Section INFORMATION -->
+        <section class="information section section-border bg-white">
+            <div class="container information__container">
 
-        <!-- Section CONTACT OFFICE -->
-        <section class="contact-office section bg-support">
-            <div class="container container-column reverse">
-                <div class="container-column__info">
-                    <h1 class="text-heading">Стекломаркет "Офис"</h1>
-                    <img class="image" src="../image/office.jpeg" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                    <div class="subsection contact-address">
-                        <h2 class="text-heading subsection__title">Адрес:</h2>
-                        <p class="text contact-address__text">656922, Алтайский край, г. Барнаул,<br>ул. Попова, д. 179б, офис 3.</p>
-                    </div>
-                    <div class="subsection contact-time-work">
-                        <h2 class="text-heading subsection__title">Режим работы:</h2>
-                        <ul class="contact-time__list">
-                            <li class="time-work">Пн-Чт: 8:00-17:00</li>
-                            <li class="time-work time-work-small"> перерыв: 12:00-13:00</li>
-                            <li class="time-work">Суббота и воскресенье выходной</li>
-                        </ul>
-                    </div>
+                <div class="about-company">
+                    <h2 class="about-company__title text-heading">Немного о нас</h2>
+                    <p class="text about-company__text">
+                        <strong>«Стекломаркет» — бренд ООО «Витрум»</strong>, специализирующийся на поставках высококачественного стекла и профильной продукции для строительной отрасли.<br>
+                        Компания сотрудничает с ведущими производителями из <strong>России, Китая, Казахстана и Киргизии</strong>, что позволяет обеспечивать широкий ассортимент продукции при оптимальном соотношении цены и качества.<br>
+                        Вся продукция сертифицирована и соответствует действующим стандартам качества.<br>
+                    </p>
+                    <p class="text about-company__text"><strong>ООО «Витрум»</strong> гарантирует надежность поставок и выгодные условия сотрудничества для успешной реализации проектов любого масштаба.</p>
                 </div>
-                <div class="container-column__image">
-                    <img class="image" src="../image/office.jpeg" alt="" onerror="this.onerror=null; this.src='../image/no-image.jpg'">
-                </div>
-            </div>
-        </section>
 
-        <!-- Section PHONE CONTACT -->
-        <section class="phones-contact section section section-border bg-white">
-            <div class="container phone-contact__container">
-                <h2 class="text-heading section__title">Контактная информация</h2>
-                <div class="phones__list">
-                    <div class="item modal__item">
-                        <div class="signature-icon">
-                            <i class="signature-icon__icon bi bi-printer-fill"></i>
-                            <small class="signature-icon__text">Факс</small>
+                <div class="mission">
+                    <h2 class = "text-heading mission__title">Миссия</h2>
+                    <p class="text mission__text"><strong>Наша миссия</strong> — обеспечивать клиентов качественным
+                        <strong>стеклом и профильной продукцией</strong>, сочетая широкий ассортимент,
+                        надежность поставок и высокий уровень сервиса.
+                    </p>
+                </div>
+
+                <div class="stats">
+                    <div class="stats__container">
+                        <div class="stats__item">
+                            <svg class="stats__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-240Zm-320 80v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440h14q-11 18-16.5 38.5T472-360q-54 1-107.5 14.5T260-306q-9 5-14.5 14t-5.5 20v32h283l80 80H160Zm320-320q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm236 480L576-300q-13-13-18.5-28t-5.5-30q0-32 23-57t59-25q28 0 44 13t38 35q20-20 36.5-34t45.5-14q37 0 59.5 25.5T880-357q0 15-6 30t-18 27L716-160Z"/></svg>
+                            <span class="stats__number">5000+</span>
+                            <p class="text stats__text">Довольных клиентов </p>
                         </div>
-                        <span>+7-(385)-250-18-54</span>
-                    </div>
 
-                    <div class="item modal__item">
-                        <i class="bi bi-whatsapp"></i>
-                        <span class="days" data-number="+7-(923)-003-22-00">+7-(923)-003-22-00</span>
-                    </div>
-                    <div class="item modal__item">
-                        <i class="bi bi-phone-fill"></i>
-                        <span class="days" data-number="+7-(923)-003-77-00">+7-(923)-003-77-00</span>
-                    </div>
-                    <div class="item modal__item">
-                        <i class="bi bi bi-envelope-at-fill"></i>
-                        <span>sale@steklomarket.ru</span>
+                        <div class="stats__item">
+                            <svg class="stats__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-120v-720h720v720H120Zm80-640v360l180-181 160 160 220-247v-92H200Zm0 560h560v-348L540-301 380-461 200-280v80Z"/></svg>
+                            <span class="stats__number">40</span>
+                            <p class="text stats__text">Видов<br> стекла</p>
+                        </div>
+
+                        <div class="stats__item">
+                            <svg class="stats__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m387-412 35-114-92-74h114l36-112 36 112h114l-93 74 35 114-92-71-93 71ZM240-40v-309q-38-42-59-96t-21-115q0-134 93-227t227-93q134 0 227 93t93 227q0 61-21 115t-59 96v309l-240-80-240 80Zm240-280q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70ZM320-159l160-41 160 41v-124q-35 20-75.5 31.5T480-240q-44 0-84.5-11.5T320-283v124Zm160-62Z"/></svg>
+                            <span class="stats__number">15</span>
+                            <p class="text stats__text">Лет на<br> рынке</p>
+                        </div>
+
+                        <div class="stats__item">
+                            <svg class="stats__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M80-80v-481l280-119v80l200-80v120h320v480H80Zm80-80h640v-320H480v-82l-200 80v-78l-120 53v347Zm280-80h80v-160h-80v160Zm-160 0h80v-160h-80v160Zm320 0h80v-160h-80v160Zm280-320H680l40-320h120l40 320ZM160-160h640-640Z"/></svg>
+                            <span class="stats__number">1000</span>
+                            <p class="text stats__text">M<sup>2</sup> складских помещений</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- Section MAP -->
-        <section id="map" class="section bg-support">
-            <div class="container map__container">
-                <h2 class="text-heading section__title">Мы на карте</h2>
-                <div class="map-wrapper">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A283196c4c2bbd3428ee0dcb4336102d8a1ec76660f470a553f537418f302228e&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
-                    <div class="map-overlay"></div>
+        <!-- Section DETAILS -->
+        <section class="details section bg-support">
+            <div class="container details__container">
+
+                <div class="company-details">
+                    <h2 class="text-heading details-title">Реквизиты организации</h2>
+                    <p class="text company-name">Общество с ограниченной ответственностью "Витрум"</p>
+                    <div class="address__container">
+                        <p class="address">
+                            <span class="address__title">Юридический адрес:</span>
+                            <span class="address__text">656922, Алтайский край, г. Барнаул, ул. Попова,<br> д. 179Б, офис 3.</span>
+                        </p>
+
+                        <p class="address">
+                            <span class="address__title">Почтовый адрес (для корреспонденции):</span>
+                            <span class="address__text">656011, г. Барнаул, а/я 1848</span>
+                        </p>
+                    </div>
+
+                    <div class="details__items">
+                        <ul class="details__list details__left">
+                            <li class="details__item"><strong>ИНН:</strong>2222829160</li>
+                            <li class="details__item"><strong>ОКПО:</strong>31476682</li>
+                            <li class="details__item"><strong>ОКВЭД:</strong>51.53.24</li>
+                            <li class="details__item"><strong>ОКТМО:</strong>01701000001</li>
+                            <li class="details__item"><strong>ОКФС:</strong>16</li>
+                        </ul>
+                        <ul class="details__list details__right">
+                            <li class="details__item"><strong>КПП:</strong>222201001</li>
+                            <li class="details__item"><strong>ОГРН:</strong>1142223012667</li>
+                            <li class="details__item"><strong>ОКАТО:</strong>01401364000</li>
+                            <li class="details__item"><strong>ОКОГО:</strong>4210014</li>
+                            <li class="details__item"><strong>ОКОПФ:</strong>12165</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bank-details">
+                    <h2 class="text-heading details-title">Банковские реквизиты:</h2>
+                    <p class="text company-name">Филиал "Центральный" Банка ВТБ (ПАО) г. Барнаул</p>
+                    <ul class="details__list">
+                        <li class="details__item"><strong>Р/С:</strong>40702810612910002058</li>
+                        <li class="details__item"><strong>БИК</strong>044525411</li>
+                        <li class="details__item"><strong>К/С:</strong>30101810145250000411</li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section CERTIFICATE -->
+        <section class="certificate section section-border bg-white">
+            <div class="container certificate__container">
+                <h2 class="text-heading section__title">Сертификаты</h2>
+                <div class="controls-btn">
+                    <button class="btn btn--slider" id="prevBtn">&#10094;</button>
+                    <button class="btn btn--slider" id="nextBtn">&#10095;</button>
+                </div>
+
+                <div class="slider certificate__items" id="slider">
+                    <div class="slider__track" id="sliderTrack">
+                        <div class="slider__item"><img src="../image/certificate/larta-certificate.png" class="minimized" alt="certificate"></div>
+                        <div class="slider__item"><img src="../image/certificate/larta-certificate-2.jpg" class="minimized" alt="certificate"></div>
+                        <div class="slider__item"><img src="../image/certificate/larta-certificate-3.jpg" class="minimized" alt="certificate"></div>
+                        <div class="slider__item"><img src="../image/certificate/larta-certificate-4.1.jpg" class="minimized" img-title="(Часть 1)" alt="certificate"></div>
+                        <div class="slider__item"><img src="../image/certificate/larta-certificate-4.2.jpg" class="minimized" img-title="(Часть 2)" alt="certificate"></div>
+                        <div class="slider__item"><img src="../image/certificate/salavat-certificate-1.jpg" class="minimized" alt="certificate"></div>
+                        <div class="slider__item"><img src="../image/certificate/salavat-certificate-2.jpg" class="minimized" alt="certificate"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -313,6 +358,6 @@
     </button>
 </div>
 
-    <script src="../script/index.js"></script>
+<script src="../script/index.js"></script>
 </body>
 </html>
