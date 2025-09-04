@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/index.css">
 
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body page="production">
@@ -48,7 +47,7 @@
             <div class="header__container container">
                 <!-- header logo -->
                 <div class="header__left">
-                    <a class="logo" href="../index.html" data-page="main">
+                    <a class="logo" href="/" data-page="main">
                         <img class="logo__img" src="../image/logo.png" alt="">
                         <div class="logo-text__container">
                             <span class="logo-text__top">STEKLO</span>
@@ -59,19 +58,19 @@
                 <!-- header-nav-bar -->
                 <div class="header__center">
                     <nav class="header__nav">
-                        <a href="about.html" class="nav__item" data-page="about">О компании</a>
+                        <a href="/about" class="nav__item" data-page="about">О компании</a>
                         <div class="nav__item dropdown__item">
                             <div class="dropdown__toggle">
                                 <span>Продукция</span>
                                 <i class="bi bi-caret-down-fill"></i>
                             </div>
                             <nav class="sub__nav">
-                                <a class="nav__item" href="production.html" data-page="production"><i class="bi bi-arrow-right-short"></i>Каталог</a>
-                                <a class="nav__item" href="services.html" data-page="services"><i class="bi bi-arrow-right-short"></i>Услуги</a>
+                                <a class="nav__item" href="/production" data-page="production"><i class="bi bi-arrow-right-short"></i>Каталог</a>
+                                <a class="nav__item" href="/services" data-page="services"><i class="bi bi-arrow-right-short"></i>Услуги</a>
                             </nav>
                         </div>
-                        <a href="contact.html" class="nav__item" data-page="contact">Контакты</a>
-                        <a href="faq.html" class="nav__item" data-page="faq">FAQ</a>
+                        <a href="/contact" class="nav__item" data-page="contact">Контакты</a>
+                        <a href="/faq" class="nav__item" data-page="faq">FAQ</a>
                     </nav>
                 </div>
 
@@ -79,16 +78,16 @@
                 <div class="header__right">
                     <div class="btn-group">
                         <button class="btn btn--primary btn-map">
-                            <div class="item btn__item">
+                            <span class="item btn__item">
                                 <i class="bi bi-map-fill btn__icon"></i>
                                 <span class="btn__text">Как к нам добраться?</span>
-                            </div>
+                            </span>
                         </button>
 
                         <button class="btn btn--mobile">
-                            <div class="item btn__item btn__item--mob">
+                            <span class="item btn__item btn__item--mob">
                                 <i class="bi bi-list btn__icon"></i>
-                            </div>
+                            </span>
                         </button>
                     </div>
                 </div>
@@ -102,23 +101,23 @@
             <nav class="sidebar__nav">
                 <div class="item nav__item">
                     <i class="bi bi-house-door-fill"></i>
-                    <span><a href="../index.html">Главная</a></span>
+                    <span><a href="/">Главная</a></span>
                 </div>
                 <div class="item nav__item" data-page="about">
                     <i class="bi bi-info-square-fill"></i>
-                    <span><a href="../page/about.html">О компании</a></span>
+                    <span><a href="../page//about">О компании</a></span>
                 </div>
                 <div class="item nav__item" data-page="production">
                     <i class="bi bi-aspect-ratio"></i>
-                    <span> <a href="../page/production.html">Продукция</a></span>
+                    <span> <a href="../page//production">Продукция</a></span>
                 </div>
                 <div class="item nav__item" data-page="services">
                     <i class="bi bi-briefcase-fill"></i>
-                    <span> <a href="../page/services.html">Услуги</a></span>
+                    <span> <a href="../page//services">Услуги</a></span>
                 </div>
                 <div class="item nav__item" data-page="contact">
                     <i class="bi bi-pin-map-fill"></i>
-                    <span> <a href="../page/contact.html">Контакты</a></span>
+                    <span> <a href="../page//contact">Контакты</a></span>
                 </div>
                 <div class="item nav__item" data-page="faq">
                     <i class="bi bi-shop"></i>
@@ -155,65 +154,65 @@
 
                         <div class="select-button">
                             <button class="btn btn-tab active" data-target="clearGlass">
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Стекло беcцветное</span>
-                                </div>
+                                </span>
                             </button>
                             <div class="triangle"></div>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab"  data-target="colorfulGlass">
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Стекло тонированное</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="himGlass" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Cтекло химического травления</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="pattenGlass" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Cтекло узорчатое</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="ribbedGlass" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Cтекло ребристое</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="mirror" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Зеркало</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="varnish" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">C лакокрасочным покрытием</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
                     </div>
@@ -680,7 +679,7 @@
             <div class="footer-content">
 
                 <div class="footer__logo">
-                    <a class="logo" href="../index.html" data-page="main">
+                    <a class="logo" href="/" data-page="main">
                         <img class="logo__img" src="../image/logo.png" alt="">
                         <div class="logo-text__container">
                             <span class="logo-text__top">STEKLO</span>
@@ -690,10 +689,10 @@
                 </div>
 
                 <nav class="content-container footer__nav">
-                    <a class="item footer__nav-item" href="about.html" data-page="about">О компании</a>
-                    <a class="item footer__nav-item" href="production.html" data-page="production">Продукция</a>
-                    <a class="item footer__nav-item" href="contact.html" data-page="contact">Контакты</a>
-                    <a class="item footer__nav-item" href="faq.html" data-page="faq">FAQ</a>
+                    <a class="item footer__nav-item" href="/about" data-page="about">О компании</a>
+                    <a class="item footer__nav-item" href="/production" data-page="production">Продукция</a>
+                    <a class="item footer__nav-item" href="/contact" data-page="contact">Контакты</a>
+                    <a class="item footer__nav-item" href="/faq" data-page="faq">FAQ</a>
                 </nav>
 
                 <div class="content-container footer__company-data">
