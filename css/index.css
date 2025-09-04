@@ -1531,7 +1531,6 @@ table th {
     font-family: var(--text-font), sans-serif;
     display: grid;
     grid-template-areas: "company_details" "bank_details" "qr-code";
-    /*grid-template-columns: repeat(2, minmax(300px, 1fr));*/
     gap: var(--spacing-md);
 }
 
@@ -1843,9 +1842,9 @@ table th {
     margin: 0;
     font-family: var(--text-font), sans-serif;
     font-weight: 300;
-    white-space: normal; /* разрешить переносы */
-    overflow-wrap: break-word; /* переносить длинные слова */
-    word-break: normal; /* перенос слов по пробелам, не ломать слова */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
     font-size: 16px;
 }
 
@@ -1853,7 +1852,6 @@ table th {
     font-weight: 300;
     font-size: 14px;
 }
-
 
 @media (min-width: 620px) {
     .contact-warehouse .image,
