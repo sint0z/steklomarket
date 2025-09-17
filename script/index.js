@@ -27,7 +27,6 @@ class Modal{
     }
 
     hide(){
-        console.log("Log")
         this.modal.classList.remove('active');
         this.modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
@@ -252,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     }
-    scrollToSection(".btn-map", "#map", "contact.html");
+    scrollToSection(".btn-map", "#map", "/contact");
 
     let updated = false
     function updateHeaderPositions() {
@@ -295,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateHeaderPositions();
 
-    window.addEventListener('resize',()=>{
+    window.addEventListener('resize',()=> {
         updateHeaderPositions();
     });
 
