@@ -1263,6 +1263,7 @@
 }
 
 .price-table__container{
+    min-width: 300px;
     width: 100%;
     border: 2px solid var(--contrast-color);
     border-radius: 8px;
@@ -1311,8 +1312,13 @@ table tr {
     background-color: var(--stroke-color);
 }
 .table-section-title td{
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    min-width: 200px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
 }
 table th, table td
 {
@@ -1343,7 +1349,7 @@ table th {
         display: none;
     }
     table tr {
-        min-width: 320px;
+        min-width: 200px;
         margin-bottom: var(--spacing-xl);
         display: block;
         border-bottom: 2px solid #ddd;
@@ -1352,7 +1358,7 @@ table th {
     }
     table td {
         letter-spacing: 1px;
-        font-size: 20px;
+        font-size: 18px;
         display: flex;
         text-align: right;
         border-bottom: 1px dotted #ccc;
