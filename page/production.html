@@ -6,18 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="robots" content="index, contact, production">
-    <meta name="description" content="Стекломаркет - продажа качественного стекла, надежные поставки и профессиональная консультация. Широкий ассортимент стекла для строительных и промышленных целей.">
-    <meta name="keywords" content="Стекломаркет, ООО 'Витрум', стекло купить, поставки стекла, строительное стекло, купить стекло, барнаул стекло, стекло,зеркало,резка стекла">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <meta name="description" content="Стекломаркет - продажа качественного стекла и зеркал, резка, надежные поставки и профессиональная консультация. Широкий ассортимент стекла и зеркал. ">
+    <meta name="keywords" content="Стекломаркет, ООО 'Витрум', 'резка стекла', 'резка зеркала', 'узорчатое стекло', 'армированное стекло', 'стекло', 'зеркало', 'стекло Барнаул', 'зеркало Барнаул'">
 
     <title>Каталог</title>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104241835', 'ym');
+
+        ym(104241835, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/104241835" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/index.css?v=2.2">
 
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body page="production">
@@ -48,7 +65,7 @@
             <div class="header__container container">
                 <!-- header logo -->
                 <div class="header__left">
-                    <a class="logo" href="../index.html" data-page="main">
+                    <a class="logo" href="/" data-page="main">
                         <img class="logo__img" src="../image/logo.png" alt="">
                         <div class="logo-text__container">
                             <span class="logo-text__top">STEKLO</span>
@@ -59,19 +76,19 @@
                 <!-- header-nav-bar -->
                 <div class="header__center">
                     <nav class="header__nav">
-                        <a href="about.html" class="nav__item" data-page="about">О компании</a>
+                        <a href="/about" class="nav__item" data-page="about">О компании</a>
                         <div class="nav__item dropdown__item">
                             <div class="dropdown__toggle">
                                 <span>Продукция</span>
                                 <i class="bi bi-caret-down-fill"></i>
                             </div>
                             <nav class="sub__nav">
-                                <a class="nav__item" href="production.html" data-page="production"><i class="bi bi-arrow-right-short"></i>Каталог</a>
-                                <a class="nav__item" href="services.html" data-page="services"><i class="bi bi-arrow-right-short"></i>Услуги</a>
+                                <a class="nav__item" href="/production" data-page="production"><i class="bi bi-arrow-right-short"></i>Каталог</a>
+                                <a class="nav__item" href="/services" data-page="services"><i class="bi bi-arrow-right-short"></i>Услуги</a>
                             </nav>
                         </div>
-                        <a href="contact.html" class="nav__item" data-page="contact">Контакты</a>
-                        <a href="faq.html" class="nav__item" data-page="faq">FAQ</a>
+                        <a href="/contact" class="nav__item" data-page="contact">Контакты</a>
+                        <a href="/faq" class="nav__item" data-page="faq">FAQ</a>
                     </nav>
                 </div>
 
@@ -79,16 +96,16 @@
                 <div class="header__right">
                     <div class="btn-group">
                         <button class="btn btn--primary btn-map">
-                            <div class="item btn__item">
+                            <span class="item btn__item">
                                 <i class="bi bi-map-fill btn__icon"></i>
                                 <span class="btn__text">Как к нам добраться?</span>
-                            </div>
+                            </span>
                         </button>
 
                         <button class="btn btn--mobile">
-                            <div class="item btn__item btn__item--mob">
+                            <span class="item btn__item btn__item--mob">
                                 <i class="bi bi-list btn__icon"></i>
-                            </div>
+                            </span>
                         </button>
                     </div>
                 </div>
@@ -102,29 +119,38 @@
             <nav class="sidebar__nav">
                 <div class="item nav__item">
                     <i class="bi bi-house-door-fill"></i>
-                    <span><a href="../index.html">Главная</a></span>
+                    <span><a href="/">Главная</a></span>
                 </div>
                 <div class="item nav__item" data-page="about">
                     <i class="bi bi-info-square-fill"></i>
-                    <span><a href="../page/about.html">О компании</a></span>
+                    <span><a href="/about">О компании</a></span>
                 </div>
                 <div class="item nav__item" data-page="production">
                     <i class="bi bi-aspect-ratio"></i>
-                    <span> <a href="../page/production.html">Продукция</a></span>
+                    <span> <a href="/production">Продукция</a></span>
                 </div>
                 <div class="item nav__item" data-page="services">
                     <i class="bi bi-briefcase-fill"></i>
-                    <span> <a href="../page/services.html">Услуги</a></span>
+                    <span> <a href="/services">Услуги</a></span>
                 </div>
                 <div class="item nav__item" data-page="contact">
                     <i class="bi bi-pin-map-fill"></i>
-                    <span> <a href="../page/contact.html">Контакты</a></span>
+                    <span> <a href="/contact">Контакты</a></span>
                 </div>
                 <div class="item nav__item" data-page="faq">
                     <i class="bi bi-shop"></i>
-                    <span><a href="../page/faq">FAQ</a></span>
+                    <span><a href="/faq">FAQ</a></span>
                 </div>
             </nav>
+            <div class="btn-group">
+                <!-- contact button in sidebar -->
+                <button class="btn btn--primary btn-map"  title="Как к нам добраться?" aria-label="Как к нам добраться?">
+                   <span class="item btn__item">
+                        <i class="bi bi-map-fill btn__icon"></i>
+                        <span class="btn__text">Как к нам добраться?</span>
+                    </span>
+                </button>
+            </div>
         </div>
     </aside>
     <div class="overlay"></div>
@@ -152,68 +178,67 @@
                     <div id="following-list">
                     <h1 class="text-heading">Прайс-лист:</h1>
                     <div class="select-buttons">
-
                         <div class="select-button">
                             <button class="btn btn-tab active" data-target="clearGlass">
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Стекло беcцветное</span>
-                                </div>
+                                </span>
                             </button>
                             <div class="triangle"></div>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab"  data-target="colorfulGlass">
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Стекло тонированное</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="himGlass" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Cтекло химического травления</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="pattenGlass" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Cтекло узорчатое</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="ribbedGlass" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Cтекло ребристое</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="mirror" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">Зеркало</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
 
                         <div class="select-button">
                             <button class="btn btn-tab" data-target="varnish" >
-                                <div class="item btn__item">
+                                <span class="item btn__item">
                                     <i class="bi bi-plus-circle-fill btn__icon"></i>
                                     <span class="text btn__text">C лакокрасочным покрытием</span>
-                                </div>
+                                </span>
                             </button>
                         </div>
                     </div>
@@ -229,7 +254,6 @@
                             Оно идеально подходит для современных интерьеров, добавляя им стиль и элегантность благодаря своей простой и натуральной красоте.
                         </p>
                         <div class="price-table__container">
-
                             <div class="table-wrap">
                                 <table>
                                     <thead>
@@ -240,51 +264,52 @@
                                         <th>Толщина,<br>мм</th>
                                         <th>Размер</th>
                                         <th>Лист,<br>м2</th>
+                                        <th>Цена</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-section-title"><td  colspan="7">Стекло листовое, бесцветное /Сlear float Glass</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">2</td><td data-label="Размер">1300*800</td><td data-label="Лист,м2">1.04</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">2</td><td data-label="Размер">1300*1605</td><td data-label="Лист,м2">1.04</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">2.5</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">2.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Саратов</td><td data-label="Цвет">бцв</td><td data-label="Толщина">3</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">1275*1605</td><td data-label="Лист,м2">2.05</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М4</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">1300*1605</td><td data-label="Лист,м2">2.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Саратов</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Ларта Гласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Саратов</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">5</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">5</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.093</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">12</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">2</td><td data-label="Размер">1300*800</td><td data-label="Лист,м2">1.04</td><td data-label="Цена"> от 1300 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">2</td><td data-label="Размер">1300*1605</td><td data-label="Лист,м2">1.04</td><td data-label="Цена"> от 1300 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">2.5</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">2.09</td><td data-label="Цена"> от 1300 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Саратов</td><td data-label="Цвет">бцв</td><td data-label="Толщина">3</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена"> от 1300 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">1275*1605</td><td data-label="Лист,м2">2.05</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М4</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">1300*1605</td><td data-label="Лист,м2">2.09</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Саратов</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Ларта Гласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Саратов</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">5</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена"> от 1300 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">5</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 1300 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена"> от 1600 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td><td data-label="Цена"> от 1600 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 1600 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.093</td><td data-label="Цена"> от 2500 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td><td data-label="Цена"> от 2500 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 2500 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Орда</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена"> от 3000 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td><td data-label="Цена"> от 3000 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td><td data-label="Цена"> от 3000 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Интергласс</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 3000 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло листовое,  М1</td> <td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">12</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 3000 руб</td></tr>
 
                                         <tr class="table-section-title"><td colspan="7">Стекло листовое, антибликовое /Аnti-reflective coating glass</td></tr>
-                                        <tr><td data-label="Наименование">Пикто / Picto</td><td data-label="Изготовитель">Польша</td><td data-label="Цвет">бцв</td><td data-label="Толщина">2</td><td data-label="Размер">1100*800</td><td data-label="Лист,м2">0.88</td><tr>
+                                        <tr><td data-label="Наименование">Пикто / Picto</td><td data-label="Изготовитель">Польша</td><td data-label="Цвет">бцв</td><td data-label="Толщина">2</td><td data-label="Размер">1100*800</td><td data-label="Лист,м2">0.88</td><td data-label="Цена"> от 1300 руб</td><tr>
                                         <tr class="table-section-title"><td colspan="7">Стекло листовое, осветлённое</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
+                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена"> от 2650 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 2650 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена"> от 3900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 3900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена"> от 3900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 3900 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло Ultraview R </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бцв</td><td data-label="Толщина">10</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена"> от 3900 руб</td></tr>
 
                                         <tr class="table-section-title"><td colspan="7">Стекло армированное</td></tr>
-                                        <tr><td data-label="Наименование">Стекло армированное</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Стекло армированное</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2000*2500</td><td data-label="Лист,м2">5</td></tr>
+                                        <tr><td data-label="Наименование">Стекло армированное</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена"> от 5600 руб</td></tr>
+                                        <tr><td data-label="Наименование">Стекло армированное</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2000*2500</td><td data-label="Лист,м2">5</td><td data-label="Цена"> от 5600 руб</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -313,39 +338,40 @@
                                         <th>Толщина,<br>мм</th>
                                         <th>Размер</th>
                                         <th>Лист,<br>м2</th>
+                                        <th>Цена</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr class="table-section-title"><td  colspan="7">Стекло окрашенное в массе / Tinted glass</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">5</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">10</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">10</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">10</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе Tinted Black Glass (PG10) </td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">черн</td><td data-label="Толщина">4</td><td data-label="Размер">3300*2140</td><td data-label="Лист,м2">7.06</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе Tinted Black Glass (PG10) </td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">черн</td><td data-label="Толщина">4</td><td data-label="Размер">1650*2140</td><td data-label="Лист,м2">3.53</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">черн</td><td data-label="Толщина">8</td><td data-label="Размер">3300*2140</td><td data-label="Лист,м2">7.06</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">черн</td><td data-label="Толщина">8</td><td data-label="Размер">1650*2140</td><td data-label="Лист,м2">3.530</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">темно-серое</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">темно-серое</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.18</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">темно-серое</td><td data-label="Толщина">10</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">темно-серое</td><td data-label="Толщина">10</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.18</td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 2000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">5</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2600 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 3000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">брнз</td><td data-label="Толщина">10</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 6000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 2000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 2000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 3000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">10</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 6000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">КЗЛС</td><td data-label="Цвет">серое</td><td data-label="Толщина">10</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 6000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе<br>Tinted Black Glass (PG10) </td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">черн</td><td data-label="Толщина">4</td><td data-label="Размер">3300*2140</td><td data-label="Лист,м2">7.06</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе<br>Tinted Black Glass (PG10) </td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">черн</td><td data-label="Толщина">4</td><td data-label="Размер">1650*2140</td><td data-label="Лист,м2">3.53</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">черн</td><td data-label="Толщина">8</td><td data-label="Размер">3300*2140</td><td data-label="Лист,м2">7.06</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">черн</td><td data-label="Толщина">8</td><td data-label="Размер">1650*2140</td><td data-label="Лист,м2">3.530</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">темно-серое</td><td data-label="Толщина">8</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">темно-серое</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.18</td><td data-label="Цена">от 4500 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">темно-серое</td><td data-label="Толщина">10</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 6000 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло окраш в массе</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">темно-серое</td><td data-label="Толщина">10</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.18</td><td data-label="Цена">от 6000 руб </td></tr>
 
                                     <tr class="table-section-title"><td  colspan="7">Стекло рефлективное</td></tr>
-                                    <tr><td data-label="Наименование">Стекло Комфорт бронзовый 20</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td></tr>
-                                    <tr><td data-label="Наименование">Стекло Комфорт Элит плюс</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бц</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
+                                    <tr><td data-label="Наименование">Стекло Комфорт бронзовый 20</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2600*1800</td><td data-label="Лист,м2">4.68</td><td data-label="Цена">от 2600 руб </td></tr>
+                                    <tr><td data-label="Наименование">Стекло Комфорт Элит плюс</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бц</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 900 руб </td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -372,53 +398,54 @@
                                         <th>Толщина,<br>мм</th>
                                         <th>Размер</th>
                                         <th>Лист,<br>м2</th>
+                                        <th>Цена</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-section-title"><td  colspan="7">Стекло узорчатое химического травления / Acid etched glass</td></tr>
 
-                                        <tr><td data-label="Наименование">Букет</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Вулкан</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Дали</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Ледовый хруст / Уади</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Ледовый хруст / Уади</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td></tr>
-                                        <tr><td data-label="Наименование">Мороз / Айс</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Пунто</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сияние /Лабиринт</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сияние /Лабиринт</td><td data-label="Изготовитель">КНР</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td></tr>
-                                        <tr><td data-label="Наименование">Созвездие</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Флутес</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сантук</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Шале</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Букет</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Вулкан</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Вулкан</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td></tr>
-                                        <tr><td data-label="Наименование">Гранит</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Дали</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Зебра /Полоска</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td></tr>
-                                        <tr><td data-label="Наименование">Ледовый хруст /Уади</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Мороз / Айс</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td></tr>
-                                        <tr><td data-label="Наименование">Мороз / Айс</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Омут</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Плавни /Басак</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td></tr>
-                                        <tr><td data-label="Наименование">Плавни /Басак</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2500*1605</td><td data-label="Лист,м2">4.01</td></tr>
-                                        <tr><td data-label="Наименование">Пунто</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td></tr>
-                                        <tr><td data-label="Наименование">Пунто</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Созвездие</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Флутес</td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сантук</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сантук</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2500*1605</td><td data-label="Лист,м2">4.01</td></tr>
+                                        <tr><td data-label="Наименование">Букет</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Вулкан</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Дали</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Ледовый хруст / Уади</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Ледовый хруст / Уади</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мороз / Айс</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Пунто</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сияние /Лабиринт</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сияние /Лабиринт</td><td data-label="Изготовитель">КНР</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Созвездие</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Флутес</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сантук</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Шале</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Букет</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Вулкан</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Вулкан</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Гранит</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Дали</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зебра /Полоска</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Ледовый хруст /Уади</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мороз / Айс</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мороз / Айс</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Омут</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Плавни /Басак</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Плавни /Басак</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2500*1605</td><td data-label="Лист,м2">4.01</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Пунто</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Пунто</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Созвездие</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Флутес</td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сантук</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сантук</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2500*1605</td><td data-label="Лист,м2">4.01</td><td data-label="Цена">от 2900 руб </td></tr>
 
-                                        <tr class="table-section-title"><td  colspan="7">Химически матированное стекло / Acid etched glass</td></tr>
-                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">7.22</td></tr>
-                                        <tr><td data-label="Наименование">Сатин (под заказ)</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">5</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">7.22</td></tr>
-                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">7.22</td></tr>
-                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td></tr>
-                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">7.22</td></tr>
-                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">сер</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
+                                        <tr class="table-section-title"><td colspan="7">Химически матированное стекло / Acid etched glass</td></tr>
+                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">7.22</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сатин (под заказ)</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">5</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">7.22</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">7.22</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">2250*1605</td><td data-label="Лист,м2">3.61</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">7.22</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">сер</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сатин</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4000 руб </td></tr>
                                     </tbody>
                                     </table>
                             </div>
@@ -446,28 +473,29 @@
                                         <th>Толщина,<br>мм</th>
                                         <th>Размер</th>
                                         <th>Лист,<br>м2</th>
+                                        <th>Цена</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-section-title"><td  colspan="7">Стекло узорчатое прокатное / Patterned glass</td></tr>
-                                        <tr><td data-label="Наименование">Бамбук</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Глория /Готика/ Дрим/ 119</td><td data-label="Изготовитель">Польша</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2160*1420</td><td data-label="Лист,м2">3.07</td></tr>
-                                        <tr><td data-label="Наименование">Дельта на скрине /Сузорье/ Морган</td><td data-label="Изготовитель">Иран</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2000*1400</td><td data-label="Лист,м2">2.8</td></tr>
-                                        <tr><td data-label="Наименование">Крепи /Нашиджи /6</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Майский цветок</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Пазл</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Скрин / Призма</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Хрусталь (Диамант) </td><td data-label="Изготовитель">Иран</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2000*1400</td><td data-label="Лист,м2">2.8</td></tr>
-                                        <tr><td data-label="Наименование">Шиншила/ 101</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Атрио</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Глория /Готика/ Дрим/ 119</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Дельта на скрине /Сузорье/ Морган</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Кризет/003</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Ниагара / Водопад/ Сильвит/ 118</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Шиншила /101</td><td data-label="Изготовитель">Польша</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2160*1420</td><td data-label="Лист,м2">3.07</td></tr>
-                                        <tr><td data-label="Наименование">Глория /Готика/ Дрим/ 119</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">жлт</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
-                                        <tr><td data-label="Наименование">Черепашка /Ripple/ 102</td><td data-label="Изготовитель">Польша</td><td data-label="Цвет">жлт</td><td data-label="Толщина">4</td><td data-label="Размер">2160*1420</td><td data-label="Лист,м2">3.07</td></tr>
-                                        <tr><td data-label="Наименование">Черепашка /Ripple/ 102</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">син</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td></tr>
+                                        <tr><td data-label="Наименование">Бамбук</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Глория /Готика/ Дрим/ 119</td><td data-label="Изготовитель">Польша</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2160*1420</td><td data-label="Лист,м2">3.07</td><td data-label="Цена">от 2000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Дельта на скрине /Сузорье/ Морган</td><td data-label="Изготовитель">Иран</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2000*1400</td><td data-label="Лист,м2">2.8</td><td data-label="Цена">от 1800 руб </td></tr>
+                                        <tr><td data-label="Наименование">Крепи /Нашиджи /6</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Майский цветок</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Пазл</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Скрин / Призма</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Хрусталь (Диамант) </td><td data-label="Изготовитель">Иран</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2000*1400</td><td data-label="Лист,м2">2.8</td><td data-label="Цена">от 1800 руб </td></tr>
+                                        <tr><td data-label="Наименование">Шиншила/ 101</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Атрио</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Глория /Готика/ Дрим/ 119</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Дельта на скрине /Сузорье/ Морган</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Кризет/003</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Ниагара / Водопад/ Сильвит/ 118</td><td data-label="Изготовитель">Беларусь</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Шиншила /101</td><td data-label="Изготовитель">Польша</td><td data-label="Цвет">брнз</td><td data-label="Толщина">4</td><td data-label="Размер">2160*1420</td><td data-label="Лист,м2">3.07</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Глория /Готика/ Дрим/ 119</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">жлт</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Черепашка /Ripple/ 102</td><td data-label="Изготовитель">Польша</td><td data-label="Цвет">жлт</td><td data-label="Толщина">4</td><td data-label="Размер">2160*1420</td><td data-label="Лист,м2">3.07</td><td data-label="Цена">от 1900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Черепашка /Ripple/ 102</td><td data-label="Изготовитель">Украина</td><td data-label="Цвет">син</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1600</td><td data-label="Лист,м2">3.36</td><td data-label="Цена">от 1900 руб </td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -494,27 +522,28 @@
                                         <th>Толщина,<br>мм</th>
                                         <th>Размер</th>
                                         <th>Лист,<br>м2</th>
+                                        <th>Цена</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-section-title"><td  colspan="7">Стекло прокатное ребристое/ Patterned Ribbed glass</td></tr>
-                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3000*2100</td><td data-label="Лист,м2">6.6</td></tr>
-                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3300*2100</td><td data-label="Лист,м2">6.93</td></tr>
-                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3000*1050</td><td data-label="Лист,м2">3.3</td></tr>
-                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1500</td><td data-label="Лист,м2">3.3</td></tr>
-                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3300*2000</td><td data-label="Лист,м2">6.6</td></tr>
-                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3300*1000</td><td data-label="Лист,м2">3.3</td></tr>
-                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3300*2100</td><td data-label="Лист,м2">6.93</td></tr>
-                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3300*2100</td><td data-label="Лист,м2">3.3</td></tr>
-                                        <tr><td data-label="Наименование">Moru серое с напылением</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2440*2100</td><td data-label="Лист,м2">5.12</td></tr>
-                                        <tr><td data-label="Наименование">Tinted Grey Moru Glass</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серое</td><td data-label="Толщина">8</td><td data-label="Размер">3300*2100</td><td data-label="Лист,м2">6.93</td></tr>
-                                        <tr><td data-label="Наименование">Эстриадо/Flutelite-B</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3300*2000</td><td data-label="Лист,м2">6.6</td></tr>
-                                        <tr><td data-label="Наименование">Эстриадо/Flutelite-B</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3300*1000</td><td data-label="Лист,м2">3.3</td></tr>
-                                        <tr><td data-label="Наименование">Эстриадо/Flutelite-B</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2000*1650</td><td data-label="Лист,м2">3.3</td></tr>
-                                        <tr><td data-label="Наименование">Эстриадо/Flutelite-B</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3300*000</td><td data-label="Лист,м2">6.6</td></tr>
-                                        <tr><td data-label="Наименование">Визио Сан Классик/ Visio San Classic</td><td data-label="Изготовитель">Европа</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2000</td><td data-label="Лист,м2">6.42</td></tr>
-                                        <tr><td data-label="Наименование">Визио Сан Классик/ Visio San Classic</td><td data-label="Изготовитель">Европа</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*1000</td><td data-label="Лист,м2">3.21</td></tr>
-                                        <tr><td data-label="Наименование">Визио Сан Классик/ Visio San Classic</td><td data-label="Изготовитель">Европа</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2000*1605</td><td data-label="Лист,м2">3.21</td></tr>
+                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3000*2100</td><td data-label="Лист,м2">6.6</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3300*2100</td><td data-label="Лист,м2">6.93</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3000*1050</td><td data-label="Лист,м2">3.3</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2100*1500</td><td data-label="Лист,м2">3.3</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3300*2000</td><td data-label="Лист,м2">6.6</td><td data-label="Цена">от 9700 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">6</td><td data-label="Размер">3300*1000</td><td data-label="Лист,м2">3.3</td><td data-label="Цена">от 9700 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3300*2100</td><td data-label="Лист,м2">6.93</td><td data-label="Цена">от 15100 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мору/Moru Ultra clear</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3300*2100</td><td data-label="Лист,м2">3.3</td><td data-label="Цена">от 15100 руб </td></tr>
+                                        <tr><td data-label="Наименование">Moru серое с напылением</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2440*2100</td><td data-label="Лист,м2">5.12</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Tinted Grey Moru Glass</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серое</td><td data-label="Толщина">8</td><td data-label="Размер">3300*2100</td><td data-label="Лист,м2">6.93</td><td data-label="Цена">от 15100 руб </td></tr>
+                                        <tr><td data-label="Наименование">Эстриадо/Flutelite-B</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3300*2000</td><td data-label="Лист,м2">6.6</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Эстриадо/Flutelite-B</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3300*1000</td><td data-label="Лист,м2">3.3</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Эстриадо/Flutelite-B</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2000*1650</td><td data-label="Лист,м2">3.3</td><td data-label="Цена">от 15100 руб </td></tr>
+                                        <tr><td data-label="Наименование">Эстриадо/Flutelite-B</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бцв</td><td data-label="Толщина">8</td><td data-label="Размер">3300*000</td><td data-label="Лист,м2">6.6</td><td data-label="Цена">от 15100 руб </td></tr>
+                                        <tr><td data-label="Наименование">Визио Сан Классик/ Visio San Classic</td><td data-label="Изготовитель">Европа</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2000</td><td data-label="Лист,м2">6.42</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Визио Сан Классик/ Visio San Classic</td><td data-label="Изготовитель">Европа</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*1000</td><td data-label="Лист,м2">3.21</td><td data-label="Цена">от 6500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Визио Сан Классик/ Visio San Classic</td><td data-label="Изготовитель">Европа</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2000*1605</td><td data-label="Лист,м2">3.21</td><td data-label="Цена">от 6500 руб </td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -543,53 +572,54 @@
                                         <th>Толщина,<br>мм</th>
                                         <th>Размер</th>
                                         <th>Лист,<br>м2</th>
+                                        <th>Цена</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-section-title"><td  colspan="7">Зеркало бесцветное /Mirror clear</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно LartaMirorCopper-free</td><td data-label="Изготовитель">Тракья</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно LartaMirorCopper-free</td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2750*1605</td><td data-label="Лист,м2">4.41</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно</td><td data-label="Изготовитель">Тракья</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно Mirroline</td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">8.19</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно Mirroline</td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно LartaMirorCopper-free</td><td data-label="Изготовитель">Тракья</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно LartaMirorCopper-free</td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2750*1605</td><td data-label="Лист,м2">4.41</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно</td><td data-label="Изготовитель">Тракья</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно Mirroline</td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2250</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 1600 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно Mirroline</td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">3210*2550</td><td data-label="Лист,м2">8.19</td><td data-label="Цена">от 1600 руб </td></tr>
 
                                         <tr class="table-section-title"><td  colspan="7">Зеракало цветное / Tinted mirror</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно  </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно</td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2750*1605</td><td data-label="Лист,м2">4.41</td></tr>
-                                        <tr><td data-label="Наименование">Зеркальное полотно  </td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2750*1605</td><td data-label="Лист,м2">4.41</td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно  </td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2200 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2200 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно</td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2750*1605</td><td data-label="Лист,м2">4.41</td><td data-label="Цена">от 2200 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркальное полотно  </td><td data-label="Изготовитель">Larta</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2750*1605</td><td data-label="Лист,м2">4.41</td><td data-label="Цена">от 2200 руб </td></tr>
 
                                         <tr class="table-section-title"><td  colspan="7">Зеркальное полотно  химического травления / Acid etched mirror</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало сатинированное</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало сатинированное</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало сатинированное</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
+                                        <tr><td data-label="Наименование">Зеркало сатинированное</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бцв</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало сатинированное</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4000 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало сатинированное</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серое</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4000 руб </td></tr>
 
                                         <tr class="table-section-title"><td  colspan="7">Зеркальное полотно  химического травления с узором / Acid etched mirror</td></tr>
-                                        <tr><td data-label="Наименование">Бринелли / SD-1808 (верх. травл)</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Деревья /  SMC-021</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td></tr>
-                                        <tr><td data-label="Наименование">Ледовый хруст / Уади / SD-1770</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Мороз / Айс / SD-1881</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Сияние / Ностальгия / Лабиринт</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Тетрис /SD-1848</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Цветы / Ромашки / SD- 1833</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Бринелли / SD-1753 (верх травл)</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Деревья /  SMC-021</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td></tr>
-                                        <tr><td data-label="Наименование">Ледовый хруст / Уади / SD-1809</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Мороз / Айс / SD- 1874</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Мороз / Айс / SMC-ODG-006</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td></tr>
-                                        <tr><td data-label="Наименование">Тетрис / SD-1757</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Цветы /  SMC-014</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td></tr>
-                                        <tr><td data-label="Наименование">Цветы / Ромашки / SD-1833</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
+                                        <tr><td data-label="Наименование">Бринелли / SD-1808 (верх. травл)</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Деревья /  SMC-021</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Ледовый хруст / Уади / SD-1770</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мороз / Айс / SD-1881</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Сияние / Ностальгия / Лабиринт</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Тетрис /SD-1848</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Цветы / Ромашки / SD- 1833</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Бринелли / SD-1753 (верх травл)</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Деревья /  SMC-021</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Ледовый хруст / Уади / SD-1809</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мороз / Айс / SD- 1874</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Мороз / Айс / SMC-ODG-006</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Тетрис / SD-1757</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Цветы /  SMC-014</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1650</td><td data-label="Лист,м2">4.21</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Цветы / Ромашки / SD-1833</td><td data-label="Изготовитель">Россия</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 4900 руб </td></tr>
 
                                         <tr class="table-section-title"><td  colspan="7">Зеркальное полотно МИРАКЛ</td></tr>
-                                        <tr><td data-label="Наименование">Миракл17/ Италия</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">евробрнз</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Миракл17/ Италия</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Миракл18/ Кристал Винтаж-1</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">евробрнз</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Миракл18/ Кристал Винтаж-1</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Миракл/ Алмаз/ Квадро (300*300*8) МАТОВЫЙ <br> <span style="color:red">(имеются точки)</span></td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
+                                        <tr><td data-label="Наименование">Миракл17/ Италия</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">евробрнз</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Миракл17/ Италия</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Миракл18/ Кристал Винтаж-1</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">евробрнз</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Миракл18/ Кристал Винтаж-1</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 4900 руб </td></tr>
+                                        <tr><td data-label="Наименование">Миракл/ Алмаз/ Квадро (300*300*8) МАТОВЫЙ <br> <span style="color:red">(имеются точки)</span></td><td data-label="Изготовитель">Китай</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 4900 руб </td></tr>
 
-                                        <tr class="table-section-title"><td  colspan="7">СОСТАРЕННОЕ ЗЕРКАЛО</td></tr>
-                                        <tr><td data-label="Наименование">Состаренное зеркало F030-4</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет"></td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
+                                        <tr class="table-section-title"><td  colspan="7">Состаренное стекло</td></tr>
+                                        <tr><td data-label="Наименование">Состаренное зеркало F030-4</td><td data-label="Изготовитель">Китай</td><td data-label="Цвет"></td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 4900 руб </td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -611,57 +641,57 @@
                                         <th>Толщина,<br>мм</th>
                                         <th>Размер</th>
                                         <th>Лист,<br>м2</th>
+                                        <th>Цвет</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-section-title"><td  colspan="7">Стекло с лакокрасочным покрытием / Стекло с ЛКП</td></tr>
-                                        <tr><td data-label="Наименование">Клетка на черном (SD-9000)</td><td data-label="Изготовитель">RAL 9005 </td><td data-label="Цвет">Белгород</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Лакобель сатинированный/ Белый/ </td><td data-label="Изготовитель">RAL 9003 </td><td data-label="Цвет">Поволжье</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Лакобель сатинированный/ Жемчужно - белый/ </td><td data-label="Изготовитель">RAL 1013</td><td data-label="Цвет">Поволжье</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Монолак белый (opty) (SD-1782)</td><td data-label="Изготовитель">RAL 9003 </td><td data-label="Цвет">Белгород</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Монолак жемчужно-белый  (opty) ( SD-1735)</td><td data-label="Изготовитель">RAL 1013</td><td data-label="Цвет">Белгород</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Монолак белый (SD-1814)</td><td data-label="Изготовитель">RAL 9010</td><td data-label="Цвет">Белгород</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Privaline Light Beige</td><td data-label="Изготовитель">RAL 9015</td><td data-label="Цвет">Салават</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Privaline Light Brown</td><td data-label="Изготовитель">RAL 1236</td><td data-label="Цвет">Салават</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Privaline Black</td><td data-label="Изготовитель">RAL 9005</td><td data-label="Цвет">Салават</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло Privaline Light Grey</td><td data-label="Изготовитель">RAL 7035</td><td data-label="Цвет">Салават</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Кашемир однотонное</td><td data-label="Изготовитель"></td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лакокрасочным покрытием / Стекло с ЛКП</td><td data-label="Изготовитель"></td><td data-label="Цвет"></td><td data-label="Толщина"></td><td data-label="Размер"></td><td data-label="Лист,м2">0</td>
-                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Баклажан</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Вино</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Кашемир</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Нежно-фиолет</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Помадный</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Трюфель</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Фуксия</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Акация</td><td data-label="Изготовитель">Черный</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Акация</td><td data-label="Изготовитель">Белый</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Акация</td><td data-label="Изготовитель">Кашемир</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Диско </td><td data-label="Изготовитель">Белый</td><td data-label="Цвет">Белгород</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Клетка</td><td data-label="Изготовитель">Баклажан</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Клетка</td><td data-label="Изготовитель">Вино</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Клетка</td><td data-label="Изготовитель">Черный</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Сирень 3D</td><td data-label="Изготовитель">Белый</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Цветы</td><td data-label="Изготовитель">Вино</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Цветы</td><td data-label="Изготовитель">Кашемир</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
+                                        <tr><td data-label="Наименование">Клетка на черном (SD-9000) </td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">RAL 9005</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Лакобель сатинированный<br>/ Белый </td><td data-label="Изготовитель">Поволжье</td><td data-label="Цвет">RAL 9003</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3800 руб </td></tr>
+                                        <tr><td data-label="Наименование">Лакобель сатинированный<br>/Жемчужно - белый/</td><td data-label="Изготовитель">Поволжье</td><td data-label="Цвет">RAL 1013 </td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3800 руб </td></tr>
+                                        <tr><td data-label="Наименование">Монолак белый (opty)(SD-1782)</td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">RAL 9003</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Монолак жемчужно-белый (opty)<br>( SD-1735)</td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">RAL 1013</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 3500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Монолак белый (SD-1814)</td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">RAL 9010</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло Privaline Light Beige</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">RAL 9015</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло Privaline Light Brown</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">RAL 1236</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло Privaline Black</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">RAL 9005</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло Privaline Light Grey</td><td data-label="Изготовитель">Салават</td><td data-label="Цвет">RAL 7035</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Кашемир однотонное</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет"></td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Баклажан</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Вино</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Кашемир</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Нежно-фиолет</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Помадный</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Трюфель</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп однотонное</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Фуксия</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Акация</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Черный</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Акация</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Белый</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Акация</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Кашемир</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Диско </td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">Белый</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Клетка</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Баклажан</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Клетка</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Вино</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Клетка</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Черный</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Сирень 3D</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Белый</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Цветы</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Вино</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Стекло с лкп с рисунком, Цветы</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">Кашемир</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 1500 руб </td></tr>
 
                                         <tr class="table-section-title"><td  colspan="7">Зеркало с узором под амальгамой</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Акация / Леди</td><td data-label="Изготовитель">бронза</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Магнолия / Пионы</td><td data-label="Изготовитель">бронза</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Омут</td><td data-label="Изготовитель">бронза</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Магнолия / Пион</td><td data-label="Изготовитель">бронза</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Туарег</td><td data-label="Изготовитель">бронза</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Фьюзи</td><td data-label="Изготовитель">бронза</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Акация</td><td data-label="Изготовитель">серебро</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Омут</td><td data-label="Изготовитель">серебро</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Ледовый хруст / Уади</td><td data-label="Изготовитель">серебро</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Туарег</td><td data-label="Изготовитель">серебро</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Феникс</td><td data-label="Изготовитель">серебро</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
-                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, Фьюзи</td><td data-label="Изготовитель">серебро</td><td data-label="Цвет">Командор</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Акация / Леди</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Магнолия / Пионы</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Омут</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Магнолия / Пион</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Туарег</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Фьюзи</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">бронза</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Акация</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Омут</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Ледовый хруст / Уади</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Туарег</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Феникс</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Зеркало с лкп с рисунком, <br>Фьюзи</td><td data-label="Изготовитель">Командор</td><td data-label="Цвет">серебро</td><td data-label="Толщина">4</td><td data-label="Размер">2440*1830</td><td data-label="Лист,м2">4.47</td><td data-label="Цена">от 2500 руб </td></tr>
 
                                         <tr class="table-section-title"><td  colspan="7">Стекло с керамической печатью</td></tr>
-                                        <tr><td data-label="Наименование">Атриум белый</td><td data-label="Изготовитель">SD-7055 </td><td data-label="Цвет">Белгород</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
-                                        <tr><td data-label="Наименование">Помпея</td><td data-label="Изготовитель">SD-7041 </td><td data-label="Цвет">Белгород</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td></tr>
+                                        <tr><td data-label="Наименование">Атриум белый</td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">SD-7055</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2500 руб </td></tr>
+                                        <tr><td data-label="Наименование">Помпея</td><td data-label="Изготовитель">Белгород</td><td data-label="Цвет">SD-7041</td><td data-label="Толщина">4</td><td data-label="Размер">2550*1605</td><td data-label="Лист,м2">4.09</td><td data-label="Цена">от 2500 руб </td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -680,7 +710,7 @@
             <div class="footer-content">
 
                 <div class="footer__logo">
-                    <a class="logo" href="../index.html" data-page="main">
+                    <a class="logo" href="/" data-page="main">
                         <img class="logo__img" src="../image/logo.png" alt="">
                         <div class="logo-text__container">
                             <span class="logo-text__top">STEKLO</span>
@@ -690,10 +720,10 @@
                 </div>
 
                 <nav class="content-container footer__nav">
-                    <a class="item footer__nav-item" href="about.html" data-page="about">О компании</a>
-                    <a class="item footer__nav-item" href="production.html" data-page="production">Продукция</a>
-                    <a class="item footer__nav-item" href="contact.html" data-page="contact">Контакты</a>
-                    <a class="item footer__nav-item" href="faq.html" data-page="faq">FAQ</a>
+                    <a class="item footer__nav-item" href="/about" data-page="about">О компании</a>
+                    <a class="item footer__nav-item" href="/production" data-page="production">Продукция</a>
+                    <a class="item footer__nav-item" href="/contact" data-page="contact">Контакты</a>
+                    <a class="item footer__nav-item" href="/faq" data-page="faq">FAQ</a>
                 </nav>
 
                 <div class="content-container footer__company-data">
@@ -751,5 +781,30 @@
 </div>
 
 <script src="../script/index.js"></script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 0,
+                "item": {
+                    "@id": "https://steklomarket.ru/",
+                    "name": "Главная"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://steklomarket.ru/production",
+                    "name": "Каталог"
+                }
+            }
+        ]
+    }
+</script>
+
 </body>
 </html>
