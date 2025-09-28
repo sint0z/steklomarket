@@ -446,6 +446,8 @@
     grid-row: 1/span 2;
 }
 
+.hero__left  .text-heading span:last-child{ font-size: 26px }
+
 .hero__right{
     height: 420px;
     width: 100%;
@@ -643,7 +645,7 @@
     padding: 0;
     font-weight: 700
 }
-
+.card-description__item sup{top: 0}
 .card-description__item:last-child{
     color: var(--accent-color);
     font-weight: 900;
@@ -1261,6 +1263,7 @@
 }
 
 .price-table__container{
+    min-width: 300px;
     width: 100%;
     border: 2px solid var(--contrast-color);
     border-radius: 8px;
@@ -1294,8 +1297,9 @@ table {
     border: 1px solid #ccc;
     width: 100%;
     margin:0;
-    padding:0;
     border-collapse: collapse;
+    padding:0;
+    white-space: nowrap
 }
 
 table tr {
@@ -1308,8 +1312,13 @@ table tr {
     background-color: var(--stroke-color);
 }
 .table-section-title td{
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    min-width: 200px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
 }
 table th, table td
 {
@@ -1340,7 +1349,7 @@ table th {
         display: none;
     }
     table tr {
-        min-width: 320px;
+        min-width: 200px;
         margin-bottom: var(--spacing-xl);
         display: block;
         border-bottom: 2px solid #ddd;
@@ -1349,7 +1358,7 @@ table th {
     }
     table td {
         letter-spacing: 1px;
-        font-size: 20px;
+        font-size: 18px;
         display: flex;
         text-align: right;
         border-bottom: 1px dotted #ccc;
@@ -1439,6 +1448,7 @@ table th {
     gap: var(--spacing-lg) var(--spacing-xl);
     grid-template-areas: "about" "mission" "stats";
     grid-template-columns: repeat(1, auto);
+    justify-content: center;
 }
 
 .stats{
@@ -1515,6 +1525,8 @@ table th {
 }
 .mission__text,
 .about-company__text{
+    hyphens: auto;
+    line-break: loose;
     color: var(--accent-color);
     letter-spacing: normal;
     text-align: justify;
@@ -1525,16 +1537,10 @@ table th {
 .details__container{
     font-family: var(--text-font), sans-serif;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas: "company_details" "bank_details" "qr-code";
     gap: var(--spacing-md);
 }
-@media (min-width: 1024px) {
-    .information__container{
-        grid-template-areas: "about about mission mission"
-                             "about about stats stats";
-        place-content: start;
-    }
-}
+
 
 .details-title{font-size: 32px}
 
@@ -1578,6 +1584,8 @@ table th {
     grid-template-columns: repeat(2, minmax(0,max-content));
     gap: var(--spacing-xs);
 }
+.company-details{ grid-area: company_details }
+.bank-details{grid-area: bank_details}
 
 .company-details,
 .bank-details{
@@ -1586,6 +1594,38 @@ table th {
     width: 100%;
     min-width: 300px;
     max-width: 400px;
+}
+
+
+.qr-code{
+    grid-area: qr-code;
+    display: grid;
+    gap: var(--spacing-sm);
+    justify-items: start;
+
+}
+
+.text--qr{
+    font-size: 16px
+}
+
+
+.qr-code__container{
+    width: 190px;
+    height: auto;
+}
+
+@media (min-width: 700px) {
+    .information__container{
+        grid-template-areas: "about about mission mission"
+                             "about about stats stats";
+        place-content: start;
+    }
+
+    .details__container{
+        grid-template-areas: "company_details bank_details"
+                             "company_details qr-code";
+    }
 }
 
 .bank-details{align-self: start}
@@ -1757,7 +1797,8 @@ table th {
     white-space: nowrap}
 
 .faq__item .question::after {
-    content: "+";
+    content: "";
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16'  fill='%237288a2' class='bi bi-plus' xmlns='http://www.w3.org/2000/svg'><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/></svg>");
     position: absolute;
     top: 50%;
     right: 1rem;
@@ -1766,7 +1807,6 @@ table th {
     border: 1px solid #7288a2;
     border-radius: 50%;
     font-size: 2rem;
-    color: #7288a2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1778,7 +1818,6 @@ table th {
     transform: translateY(-50%) rotate(45deg);
     color: var(--bg-main);
     border-color: var(--contrast-color);
-    background-color: var(--contrast-color);
     box-shadow: 0 0 5px 0 var(--accent-color);
 }
 
@@ -1810,9 +1849,9 @@ table th {
     margin: 0;
     font-family: var(--text-font), sans-serif;
     font-weight: 300;
-    white-space: normal; /* разрешить переносы */
-    overflow-wrap: break-word; /* переносить длинные слова */
-    word-break: normal; /* перенос слов по пробелам, не ломать слова */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
     font-size: 16px;
 }
 
@@ -1820,7 +1859,6 @@ table th {
     font-weight: 300;
     font-size: 14px;
 }
-
 
 @media (min-width: 620px) {
     .contact-warehouse .image,
@@ -1832,4 +1870,9 @@ table th {
     .contact-office .container-column {
         gap: 100px;
     }
+}
+
+.contact-office .container-column{ gap: 0 }
+.contact-office .container-column__image .image{
+    width: 60%;
 }
