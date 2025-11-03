@@ -433,22 +433,19 @@ button:disabled:hover{
 
 .magnify{
     display: grid;
-    gap: var(--spacing-lg);
     position: relative;
     min-width: 320px;
-    max-width: 600px;        /* Максимальная ширина контейнера */
-    margin: 0 auto;          /* Центрирует контейнер по странице */
-    padding: 10px;           /* Отступы */
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .magnify img{
-    max-width: 100%;    /* максимум по ширине */
-    max-height: 80vh;   /* максимум по высоте */
-    height: auto;       /* сохраняем пропорции */
-    width: auto;        /* сохраняем пропорции */
-    object-fit: contain; /* масштабирование без обрезки */
+    max-width: 100%;
+    max-height: 80vh;
+    height: auto;
+    width: auto;
+    object-fit: contain;
     min-width: 320px;
-        /* Сохраняет пропорции */
     display: block;
     border-radius: 18px 18px 0 0 ;
 }

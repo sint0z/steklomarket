@@ -44,8 +44,6 @@
     padding-bottom: var(--spacing-md);
     z-index: 111;
     transition: top 0.3s ease;
-    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
@@ -101,8 +99,6 @@
     padding-bottom: 4px;
 }
 
-.nav__item
-
 .dropdown__item{
     position: relative;
 }
@@ -127,8 +123,6 @@
     left: 0;
     gap: 12px;
     padding: 15px 10px;
-    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     border-radius: 4px;
     z-index: 106;
@@ -466,6 +460,7 @@
     height: 100%;
     object-fit: contain;
     min-width: 300px;
+    aspect-ratio: 16 / 9;
 }
 
 
@@ -566,8 +561,6 @@
     position: relative;
     border-radius: 16px 0 16px 0 ;
     background-color: var(--base-white);
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
@@ -620,8 +613,9 @@
     position: relative;
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 1px;
+    aspect-ratio: 4 / 3;
 }
 
 .card-description{
@@ -708,8 +702,6 @@
 @media (min-width: 620px) {
     .about-us .image{
         width:100%;
-        -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
         box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     }
 }
@@ -801,14 +793,13 @@
 }
 
 .map-wrapper > iframe{
-    -webkit-box-shadow: 0px 0px 17px 15px rgba(34, 60, 80, 0.24);
-    -moz-box-shadow: 0px 0px 17px 15px rgba(34, 60, 80, 0.24);
     box-shadow: 0px 13px 17px 11px rgba(34, 60, 80, 0.24);
+    aspect-ratio: 16 / 9;
 }
 
 
 /*----------------------------------------
-            Moodal Window
+            Modal Window
 ---------------------------------------*/
 .modal {
     display: none;
@@ -909,7 +900,7 @@
 }
 
 .progress-bar{
-    height: 100vh;
+    height: 100%;
     width: 0;
     border-radius: 10px 0 0 10px;
     background-color: var(--contrast-color);
@@ -958,8 +949,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    -webkit-box-shadow: 0px 0px 17px 15px rgba(34, 60, 80, 0.24);
-    -moz-box-shadow: 0px 0px 17px 15px rgba(34, 60, 80, 0.24);
     box-shadow: 0px 0px 17px 15px rgba(34, 60, 80, 0.24);
 }
 
@@ -1010,7 +999,7 @@
 }
 
 /*----------------------------------------
-            Sitebar Section
+            Sidebar Section
 ---------------------------------------*/
 
 .sidebar {
@@ -1289,7 +1278,7 @@
     color: var(--accent-color);
     max-height: 800px;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 table {
@@ -1353,8 +1342,7 @@ table th {
         margin-bottom: var(--spacing-xl);
         display: block;
         border-bottom: 2px solid #ddd;
-        box-shadow: 0 4px 8px rgba(155, 0, 0, 0.4);,
-        0 1px 3px rgba(155, 0, 0, 0.4);;
+        box-shadow: 0 4px 8px rgba(155, 0, 0, 0.4), 0 1px 3px rgba(155, 0, 0, 0.4);
     }
     table td {
         letter-spacing: 1px;
@@ -1775,14 +1763,7 @@ table th {
 .question{
     margin: 0;
     position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     padding: 1rem 3rem 1rem 1rem;
@@ -1829,8 +1810,6 @@ table th {
     border-bottom: 1px solid #e5e5e5;
     overflow: hidden;
     clear: both;
-    -webkit-transition: all 0.2s ease 0.15s;
-    -o-transition: all 0.2s ease 0.15s;
     transition: all 0.2s ease 0.15s;
 }
 
@@ -1839,8 +1818,6 @@ table th {
     opacity: 1;
     padding: 1rem;
     max-height: 100%;
-    -webkit-transition: all 0.35s ease 0.15s;
-    -o-transition: all 0.35s ease 0.15s;
     transition: all 0.35s ease 0.15s;
 }
 

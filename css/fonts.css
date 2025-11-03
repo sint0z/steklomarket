@@ -3,6 +3,7 @@
     src:url('../fonts/1638453898579_BebasNeue-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Bebas Neue';
@@ -38,6 +39,7 @@
     src:url('../fonts/Montserrat-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat';
