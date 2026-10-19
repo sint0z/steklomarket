@@ -444,7 +444,7 @@ button:disabled:hover{
     max-height: 80vh;
     height: auto;
     width: auto;
-    object-fit: contain;
+    object-fit: cover;
     min-width: 320px;
     display: block;
     border-radius: 18px 18px 0 0 ;
